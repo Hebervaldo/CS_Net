@@ -1,0 +1,45 @@
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.exe
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.deps.json
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.runtimeconfig.json
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\ref\prjRedeNeuralCSCoreNet.dll
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\ref\prjRedeNeuralCSCoreNet.dll
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+C:\Users\Usuario\source\repos\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.genruntimeconfig.cache
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.exe
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.deps.json
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.runtimeconfig.json
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.AssemblyReference.cache
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfoInputs.cache
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfo.cs
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.CoreCompileInputs.cache
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\refint\prjRedeNeuralCSCoreNet.dll
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.genruntimeconfig.cache
+D:\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\ref\prjRedeNeuralCSCoreNet.dll
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.exe
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.deps.json
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.runtimeconfig.json
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.AssemblyReference.cache
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfoInputs.cache
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.AssemblyInfo.cs
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.csproj.CoreCompileInputs.cache
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.dll
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\refint\prjRedeNeuralCSCoreNet.dll
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.pdb
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\prjRedeNeuralCSCoreNet.genruntimeconfig.cache
+C:\Users\heber\OneDrive\Área de Trabalho\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net6.0\ref\prjRedeNeuralCSCoreNet.dll

@@ -1,0 +1,17 @@
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.exe
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.deps.json
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.runtimeconfig.json
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.dll
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.pdb
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\Microsoft.Windows.SDK.NET.dll
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\bin\Debug\net9.0-windows10.0.19041.0\WinRT.Runtime.dll
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.AssemblyInfoInputs.cache
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.AssemblyInfo.cs
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.csproj.CoreCompileInputs.cache
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeN.E9276908.Up2Date
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.dll
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\refint\prjRedeNeuralCSCoreNet.dll
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.pdb
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\prjRedeNeuralCSCoreNet.genruntimeconfig.cache
+D:\Documentos\Codigos\RedeNeural\prjRedeNeuralCSCoreNet\prjRedeNeuralCSCoreNet\obj\Debug\net9.0-windows10.0.19041.0\ref\prjRedeNeuralCSCoreNet.dll

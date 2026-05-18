@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e89b4169-c156-41d1-95a9-3aaff5aa136d": {
+      "ProjectGuid": "e89b4169-c156-41d1-95a9-3aaff5aa136d",
+      "DisplayName": "prjRedeNeuralCSCoreNet",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

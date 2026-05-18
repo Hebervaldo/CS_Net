@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "f29816fc-66ee-4abe-bb44-3f0c8be47ba3": {
+      "ProjectGuid": "f29816fc-66ee-4abe-bb44-3f0c8be47ba3",
+      "DisplayName": "prjConsolePDFOCRCSNet480",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Arquivos Diversos",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

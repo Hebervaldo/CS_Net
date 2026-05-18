@@ -1,0 +1,13 @@
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.csproj.AssemblyReference.cache
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\Interop.ADOX.dll
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\Interop.JRO.dll
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.csproj.ResolveComReference.cache
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\bin\Debug\prjObterDadosMBPPdfMBPI.exe.config
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\bin\Debug\prjObterDadosMBPPdfMBPI.exe
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\bin\Debug\prjObterDadosMBPPdfMBPI.pdb
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\bin\Debug\itextsharp.dll
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.csproj.CopyComplete
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.exe
+C:\Users\Usuario\source\repos\prjObterDadosMBPPdfMBPI\prjObterDadosMBPPdfMBPI\obj\Debug\prjObterDadosMBPPdfMBPI.pdb

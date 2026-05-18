@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|d:\\documentos\\codigos\\redeneural\\solucoes_rede_neural_cscorenet\\solucoes_rede_neural_cscorenet\\frmredeneural.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|solutionrelative:solucoes_rede_neural_cscorenet\\frmredeneural.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\solucoes_rede_neural_cscorenet\\frmredeneural.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|solutionrelative:solucoes_rede_neural_cscorenet\\frmredeneural.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|d:\\documentos\\codigos\\redeneural\\solucoes_rede_neural_cscorenet\\solucoes_rede_neural_cscorenet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|solutionrelative:solucoes_rede_neural_cscorenet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\solucoes_rede_neural_cscorenet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94F1DAC7-1020-455B-89D4-F24024F8B708}|Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj|solutionrelative:solucoes_rede_neural_cscorenet\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmRedeNeural.cs",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "RelativeDocumentMoniker": "Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "ToolTip": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "RelativeToolTip": "Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "ViewState": "AgIAAP4AAAAAxMzMzMwMwA0BAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:38:34.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Program.cs",
+              "RelativeDocumentMoniker": "Solucoes_Rede_Neural_CSCoreNet\\Program.cs",
+              "ToolTip": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Program.cs",
+              "RelativeToolTip": "Solucoes_Rede_Neural_CSCoreNet\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T01:38:34.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmRedeNeural.cs [Design]",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "RelativeDocumentMoniker": "Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\Programacao\\Linguagem\\CS\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmRedeNeural.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-04-21T01:38:35.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmPrincipal.cs [Design]",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmPrincipal.cs",
+              "RelativeDocumentMoniker": "Solucoes_Rede_Neural_CSCoreNet\\frmPrincipal.cs",
+              "ToolTip": "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\frmPrincipal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2025-04-21T01:38:35.55Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

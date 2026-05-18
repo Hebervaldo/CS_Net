@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|d:\\documentos\\codigos\\redeneural\\prjredeneuralcscorenet\\prjredeneuralcscorenet\\prjredeneuralcscorenet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|solutionrelative:prjredeneuralcscorenet\\prjredeneuralcscorenet.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|d:\\documentos\\codigos\\redeneural\\prjredeneuralcscorenet\\prjredeneuralcscorenet\\prjredeneuralcscorenet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|solutionrelative:prjredeneuralcscorenet\\prjredeneuralcscorenet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|d:\\documentos\\codigos\\redeneural\\prjredeneuralcscorenet\\prjredeneuralcscorenet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89B4169-C156-41D1-95A9-3AAFF5AA136D}|prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj|solutionrelative:prjredeneuralcscorenet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "prjRedeNeuralCSCoreNet",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "RelativeDocumentMoniker": "prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "ToolTip": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "RelativeToolTip": "prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-18T01:56:56.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "prjRedeNeuralCSCoreNet",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "RelativeDocumentMoniker": "prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "ToolTip": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "RelativeToolTip": "prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-18T01:56:51.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\Program.cs",
+              "RelativeDocumentMoniker": "prjRedeNeuralCSCoreNet\\Program.cs",
+              "ToolTip": "D:\\Documentos\\Codigos\\RedeNeural\\prjRedeNeuralCSCoreNet\\prjRedeNeuralCSCoreNet\\Program.cs",
+              "RelativeToolTip": "prjRedeNeuralCSCoreNet\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T01:56:43.372Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

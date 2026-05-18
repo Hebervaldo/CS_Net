@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\Usuario\source\repos\Solucoes_Rede_Neural_CSCoreNet\Solucoes_Rede_Neural_CSCoreNet\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmRedeNeural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmSubVisualizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmVisualizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
