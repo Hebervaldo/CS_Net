@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HSM.Embedded.Wireless.NetworkAssembly</name>
+    </assembly>
+    <members>
+        <member name="M:HSM.Embedded.Wireless.Network.SIM.SimProcs.Dispose">
+            <summary>Disposes current instance of the class and releases managed resources</summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.SIM.SimProcs.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.RAS">
+            <summary>
+            Class to provide access to the Win32 RAS API. 	
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.OnStatusChanged(Microsoft.WindowsCE.Forms.Message@)">
+            <summary>
+            Raises the StatusChanged event. Triggered when a WM_RASDIALEVENT has been received 
+            by the underlying MessageWindow. 
+            </summary>
+            <param name="m">a Message that containts the WM_RASDIALEVENT details</param>	
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.#ctor">
+            <summary>
+            RAS Class Constructor
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.Finalize">
+            <summary>
+            RAS Class Destructor
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.EntryExists(System.String)">
+            <summary>
+            Verifies if the given RAS Entry exists
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.Dial(System.String,System.String,System.String)">
+            <summary>
+            Attempts to establish a RAS connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.HangUp">
+            <summary>
+            Hangs up the RAS connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.GetStatus">
+            <summary>
+            Returns the Status for the current RAS connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.GetStatusDesc(HSM.Embedded.Wireless.Network.RAS.ConnState)">
+            <summary>
+            Returns the Status Description for the current RAS connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.GetError">
+            <summary>
+            Returns the Error indicator for the current RAS connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.GetErrorDesc(System.Int32)">
+            <summary>
+            Returns the Description for the given RAS error code
+            </summary>
+        </member>
+        <member name="E:HSM.Embedded.Wireless.Network.RAS.StatusChanged">
+            <summary>
+            Occurs when the RAS connection status has changed		
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Wireless.Network.RAS.RASHandle">
+            <summary>
+            Handle to the current connection. Read Only.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.RAS.RasDialParams.structPtr">
+            <summary>
+            Pointer to the UnManaged version of the RasDialParams Struct
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.#ctor">
+            <summary>
+            Basic Constructor
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.#ctor(System.String)">
+            <summary>
+            Constructor: Sets the EntryName
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.Finalize">
+            <summary>
+            Destructor: Frees up the allocated UnManaged memory
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.MarshalToUnManaged">
+            <summary>
+            Fills in the UnManaged version of the Structure
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.MarshalFromUnManaged">
+            <summary>
+            Extracts data from the Unmanaged buffer to the structure
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasDialParams.CalcStructSize">
+            <summary>
+            Calculates size of RasDialParams structure. Take into account memory alignment
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.RAS.RasConnState.structPtr">
+            <summary>
+            Pointer to the UnManaged version of the RasDialParams Struct
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasConnState.#ctor">
+            <summary>
+            Basic Constructor
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasConnState.Finalize">
+            <summary>
+            Destructor: Frees up the allocated UnManaged memory
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasConnState.MarshalToUnManaged">
+            <summary>
+            Fills in the UnManaged version of the Structure
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasConnState.MarshalFromUnManaged">
+            <summary>
+            Extracts data from the Unmanaged buffer to the struct. 			
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.RAS.RasConnState.CalcStructSize">
+            <summary>
+            Calculates size of RasConnState structure. Take into account memory alignment
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.RAS.ConnState">
+            <summary>
+            Specifies the RAS Connection State values
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.RAS.StatusChangedEventArgs">
+            <summary>
+            Provides data for the StatusChanged event of the RAS class		
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.RAS.StatusChangedEventArgs.connstate">
+            <summary>
+            Current RAS connection state
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.RAS.StatusChangedEventArgs.desc">
+            <summary>
+            Text description of current connection state
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.RAS.StatusChangedEventArgs.error">
+            <summary>
+            Error indicator. 0=No error. Other, use GetErrorDesc()
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.RAS.StatusChangedEventHandler">
+            <summary>
+            Represents the method that will handle the StatusChanged event of a RAS class   		
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.WM_Delegate">
+            <summary>
+             Delegate class use by Trapwindow to be called when a registered msg is received
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.MsgTrap">
+            <summary>
+            An internal struct to store information about a Windows Message to be trapped
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.MsgTrap.#ctor(System.Int32,HSM.Embedded.Wireless.Network.WM_Delegate)">
+            <summary>
+            Creates and Initializes a new MsgHandler structure
+            </summary>
+            <param name="m_MsgNum">Msg # to trap</param>
+            <param name="m_WM_Handler">User-defined Handler for the message</param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.MsgTrap.InvokeHandler(Microsoft.WindowsCE.Forms.Message@)">
+            <summary>
+            Invokes the associated message Handler
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.MsgTrap.sortMsg">
+            <summary>
+            Method to return IComparer Interface to sort by Msg#
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.MsgTrap.sortMsgHelper">
+            <summary>
+            Internal class to implement IComparer interface sorting by Msg# for the MsgTrap type
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.TrapWindow">
+            <summary>
+            Custom class to receive Window's Messages, and trigger associated Delegates.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.TrapWindow.WndProc(Microsoft.WindowsCE.Forms.Message@)">
+            <summary>
+            Window Procedure: Processes all Window messages looking for a registered 
+            message and calls the associated msg handler (delegate).
+            </summary>
+            <param name="m"></param>		
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.TrapWindow.AddHandler(System.Int32,HSM.Embedded.Wireless.Network.WM_Delegate)">
+            <summary>
+            Registers a new Message to the trapped and its associated handler (delegate)
+            </summary>
+            <param name="msg">Windows message number to trap</param>
+            <param name="WM_Handler">Handler to invoke. Null=Unregister</param>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.Memory">
+            <summary>
+            Provides simple memory allocation services and string-to-memory copying
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.AddAlignByte(System.Int32@,System.Int32)">
+            <summary>
+            Adds a byte count to the current size, considering memory alignment
+            </summary>		
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.AddAlignInt(System.Int32@,System.Int32)">
+            <summary>
+            Adds an integer count to a current size, considering memory alignment
+            </summary>		
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.AddAlignString(System.Int32@,System.Int32)">
+            <summary>
+            Adds a string length to a current size, considering memory alignment
+            </summary>		
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.AlignStructSize(System.Int32@)">
+            <summary>
+            Corrects the struct size considering memory alignment
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.AllocHLocal(System.Int32)">
+            <summary>
+            Allocates a block of memory using LocalAlloc
+            </summary>		
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.FreeHLocal(System.IntPtr@)">
+            <summary>
+            Frees memory allocated by AllocHLocal
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.ReAllocHLocal(System.IntPtr,System.Int32)">
+            <summary>
+            Resizes a block of memory previously allocated with AllocHLocal
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.StringToHLocalUni(System.String)">
+            <summary>
+            Copies the contents of a managed string to a new buffer in unmanaged memory
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.PumpToBuffer(System.IntPtr@,System.String,System.Int32)">
+            <summary>
+            Pushes the managed string into the unmanaged buffer, considering memory alignment
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.PumpFromBuffer(System.IntPtr@,System.String@,System.Int32)">
+            <summary>
+            Pushes the string out from Unmanaged buffer, considering memory alignment
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.Memory.PumpFromBuffer(System.IntPtr@,System.Byte[]@)">
+            <summary>
+            Copies from a unmanaged-memory buffer to a managed byte array. 
+            </summary>
+            <param name="p">memory buffer</param>
+            <param name="bytes">The managed array, which MUST have been initialized with the proper length</param>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.ConnMgr">
+            <summary>
+            Class to provide access to the Win32 ConnMgr API. 	
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.OnStatusChanged(Microsoft.WindowsCE.Forms.Message@)">
+            <summary>
+            Raises the StatusChanged event. Triggered when a ConnMgr notification has been received 
+            by the underlying MessageWindow. 
+            </summary>
+            <param name="m">a Message that contains the notification details</param>	
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.Timeout">
+            <summary>
+            Timeout for synchronous connection attempts
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.#ctor">
+            <summary>
+            Class Constructor
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.Finalize">
+            <summary>
+            Class Destructor
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.EntryExists(System.String)">
+            <summary>
+            Verifies if the given CM Entry exists
+            </summary>
+            <param name="EntryName">Name of the GPRS connectoid to be checked</param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.Connect(System.Guid,System.Boolean,HSM.Embedded.Wireless.Network.ConnMgr.ConnectionMode)">
+            <summary>
+            Attempts to establish a connection using the GUID to an existing connectoid
+            </summary>
+            <param name="destGuid">GUID of existing connectoid</param>
+            <param name="exclusive">Exclusive access of connectoid (boolean)</param>
+            <param name="mode">ConnectionMode is either Synchronous or Asynchronous</param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.Connect(System.String,HSM.Embedded.Wireless.Network.ConnMgr.ConnectionMode,System.String,System.String,System.String)">
+            <summary>
+            Attempts to create and establish a connection to a new GPRS connectoid using the specified ISP parameters
+            </summary>
+            <param name="EntryName">Name to be given to the new GPRS connectoid</param>
+            <param name="mode">ConnectionMode is either Synchronous or Asynchronous</param>
+            <param name="Username">User name provided by local ISP</param>
+            <param name="Password">Password provided by local ISP</param>
+            <param name="APN">Access Point Name provided by local ISP</param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.Connect(System.String,HSM.Embedded.Wireless.Network.ConnMgr.ConnectionMode,System.String)">
+            <summary>
+            Attempts to create and establish a connection to a new GPRS connectoid using the specified XML string
+            </summary>
+            <param name="EntryName">Name to be given to the new GPRS connectoid</param>
+            <param name="mode">ConnectionMode is either Synchronous or Asynchronous</param>
+            <param name="xmlIn">Complete XML string used to create new connectoid (refer to Connection Manager)</param>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.Disconnect">
+            <summary>
+            Delete the connection request. Will most likely cause to drop physical connection.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.GetStatus">
+            <summary>
+            Returns the Status for the current connection
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.GetStatusDesc(HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus)">
+            <summary>
+            Returns the Status Description for the current GPRS connection
+            </summary>
+        </member>
+        <member name="E:HSM.Embedded.Wireless.Network.ConnMgr.StatusChanged">
+            <summary>
+            Occurs when the connection status has changed		
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Wireless.Network.ConnMgr.ConnMgrHandle">
+            <summary>
+            Handle to the current connection. Read Only.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Wireless.Network.ConnMgr.Connected">
+            <summary>
+            Set to true when connection has been completed
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Wireless.Network.ConnMgr.Waiting">
+            Set to true when connection is in progress
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.structPtr">
+            <summary>
+            Pointer to the UnManaged version of the ConnectionInfo Struct
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.#ctor">
+            <summary>
+            Basic Constructor
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.Finalize">
+            <summary>
+            Destructor: Frees up the allocated UnManaged memory
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.MarshalToUnManaged">
+            <summary>
+            Fills in the UnManaged version of the Structure
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.MarshalFromUnManaged">
+            <summary>
+            Extracts data from the Unmanaged buffer to the structure
+            </summary>			
+        </member>
+        <member name="M:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionInfo.CalcStructSize">
+            <summary>
+            Calculates size of ConnectionInfo structure. Take into account memory alignment
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionPriority">
+            <summary>
+            Priority of the connection requested
+            </summary>    
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus">
+            <summary>
+            Describes the current status of the connection
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.Unknown">
+            <summary>
+            Unknown status
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.Connected">
+            <summary>
+            Connection is up
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.Suspended">
+            <summary>
+            Connection is suspended
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.Disconnected">
+            <summary>
+            Connection is disconnected
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.ConnectionFailed">
+            <summary>
+            Connection failed and cannot not be re-established
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.ConnectionCanceled">
+            <summary>
+            User aborted connection
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.ConnectionDisabled">
+            <summary>
+            Connection is ready to connect but disabled
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.NoPathToDestination">
+            <summary>
+            No path could be found to destination
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingForPath">
+            <summary>
+            Waiting for a path to the destination
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingForPhone">
+            <summary>
+            Voice call is in progress
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.PhoneOff">
+            <summary>
+            The phone has been turned off
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.ExclusiveConflict">
+            <summary>
+            The connection could not be established because it would multi-home an exclusive connection
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.NoResources">
+            <summary>
+            The Connection Manager failed to allocate resources to make the connection
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.ConnectionLinkedFailed">
+            <summary>
+            The user is could not be authenticated
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.AuthenticationFailed">
+            <summary>
+            Attempting to connect
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingConnection">
+            <summary>
+            Attempting to connect
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingForResource">
+            <summary>
+            Resource is in use by another connection
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingForNetwork">
+            <summary>
+            No path could be found to destination
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingDisconnection">
+            <summary>
+            Connection is being brought down
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.ConnectionStatus.WaitingConnectionAbort">
+            <summary>
+            Aborting connection attempt
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.ConnMgr.StatusChangedEventArgs">
+            <summary>
+            Provides data for the StatusChanged event of the class		
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.StatusChangedEventArgs.connstatus">
+            <summary>
+            Current connection state
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Wireless.Network.ConnMgr.StatusChangedEventArgs.desc">
+            <summary>
+            Text description of current connection status
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Wireless.Network.ConnMgr.StatusChangedEventHandler">
+            <summary>
+            Represents the method that will handle the StatusChanged event of the class   		
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HSM.Embedded.Utility.SystemNotificationAssembly</name>
+    </assembly>
+    <members>
+        <member name="T:HSM.Embedded.Utility.BatteryManager">
+            <summary>
+            Access the BatteryManager class through an instance of the SystemNotification class.
+            The BatteryManager class is not to be instantiated; it is a property of the SystemNotification class.
+            </summary>
+        </member>
+        <member name="E:HSM.Embedded.Utility.BatteryManager.BatteryChanged">
+            <summary>
+            Occurs for if the EnableBatteryNotification property is set to true.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.BatteryManager.EnableBatteryNotifications">
+            <summary>
+            Enables / Disables the notification of the battery state.
+            If value is set to true, register for the BatteryChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.BatteryManager.ACLineStatus">
+            <summary>
+            State of AC line.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.ACLineStatus.Offline">
+            <summary>
+            Device is offline (no AC power).
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.ACLineStatus.Online">
+            <summary>
+            Device is online (has AC power).
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.ACLineStatus.Unknown">
+            <summary>
+            State is unknown.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.BatteryManager.BatteryState">
+            <summary>
+            State of the battery.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.High">
+            <summary>
+            Battery charge is High.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.Low">
+            <summary>
+            Battery charge is Low.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.Critical">
+            <summary>
+            Battery charge is Critical.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.Charging">
+            <summary>
+            Battery charge is Charging.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.NoSystemBattery">
+            <summary>
+            No battery available.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.BatteryManager.BatteryState.UnknownStatus">
+            <summary>
+            Battery charge is unknown.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.BatteryManager.Battery">
+            <summary>
+            This class is used to obtain battery information.  (This class can not be instantiated; it is used as a propery of the SystemNotification class.)
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.BatteryManager.Battery.BatteryState">
+            <summary>
+            Gets the state of the battery.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.BatteryManager.Battery.BatteryLifePercentage">
+            <summary>
+            Gets the battery life percentage.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.BatteryManager.BatteryChangedEventHandler">
+            <summary>
+            BatteryChanged event delegate for passing BatteryChangedEventArgs class.
+            </summary>
+            <param name="sender">Source object</param>
+            <param name="e">BatteryChangedEventArgs class</param>
+        </member>
+        <member name="T:HSM.Embedded.Utility.BatteryManager.BatteryChangedEventArgs">
+            <summary>
+            The battery data returned byt he BatteryChanged event.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.BatteryManager.BatteryChangedEventArgs.MainBattery">
+            <summary>
+            Gets the state of the battery.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.BatteryManager.BatteryChangedEventArgs.AcLineStatus">
+            <summary>
+            Gets the AC line state.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.StateManager">
+            <summary>
+            Access the StateManager class through an instance of the SystemNotification class.
+            The StateManager class is not to be instantiated; it is a property of the SystemNotification class.
+            </summary>
+        </member>
+        <member name="E:HSM.Embedded.Utility.StateManager.StateChanged">
+            <summary>
+            Occurs for any of the EnableXXX properties that are set to true.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableOnTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition On state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableOffTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Off state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableCriticalTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Critical state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableBootTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Boot state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableIdleTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Idle state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableSuspendTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Suspend state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableUnattendedTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Unatteded state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableResetTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition Reset state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableUserIdleTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition UserIdle state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableBackLightTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition BackLight state. 
+            This will notify for both BackLightOn and BackLightOff events.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnablePasswordProtectedTransitionChange">
+            <summary>
+            Enables / Disables the notification of the transition PasswordProtected state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.EnableResumeChange">
+            <summary>
+            Enables / Disables the notification of the transition Resume state.
+            If value is set to true, register for the StateChanged
+            event to receive notifications.
+            </summary>
+            <remarks>
+            It is recommended to use this event to be notified when resuming from a suspended state.
+            </remarks>
+        </member>
+        <member name="T:HSM.Embedded.Utility.StateManager.StateChangeEventHandler">
+            <summary>
+            The StateChanged event delegate for passing the StateChangedEventArgs class.
+            </summary>
+            <param name="sender">Source object</param>
+            <param name="e">StateChangedEventArgs class</param>
+        </member>
+        <member name="T:HSM.Embedded.Utility.StateManager.StateChangedEventArgs">
+            <summary>
+            The State changed data returned by the StateChanged event.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.StateManager.StateChangedEventArgs.CurrentState">
+            <summary>
+            Gets the current power state. 
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.SystemNotification">
+            <summary>
+            The SystemNotification class is used to obtain power state, keyboard state and battery state notifications.  This call contains static methods to gets some data or
+            this class can be instantiated and run in the background for constant notificaitons.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.BatteryManager">
+            <summary>Manages all of the battery event(s)</summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.StateManager">
+            <summary>Manages all of the state (transitions) event(s)</summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.KeyboardManager">
+            <summary>Manages all of the keyboard event(s)</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HSM.Embedded.Utility.SystemNotification.WaitEventSync(HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT,System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:HSM.Embedded.Utility.SystemNotification.RegisterEventListener(HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT,System.UInt32,HSM.Embedded.Utility.SystemNotification.EventCallBack)" -->
+        <!-- Badly formed XML comment ignored for member "M:HSM.Embedded.Utility.SystemNotification.UnregisterEventListener(System.IntPtr)" -->
+        <member name="M:HSM.Embedded.Utility.SystemNotification.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.Finalize">
+            <summary>
+            Finalizer
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.Dispose">
+            <summary>
+            Releases all SystemNotifications resources.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.Dispose(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.Start">
+            <summary>Starts the notification thread.</summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.Stop">
+            <summary>Stops the notification thread.</summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.SuspendDevice">
+            <summary>
+            Set device to a suspended state.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.GetACLineStatus">
+            <summary>
+            Get the status of the AC Power.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.GetBatteryLife">
+            <summary>
+            Get the Battery Life value.
+            </summary>
+            <returns>
+            The percentage of the battery life. 100 = fully charged.
+            </returns>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.EnablePowerKey(System.Boolean)">
+            <summary>
+            Enable/Disable the Power Key
+            </summary>
+            <param name="enable">
+            Specifies whether to lockout(true) or enable(false) the power key.
+            </param>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.GetNumlockKeyState">
+            <summary>
+            Get the state of the Numlock key.
+            </summary>
+            <returns>
+            The state of the Numlock key.
+            </returns>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.SetNumlockKeyState(System.Boolean)">
+            <summary>
+            Set the state of the Numlock key.
+            </summary>
+            <param name="state">
+            The state to be applied to the Numlock key.
+            </param>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.GetCapslockKeyState">
+            <summary>
+            Get the state of the Capslock key.
+            </summary>
+            <returns>
+            The state of the Capslock key.
+            </returns>
+        </member>
+        <member name="M:HSM.Embedded.Utility.SystemNotification.SetCapslockKeyState(System.Boolean)">
+            <summary>
+            Set the state of the Capslock key.
+            </summary>
+            <param name="state">
+            The state to be applied to the Capslock key.
+            </param>
+        </member>
+        <member name="E:HSM.Embedded.Utility.SystemNotification.NotificationError">
+            <summary>Occurs when an exception is raised on an underlying thread.</summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerBroadcastTypes.Transition">
+            <summary> Broadcast specifying system power state transition </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerBroadcastTypes.Resume">
+            <summary> Broadcast notifying a resume, specifies previous state </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerBroadcastTypes.PowerStatusChange">
+            <summary> Power supply switched to/from AC/DC </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerBroadcastTypes.PowerInfoChange">
+            <summary> Some system power status field has changed </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.SystemNotification.PowerState">
+            <summary>
+            Possible power states are or transitions.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.On">
+            <summary>
+            Device is turned on.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Off">
+            <summary>
+            Device is turned off.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Critical">
+            <summary>
+            Device is in a critical off state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Boot">
+            <summary>
+            Device is in a boot state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Idle">
+            <summary>
+            Device is in an idle state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Suspend">
+            <summary>
+            Device is in a suspended state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Unattended">
+            <summary>
+            Device is in an un-attended state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Reset">
+            <summary>
+            Device is in a reset state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.UserIdle">
+            <summary>
+            Device is in a user-idle state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.BackLightOn">
+            <summary>
+            Device has turned on the backlight.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.PasswordProtected">
+            <summary>
+            Device is in a password protected state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.Resume">
+            <summary>
+            Device is in a resume state.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.SystemNotification.PowerState.BackLightOff">
+            <summary>
+            Device has turned the backlight off.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_LCD_BACKLIGHT_ON" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_LCD_BACKLIGHT_OFF" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_BATT_DATA_AVAILABLE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_EXTERNAL_POWER_APPLIED" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_EXTERNAL_POWER_REMOVED" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_NUM_LOCK_ON" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_NUM_LOCK_OFF" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_CAPS_LOCK_ON" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_CAPS_LOCK_OFF" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_POWER_KEY_LOCKOUT" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_POWER_KEY_NOTIFY" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_ENTER_TE_MODE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_EXIT_TE_MODE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_TE_MODE_ACK" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_USB_CONNECTED" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_USB_DISCONNECTED" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_RTC_RESET" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_BATT_DOOR_REMOVED" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_BATT_LOW_MAIN" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_UNLOCK_INPUT" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_RED_KEY_SHIT_ACTIVE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_RED_KEY_SHIT_INACTIVE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_BLUE_KEY_SHIT_ACTIVE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_BLUE_KEY_SHIT_INACTIVE" -->
+        <!-- Badly formed XML comment ignored for member "F:HSM.Embedded.Utility.SystemNotification.SYS_NAMED_EVENT.SYS_FLASH_LIGHT" -->
+        <member name="T:HSM.Embedded.Utility.SystemNotification.NotificationErrorHandler">
+            <summary>
+            Notification error event delegate for passing the Exception class.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:HSM.Embedded.Utility.SystemNotification.EventCallBack">
+            <summary>
+            Event Callback 
+            </summary>
+            <param name="pdwEventType"></param>
+            <param name="pdwResult"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HSM.Embedded.Utility.KeyBoardManager">
+            <summary>
+            Access the KeyBoardManager class through an instance of the SystemNotification class.
+            The KeyBoardManager class is not to be instantiated; it is a property of the SystemNotification class.
+            </summary>
+        </member>
+        <member name="E:HSM.Embedded.Utility.KeyBoardManager.KeyboardStateChanged">
+            <summary>
+            Occurs when any of the EnableXXX properties are set to true.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.KeyBoardManager.EnablePowerKeyNotification">
+            <summary>
+            Enables / Disables the PowerKey and notification of the transition PowerKey state. 
+            If value is set to true, register for the KeyboardStateChanged
+            event to receive notifications.
+            </summary>
+            <remarks>By registering for this notification, the PowerKey is disabled
+            until the notification thread is stopped.</remarks>
+        </member>
+        <member name="P:HSM.Embedded.Utility.KeyBoardManager.EnableNumLockNotification">
+            <summary>
+            Enables / Disables the notification of the transition NumLock state. 
+            This will notify for both NumLockOn and NumLockOff events.
+            If value is set to true, register for the KeyboardStateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.KeyBoardManager.EnableCapLockNotification">
+            <summary>
+            Enables / Disables the notification of the transition CapLock state. 
+            This will notify for both CapLockOn and CapLockOff events.
+            If value is set to true, register for the KeyboardStateChanged
+            event to receive notifications.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.KeyBoardManager.KeyboardState">
+            <summary>
+            State of the keyboard keys.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.KeyBoardManager.KeyboardState.PowerKeyPressed">
+            <summary>
+            The power key has been activated.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.KeyBoardManager.KeyboardState.CapLockOn">
+            <summary>
+            The cap lock key has been activated.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.KeyBoardManager.KeyboardState.CapLockOff">
+            <summary>
+            The Cap lock key has been de-activated.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.KeyBoardManager.KeyboardState.NumLockOn">
+            <summary>
+            The number lock key has be activated.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Utility.KeyBoardManager.KeyboardState.NumLockOff">
+            <summary>
+            The number lock key has be de-activated.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Utility.KeyBoardManager.KeyboardStateChangedEventHandler">
+            <summary>
+            The KeyboardStateChanged event delegate for passing the KeyboardStateChangedEventArgs class.
+            </summary>
+            <param name="sender">Source object</param>
+            <param name="e">KeyboardStateChangedEventArgs class</param>
+        </member>
+        <member name="T:HSM.Embedded.Utility.KeyBoardManager.KeyboardStateChangedEventArgs">
+            <summary>
+            The keyboard state data returned by the KeyboardStateChanged event.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Utility.KeyBoardManager.KeyboardStateChangedEventArgs.CurrentKeyState">
+            <summary>
+            Gets the current key state.
+            </summary>
+        </member>
+    </members>
+</doc>

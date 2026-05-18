@@ -1,0 +1,739 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HSM.Embedded.Imaging.CameraAssembly</name>
+    </assembly>
+    <members>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Dispose">
+            <summary>
+            Releases all of the CameraAssembly's resources.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Finalize">
+            <summary>
+            Finalizer
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Dispose(System.Boolean)">
+             <summary>
+            
+             </summary>
+             <param name="Disposing"></param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.OnCameraEvent(HSM.Embedded.Camera.CameraAssembly.CameraEventArgs)">
+            <summary>
+            Event method used to raise the Camera event by invoking the delegate
+            </summary>
+            <param name="e">CameraEventArgs class</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Connect(System.IntPtr,System.String,System.String)">
+            <summary>
+            This method initializes the camera functionality and sets the camera properties
+            to its default values.  It executes asynchronously.
+            </summary>
+            <param name="handle">The window handle for displaying the preview image</param>
+            <param name="file">The name of the file containing camera profiles. Set to null if not used.</param>
+            <param name="profile">The profile to use for capturing  images. Set to null if not used.</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Connect(HSM.Embedded.Camera.SensorType,System.IntPtr,System.String,System.String)">
+            <summary>
+            This method selects and initializes the specified imaging sensor with the properties
+            in the designated profile.  It executes asynchronously.
+            </summary>
+            <param name="type">The imaging sensor to be used</param>
+            <param name="handle">The window handle for displaying the preview image</param>
+            <param name="file">The name of the file containing the profiles. Set to null if not used.</param>
+            <param name="profile">The profile to use for capturing  images. Set to null if not used.</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.Disconnect">
+            <summary>
+            This method will disconnect from the driver.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetSelectedSensor(System.Int32@)">
+            <summary>
+            This method gets the imaging sensor type currently selected.
+            </summary>
+            <param name="sensor">The imaging sensor type in use</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.StartPreview">
+            <summary>
+            This method will start the camera, displaying the preview image.  The camera
+            must be previewing images to snap a picture.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.StopPreview">
+            <summary>
+            This method will terminate the previewing of images.
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetCameraID(System.Int64@)">
+            <summary>
+            Get the ID of the camera
+            This method will return the ID of the camera.
+            </summary>
+            <param name="count"></param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetCameraState(HSM.Embedded.Camera.State@)">
+            <summary>
+            Get the state of the camera
+            This method will return the state of the camera.
+            </summary>
+            <param name="state">The current state</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.SnapPicture(System.String,HSM.Embedded.Camera.JPGQuality)">
+            <summary>
+            Snap a picture at the configured resolution and save it to the
+            desired file name. The name of the file must include
+            a supported file type extension, i.e .BMP, .JPG, .PNG, or .TIF. The JpgQuality 
+            value applies only to the JPG and TIF formats.
+            The function executes synchronously.
+            </summary>
+            <param name="filename">The name of the file to store the picture. If null is
+            specified, no image will be saved.</param>
+            <param name="level">For JPG images the desired quality level: low, med, high</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HSM.Embedded.Camera.CameraAssembly.SnapPictureWithText(System.String,HSM.Embedded.Camera.JPGQuality,System.String,HSM.Embedded.Camera.TextOverlayLocation,System.Drawing.Color,System.Drawing.Font)" -->
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetPropertyRange(HSM.Embedded.Camera.CameraProperty,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            This method is used to return the range of values for the specified property.
+            </summary>
+            <param name="prop">The property </param>
+            <param name="min">The minimum valid value for the property</param>
+            <param name="max">The maximum valid value for the property</param>
+            <param name="step">The step resolution for the property</param>
+            <param name="def">The default value for the property</param>
+            <param name="flags">The flag indicating maual or automatic control of the parameter</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetProperty(HSM.Embedded.Camera.CameraProperty,System.Int32@,System.Int32@)">
+            <summary>
+            This method is used to return the current value of the specified camera property.
+            </summary>
+            <param name="prop">Camera property</param>
+            <param name="val">Value to be returned</param>
+            <param name="flags">Property type flag</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.SetProperty(HSM.Embedded.Camera.CameraProperty,System.Int32,HSM.Embedded.Camera.PropertyMode)">
+            <summary>
+            This method is used to set the value of the specified camera property.
+            </summary>
+            <param name="prop">Camera property</param>
+            <param name="val">Values</param>
+            <param name="flags">Property type flag</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetResolutionDimensions(System.Int32@,System.Int32@,System.Int32)">
+            <summary>
+            This method is used to retrieve the height and width,
+            in pixels, of the still image for the specified resolution index.
+            </summary>
+            <param name="height">Height of the image</param>
+            <param name="width">Width of the image</param>
+            <param name="resolutionIndex">Index of desired resolution</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.SetResolution(System.UInt32)">
+            <summary>
+            This method is used to set the still image resolution.
+            </summary>
+            <param name="resolutionIndex">Resolution index</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetResolutionCount(System.Int64@)">
+            <summary>
+            The method is used to retrieve the number of image resolutions
+            supported by the camera.
+            </summary>
+            <param name="count">Number of supported resolutions</param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.GetDLLRevision(System.Text.StringBuilder@)">
+            <summary>
+            Get the revision string ID of the installed camera
+            </summary>
+            <param name="sRev"></param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.RegisterPreviewCallback(HSM.Embedded.Camera.CameraAssembly.PreviewCallback)">
+            <summary>
+            This method sets the callback method to process preview images.
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.RegisterStillImageCallback(HSM.Embedded.Camera.CameraAssembly.StillImageCallback)">
+            <summary>
+            This method sets the callback method to process still images.
+            </summary>
+            <param name="callback"></param>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.SetEventsWindow(System.IntPtr)">
+            <summary>
+            This method sets the window to handle events.
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="E:HSM.Embedded.Camera.CameraAssembly.CameraEvent">
+            <summary>
+            Public instance of the Camera Event.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.RGBColor">
+            <summary>
+            Color class using red/green/blue components
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAssembly.RGBColor.r">
+            <summary>
+            Shade of red component(0-255)
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAssembly.RGBColor.g">
+            <summary>
+            Shade of green component(0-255)
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAssembly.RGBColor.b">
+            <summary>
+            Shade of blue component(0-255)
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraAssembly.RGBColor.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Constructor for RGBColor
+            </summary>
+            <param name="red">Shade of red component(0-255)</param>
+            <param name="green">Shade of green component(0-255)</param>
+            <param name="blue">Shade of blue component(0-255)</param>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.CameraTaskCodes">
+            <summary>
+            Codes used to identify the completion of an asynchronous task
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAssembly.CameraTaskCodes.ImageCaptureComplete">
+            <summary>
+            Exposure Method.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.PreviewCallback">
+            <summary>
+            Delegate for preview callback.
+            </summary>
+            <param name="pData">pointer to frame data</param>
+            <param name="len">length of frame data in bytes</param>
+            <param name="height">height of image in pixels</param>
+            <param name="width">width of image in pixels</param>
+            <param name="stride">number of bytes in each row, including extra bytes to extend the row to a multiple of 4 bytes</param>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.StillImageCallback">
+            <summary>
+            Delegate for still image callback.
+            </summary>
+            <param name="pData">pointer to frame data</param>
+            <param name="len">length of frame data in bytes</param>
+            <param name="height">height of image in pixels</param>
+            <param name="width">width of image in pixels</param>
+            <param name="stride">number of bytes in each row, including extra bytes to extend the row to a multiple of 4 bytes</param>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.CameraEventHandler">
+            <summary>
+            Camera event delegate that handles the CameraEventArgs.
+            </summary>
+            <param name="sender">Sender source.</param>
+            <param name="e">CameraEventArgs class.</param>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAssembly.CameraEventArgs">
+            <summary>
+            The CameraEventArgs class defines the data being passed to the camera event.
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Camera.CameraAssembly.CameraEventArgs.TaskCode">
+            <summary>
+            Returns the Camera Event Task Code
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraAPIResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.Success">
+            <summary>
+            Successful completion
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrNotConnected">
+            <summary>
+            Camera not initialized
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrDriver">
+            <summary>
+            Error communicating with camera
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrParameter">
+            <summary>
+            Function parameter(s) was invalid
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrUnsupported">
+            <summary>
+            Function is not supported
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrLoadEXMFile">
+            <summary>
+            Error loading EXM file
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrProfile">
+            <summary>
+            Error processing specified EXM section
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrMemory">
+            <summary>
+            Insufficient or invalid memory
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrNoImage">
+            <summary>
+            No valid image available
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrNoResponse">
+            <summary>
+            No response from engine
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraAPIResult.ErrGeneralFault">
+            <summary>
+            General system error occurred
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.SensorType">
+            <summary>
+            Defines the imaging sensor type in use. 
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.SensorType.Camera">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.SensorType.Imager">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.State">
+            <summary>
+            Defines the state of the imaging sensor.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.ShutDown">
+            <summary>
+            Not initialized.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.Initialized">
+            <summary>
+            Initialized but not active.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.Stopped">
+            <summary>
+            Active but stopped.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.Previewing">
+            <summary>
+            Streaming preview images.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.Paused">
+            <summary>
+            Previewing is paused.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.State.Capturing">
+            <summary>
+            Capturing a still image.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraProperty">
+            <summary>
+            The list of camera properties
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Brightness">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Contrast">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Saturation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Sharpness">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Gamma">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.ColorEnable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.WhiteBalance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Zoom">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusMode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Illumination">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusStep">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusMax">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusFixed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusPoint">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.FocusWindow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.CameraProperty.Aimer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.PropertyMode">
+            <summary>
+            The property mode flag indicates whether the property value is be 
+            programatically controlled or automatically at the driver level.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.PropertyMode.Auto">
+            <summary>
+            Property automatically controlled at the camera driver level
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.PropertyMode.Manual">
+            <summary>
+            Property can be manually contolled
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.ExposureSetting">
+            <summary>
+            Exposure setting is used for adjusting the imager. 
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpMode">
+            <summary>
+            Exposure mode
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpMethod">
+            <summary>
+            Exposure method
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpTgtValue">
+            <summary>
+            Exposure target value
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpTgtPercentile">
+            <summary>
+            Exposure target percentile
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpTgtAcceptGap">
+            <summary>
+            Exposure target accept gap
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpMaxValue">
+            <summary>
+            Maximum exposure
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpMaxGain">
+            <summary>
+            Maximum gain
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpInitValue">
+            <summary>
+            Initial exposure value (unsupported)
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpInitGain">
+            <summary>
+            Initial exposure gain (unsupported)
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpFrameRate">
+            <summary>
+            Frame rate (unsupported)
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpConformImage">
+            <summary>
+            Conform enable
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpConformTries">
+            <summary>
+            Conform attempts
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpSpecExclusion">
+            <summary>
+            Specular exclusion
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpSpecSat">
+            <summary>
+            Specular saturation
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpSpecLimit">
+            <summary>
+            Specular limit
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpFixedValue">
+            <summary>
+            Fixed exposure value
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpFixedGain">
+            <summary>
+            Fixed gain
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ExposureSetting.camExpFixedFrameRate">
+            <summary>
+            Fixed frame rate
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.FocusMode">
+            <summary>
+            The focus mode specifies how focus is to be achieved.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.FocusMode.None">
+            <summary>
+            No focus
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.FocusMode.Auto">
+            <summary>
+            Continuously focus in preview mode within 
+            the min and max focus range using the increment 
+            specified by the focus step property.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.FocusMode.Trigger">
+            <summary>
+            When the picture is snapped, auto focus within 
+            the min and max focus range using the increment 
+            specified by the focus step property.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.FocusMode.Fixed">
+            <summary>
+            Set focus to specified fixed focus property value.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.JPGQuality">
+            <summary>
+            JPG image quality levels.  This also applies to TIF images.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.JPGQuality.Low">
+            <summary>
+            Low quality: high amount of compression for JPG, large stroke widths and considerable background noise for TIF
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.JPGQuality.Medium">
+            <summary>
+            Medium quality: moderate compression for JPG, medium stroke widths and moderate background noise for TIF
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.JPGQuality.High">
+            <summary>
+            High quality: low amount of compression for JPG, thin stroke widths and minimal background noise for TIF
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.TextOverlayLocation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.UpperLeft">
+            <summary>
+            Overlay text in the upper-left corner
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.UpperCenter">
+            <summary>
+            Overlay text at the top horizontally centered
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.UpperRight">
+            <summary>
+            Overlay text in the upper-right corner
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.LowerLeft">
+            <summary>
+            Overlay text in the lower-left corner
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.LowerCenter">
+            <summary>
+            Overlay text at the bottom horizontally centered
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.LowerRight">
+            <summary>
+            Overlay text in the lower-right corner
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.CenterLeft">
+            <summary>
+            Overlay text to the left vertically centered
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.CenterCenter">
+            <summary>
+            Overlay text horizontally and vertically centered
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.TextOverlayLocation.CenterRight">
+            <summary>
+            Overlay text to the right vertically centered
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.ColorSpace">
+            <summary>
+            Colorspace format of image data.
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ColorSpace.Unknown">
+            <summary>
+            Undefined or not supported
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ColorSpace.Grayscale8">
+            <summary>
+            8-bit grayscale
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ColorSpace.YUY2">
+            <summary>
+            8-bits Y first pixel, 8 bits U for pixel pair, 8 bits Y second pixel, 8 bits V for pixel pair
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ColorSpace.RGB555">
+            <summary>
+            most significant bit unused, 5-bit R, 5-bit G, 5-bit B
+            </summary>
+        </member>
+        <member name="F:HSM.Embedded.Camera.ColorSpace.RGB565">
+            <summary>
+            Red 5 bits, Green 6 bits, Blue 5 bits
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.TextOverlayOutlineColor">
+            <summary>
+            Contrasting outline colors may be used to improve legibility of overlay text.
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.TextOverlayBackgroundColor">
+            <summary>
+            Background colors may be used for overlay text to provide consistent contrast at the expense of obscuring the underlying image. 
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraOps">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HSM.Embedded.Camera.CameraException">
+            <summary>
+            The CameraException class exposes camera specific exceptions.  
+            </summary>
+        </member>
+        <member name="M:HSM.Embedded.Camera.CameraException.ToString(HSM.Embedded.Camera.CameraAPIResult)">
+            <summary>
+            Converts camera exception code to string
+            </summary>
+            <param name="camResult"></param>
+            <returns></returns>
+        </member>
+        <member name="P:HSM.Embedded.Camera.CameraException.resultCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HSM.Embedded.Camera.CameraException.Message">
+            <summary>
+            Returns current camera exception message.
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

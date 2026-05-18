@@ -1,0 +1,2256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="mtdGerarNumeroIdentificacao">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdGerarNumeroIdentificacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdGerarNumeroIdentificacaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroIdentificacao">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterNumeroIdentificacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroIdentificacaoResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaBensEletronorteMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaBensEletronorteMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaCentroCustoMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaCentroCustoMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaEmpregadosMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaEmpregadosMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaInventarioBensMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorTabelaInventarioBensMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getTabelaBensEletronorteMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Passo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaBensEletronorteMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaBensEletronorteMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaCentroCustoMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Passo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaCentroCustoMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaCentroCustoMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaEmpregadosMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Passo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaEmpregadosMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaEmpregadosMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaInventarioBensMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Passo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaInventarioBensMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaInventarioBensMobileResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaCentroCusto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaCentroCustoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaCentroCustoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaBensEletronorte">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaBensEletronorteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaBensEletronorteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaEmpregados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaEmpregadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaEmpregadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getTabelaInventarioBensResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setTabelaInventarioBensResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="prpTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="prpTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="prpTabelaInventarioBensResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdUploadArquivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="f" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeArquivo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdUploadArquivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdUploadArquivoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaAtual">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaAtualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterDataTempoSistemaAtualResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaUtc">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaUtcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterDataTempoSistemaUtcResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tabela" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoSelecionador" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoTotalResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tabela" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoSelecionador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoSelecionador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoAjustadorDadosResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="linha" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="linha" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroColunas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tabela" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoSelecionador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroColunasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroColunasResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tabela" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CampoSelecionador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Dado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroLinhasResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroColunasAjustadorDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroColunasAjustadorDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroColunasAjustadorDadosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhasAjustadorDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhasAjustadorDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroLinhasAjustadorDadosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhasAjustadorDadosTabela">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AjustadorDados">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="Tabela" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroLinhasAjustadorDadosTabelaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroLinhasAjustadorDadosTabelaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTestarConexaoAbertaBancoDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTestarConexaoAbertaBancoDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdTestarConexaoAbertaBancoDadosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTestarExecucaoComandoBancoDados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BancoDados" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tabela" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdTestarExecucaoComandoBancoDadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdTestarExecucaoComandoBancoDadosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarConfiguracoes">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarConfiguracoesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdIniciarCriacaoTabelas">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdIniciarCriacaoTabelasResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterLinhaTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterLinhaTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterLinhaTabelaInventarioBensResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterLinhaTotalTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterLinhaTotalTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterLinhaTotalTabelaInventarioBensResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterLinhaAcumuladoTotalTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterLinhaAcumuladoTotalTabelaInventarioBensResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterLinhaAcumuladoTotalTabelaInventarioBensResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensInseridos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensInseridosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroItensInseridosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensAtualizados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensAtualizadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroItensAtualizadosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensInalterados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterNumeroItensInalteradosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterNumeroItensInalteradosResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarGerarProximoNumeroCodigoOtimizado">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdResetarGerarProximoNumeroCodigoOtimizadoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdManterCanalAberto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdManterCanalAbertoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdManterCanalAbertoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdFecharCanal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdFecharCanalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdFecharTodosCanais">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdFecharTodosCanaisResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaBensEletronorteMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaBensEletronorteMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaCentroCustoMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaCentroCustoMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaEmpregadosMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaEmpregadosMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaInventarioBensMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdForcarParadagetTabelaInventarioBensMobileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdForcarParadasetTabelaInventarioBens">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroIdentificacao" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdForcarParadasetTabelaInventarioBensResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mtdGerarNumeroIdentificacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdGerarNumeroIdentificacao" />
+  </wsdl:message>
+  <wsdl:message name="mtdGerarNumeroIdentificacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdGerarNumeroIdentificacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroIdentificacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroIdentificacao" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroIdentificacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroIdentificacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaBensEletronorteMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaBensEletronorteMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaBensEletronorteMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaBensEletronorteMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaCentroCustoMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaCentroCustoMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaCentroCustoMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaCentroCustoMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaEmpregadosMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaEmpregadosMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaEmpregadosMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaEmpregadosMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaInventarioBensMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaInventarioBensMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorTabelaInventarioBensMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorTabelaInventarioBensMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaBensEletronorteMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaBensEletronorteMobile" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaBensEletronorteMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaBensEletronorteMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaCentroCustoMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaCentroCustoMobile" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaCentroCustoMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaCentroCustoMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaEmpregadosMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaEmpregadosMobile" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaEmpregadosMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaEmpregadosMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaInventarioBensMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaInventarioBensMobile" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaInventarioBensMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaInventarioBensMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaCentroCustoSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaCentroCusto" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaCentroCustoSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaCentroCustoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaBensEletronorteSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaBensEletronorte" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaBensEletronorteSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaBensEletronorteResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaEmpregadosSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaEmpregados" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaEmpregadosSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaEmpregadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:getTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="getTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:getTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="setTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:setTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="setTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:setTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="prpTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:prpTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="prpTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:prpTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdUploadArquivoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdUploadArquivo" />
+  </wsdl:message>
+  <wsdl:message name="mtdUploadArquivoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdUploadArquivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaAtualSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaAtual" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaAtualSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaAtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaUtcSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaUtc" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaUtcSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaUtcResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTotal" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamento" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDados" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosLinha" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha" />
+  </wsdl:message>
+  <wsdl:message name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroColunasSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroColunas" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroColunasSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroColunasResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhas" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhasResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroColunasAjustadorDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroColunasAjustadorDados" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroColunasAjustadorDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroColunasAjustadorDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasAjustadorDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhasAjustadorDados" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasAjustadorDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhasAjustadorDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasAjustadorDadosTabelaSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhasAjustadorDadosTabela" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroLinhasAjustadorDadosTabelaSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroLinhasAjustadorDadosTabelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdTestarConexaoAbertaBancoDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdTestarConexaoAbertaBancoDados" />
+  </wsdl:message>
+  <wsdl:message name="mtdTestarConexaoAbertaBancoDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdTestarConexaoAbertaBancoDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdTestarExecucaoComandoBancoDadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdTestarExecucaoComandoBancoDados" />
+  </wsdl:message>
+  <wsdl:message name="mtdTestarExecucaoComandoBancoDadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdTestarExecucaoComandoBancoDadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarConfiguracoesSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarConfiguracoes" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarConfiguracoesSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarConfiguracoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdIniciarCriacaoTabelasSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdIniciarCriacaoTabelas" />
+  </wsdl:message>
+  <wsdl:message name="mtdIniciarCriacaoTabelasSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdIniciarCriacaoTabelasResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaTotalTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaTotalTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaTotalTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaTotalTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaAcumuladoTotalTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaAcumuladoTotalTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterLinhaAcumuladoTotalTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterLinhaAcumuladoTotalTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensInseridosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensInseridos" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensInseridosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensInseridosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensAtualizadosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensAtualizados" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensAtualizadosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensAtualizadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensInalteradosSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensInalterados" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterNumeroItensInalteradosSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterNumeroItensInalteradosResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarGerarProximoNumeroCodigoOtimizadoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdResetarGerarProximoNumeroCodigoOtimizado" />
+  </wsdl:message>
+  <wsdl:message name="mtdResetarGerarProximoNumeroCodigoOtimizadoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdResetarGerarProximoNumeroCodigoOtimizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdManterCanalAbertoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdManterCanalAberto" />
+  </wsdl:message>
+  <wsdl:message name="mtdManterCanalAbertoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdManterCanalAbertoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdFecharCanalSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdFecharCanal" />
+  </wsdl:message>
+  <wsdl:message name="mtdFecharCanalSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdFecharCanalResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdFecharTodosCanaisSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdFecharTodosCanais" />
+  </wsdl:message>
+  <wsdl:message name="mtdFecharTodosCanaisSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdFecharTodosCanaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaBensEletronorteMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaBensEletronorteMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaBensEletronorteMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaBensEletronorteMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaCentroCustoMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaCentroCustoMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaCentroCustoMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaCentroCustoMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaEmpregadosMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaEmpregadosMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaEmpregadosMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaEmpregadosMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaInventarioBensMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaInventarioBensMobile" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadagetTabelaInventarioBensMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadagetTabelaInventarioBensMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadasetTabelaInventarioBensSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadasetTabelaInventarioBens" />
+  </wsdl:message>
+  <wsdl:message name="mtdForcarParadasetTabelaInventarioBensSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdForcarParadasetTabelaInventarioBensResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServicoBancoDadosSoap">
+    <wsdl:operation name="mtdGerarNumeroIdentificacao">
+      <wsdl:input message="tns:mtdGerarNumeroIdentificacaoSoapIn" />
+      <wsdl:output message="tns:mtdGerarNumeroIdentificacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroIdentificacao">
+      <wsdl:input message="tns:mtdObterNumeroIdentificacaoSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroIdentificacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaBensEletronorteMobile">
+      <wsdl:input message="tns:mtdResetarContadorTabelaBensEletronorteMobileSoapIn" />
+      <wsdl:output message="tns:mtdResetarContadorTabelaBensEletronorteMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaCentroCustoMobile">
+      <wsdl:input message="tns:mtdResetarContadorTabelaCentroCustoMobileSoapIn" />
+      <wsdl:output message="tns:mtdResetarContadorTabelaCentroCustoMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaEmpregadosMobile">
+      <wsdl:input message="tns:mtdResetarContadorTabelaEmpregadosMobileSoapIn" />
+      <wsdl:output message="tns:mtdResetarContadorTabelaEmpregadosMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaInventarioBensMobile">
+      <wsdl:input message="tns:mtdResetarContadorTabelaInventarioBensMobileSoapIn" />
+      <wsdl:output message="tns:mtdResetarContadorTabelaInventarioBensMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorteMobile">
+      <wsdl:input message="tns:getTabelaBensEletronorteMobileSoapIn" />
+      <wsdl:output message="tns:getTabelaBensEletronorteMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCustoMobile">
+      <wsdl:input message="tns:getTabelaCentroCustoMobileSoapIn" />
+      <wsdl:output message="tns:getTabelaCentroCustoMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregadosMobile">
+      <wsdl:input message="tns:getTabelaEmpregadosMobileSoapIn" />
+      <wsdl:output message="tns:getTabelaEmpregadosMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBensMobile">
+      <wsdl:input message="tns:getTabelaInventarioBensMobileSoapIn" />
+      <wsdl:output message="tns:getTabelaInventarioBensMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCusto">
+      <wsdl:input message="tns:getTabelaCentroCustoSoapIn" />
+      <wsdl:output message="tns:getTabelaCentroCustoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorte">
+      <wsdl:input message="tns:getTabelaBensEletronorteSoapIn" />
+      <wsdl:output message="tns:getTabelaBensEletronorteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregados">
+      <wsdl:input message="tns:getTabelaEmpregadosSoapIn" />
+      <wsdl:output message="tns:getTabelaEmpregadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBens">
+      <wsdl:input message="tns:getTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:getTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setTabelaInventarioBens">
+      <wsdl:input message="tns:setTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:setTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="prpTabelaInventarioBens">
+      <wsdl:input message="tns:prpTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:prpTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdUploadArquivo">
+      <wsdl:input message="tns:mtdUploadArquivoSoapIn" />
+      <wsdl:output message="tns:mtdUploadArquivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <wsdl:input message="tns:mtdObterDataTempoSistemaAtualSoapIn" />
+      <wsdl:output message="tns:mtdObterDataTempoSistemaAtualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <wsdl:input message="tns:mtdObterDataTempoSistemaUtcSoapIn" />
+      <wsdl:output message="tns:mtdObterDataTempoSistemaUtcSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTotal">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoTotalSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamento">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBens">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDados">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinha">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosLinhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha">
+      <wsdl:input message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaSoapIn" />
+      <wsdl:output message="tns:mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunas">
+      <wsdl:input message="tns:mtdObterNumeroColunasSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroColunasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhas">
+      <wsdl:input message="tns:mtdObterNumeroLinhasSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroLinhasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunasAjustadorDados">
+      <wsdl:input message="tns:mtdObterNumeroColunasAjustadorDadosSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroColunasAjustadorDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDados">
+      <wsdl:input message="tns:mtdObterNumeroLinhasAjustadorDadosSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroLinhasAjustadorDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDadosTabela">
+      <wsdl:input message="tns:mtdObterNumeroLinhasAjustadorDadosTabelaSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroLinhasAjustadorDadosTabelaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarConexaoAbertaBancoDados">
+      <wsdl:input message="tns:mtdTestarConexaoAbertaBancoDadosSoapIn" />
+      <wsdl:output message="tns:mtdTestarConexaoAbertaBancoDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarExecucaoComandoBancoDados">
+      <wsdl:input message="tns:mtdTestarExecucaoComandoBancoDadosSoapIn" />
+      <wsdl:output message="tns:mtdTestarExecucaoComandoBancoDadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarConfiguracoes">
+      <wsdl:input message="tns:mtdResetarConfiguracoesSoapIn" />
+      <wsdl:output message="tns:mtdResetarConfiguracoesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdIniciarCriacaoTabelas">
+      <wsdl:input message="tns:mtdIniciarCriacaoTabelasSoapIn" />
+      <wsdl:output message="tns:mtdIniciarCriacaoTabelasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTabelaInventarioBens">
+      <wsdl:input message="tns:mtdObterLinhaTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdObterLinhaTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTotalTabelaInventarioBens">
+      <wsdl:input message="tns:mtdObterLinhaTotalTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdObterLinhaTotalTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaAcumuladoTotalTabelaInventarioBens">
+      <wsdl:input message="tns:mtdObterLinhaAcumuladoTotalTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdObterLinhaAcumuladoTotalTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInseridos">
+      <wsdl:input message="tns:mtdObterNumeroItensInseridosSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroItensInseridosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensAtualizados">
+      <wsdl:input message="tns:mtdObterNumeroItensAtualizadosSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroItensAtualizadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInalterados">
+      <wsdl:input message="tns:mtdObterNumeroItensInalteradosSoapIn" />
+      <wsdl:output message="tns:mtdObterNumeroItensInalteradosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens">
+      <wsdl:input message="tns:mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarGerarProximoNumeroCodigoOtimizado">
+      <wsdl:input message="tns:mtdResetarGerarProximoNumeroCodigoOtimizadoSoapIn" />
+      <wsdl:output message="tns:mtdResetarGerarProximoNumeroCodigoOtimizadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdManterCanalAberto">
+      <wsdl:input message="tns:mtdManterCanalAbertoSoapIn" />
+      <wsdl:output message="tns:mtdManterCanalAbertoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharCanal">
+      <wsdl:input message="tns:mtdFecharCanalSoapIn" />
+      <wsdl:output message="tns:mtdFecharCanalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharTodosCanais">
+      <wsdl:input message="tns:mtdFecharTodosCanaisSoapIn" />
+      <wsdl:output message="tns:mtdFecharTodosCanaisSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaBensEletronorteMobile">
+      <wsdl:input message="tns:mtdForcarParadagetTabelaBensEletronorteMobileSoapIn" />
+      <wsdl:output message="tns:mtdForcarParadagetTabelaBensEletronorteMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaCentroCustoMobile">
+      <wsdl:input message="tns:mtdForcarParadagetTabelaCentroCustoMobileSoapIn" />
+      <wsdl:output message="tns:mtdForcarParadagetTabelaCentroCustoMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaEmpregadosMobile">
+      <wsdl:input message="tns:mtdForcarParadagetTabelaEmpregadosMobileSoapIn" />
+      <wsdl:output message="tns:mtdForcarParadagetTabelaEmpregadosMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaInventarioBensMobile">
+      <wsdl:input message="tns:mtdForcarParadagetTabelaInventarioBensMobileSoapIn" />
+      <wsdl:output message="tns:mtdForcarParadagetTabelaInventarioBensMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadasetTabelaInventarioBens">
+      <wsdl:input message="tns:mtdForcarParadasetTabelaInventarioBensSoapIn" />
+      <wsdl:output message="tns:mtdForcarParadasetTabelaInventarioBensSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServicoBancoDadosSoap" type="tns:WebServicoBancoDadosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mtdGerarNumeroIdentificacao">
+      <soap:operation soapAction="http://tempuri.org/mtdGerarNumeroIdentificacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroIdentificacao">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroIdentificacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaBensEletronorteMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaCentroCustoMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaEmpregadosMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaInventarioBensMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorteMobile">
+      <soap:operation soapAction="http://tempuri.org/getTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCustoMobile">
+      <soap:operation soapAction="http://tempuri.org/getTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregadosMobile">
+      <soap:operation soapAction="http://tempuri.org/getTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBensMobile">
+      <soap:operation soapAction="http://tempuri.org/getTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCusto">
+      <soap:operation soapAction="http://tempuri.org/getTabelaCentroCusto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorte">
+      <soap:operation soapAction="http://tempuri.org/getTabelaBensEletronorte" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregados">
+      <soap:operation soapAction="http://tempuri.org/getTabelaEmpregados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/getTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/setTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="prpTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/prpTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdUploadArquivo">
+      <soap:operation soapAction="http://tempuri.org/mtdUploadArquivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaAtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaUtc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTotal">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamento">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDados">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinha">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDadosLinha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha">
+      <soap:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunas">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroColunas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhas">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroLinhas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunasAjustadorDados">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroColunasAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDados">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroLinhasAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDadosTabela">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroLinhasAjustadorDadosTabela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarConexaoAbertaBancoDados">
+      <soap:operation soapAction="http://tempuri.org/mtdTestarConexaoAbertaBancoDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarExecucaoComandoBancoDados">
+      <soap:operation soapAction="http://tempuri.org/mtdTestarExecucaoComandoBancoDados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarConfiguracoes">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarConfiguracoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdIniciarCriacaoTabelas">
+      <soap:operation soapAction="http://tempuri.org/mtdIniciarCriacaoTabelas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdObterLinhaTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTotalTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdObterLinhaTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaAcumuladoTotalTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdObterLinhaAcumuladoTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInseridos">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroItensInseridos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensAtualizados">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroItensAtualizados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInalterados">
+      <soap:operation soapAction="http://tempuri.org/mtdObterNumeroItensInalterados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarGerarProximoNumeroCodigoOtimizado">
+      <soap:operation soapAction="http://tempuri.org/mtdResetarGerarProximoNumeroCodigoOtimizado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdManterCanalAberto">
+      <soap:operation soapAction="http://tempuri.org/mtdManterCanalAberto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharCanal">
+      <soap:operation soapAction="http://tempuri.org/mtdFecharCanal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharTodosCanais">
+      <soap:operation soapAction="http://tempuri.org/mtdFecharTodosCanais" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaBensEletronorteMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaCentroCustoMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaEmpregadosMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaInventarioBensMobile">
+      <soap:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadasetTabelaInventarioBens">
+      <soap:operation soapAction="http://tempuri.org/mtdForcarParadasetTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServicoBancoDadosSoap12" type="tns:WebServicoBancoDadosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mtdGerarNumeroIdentificacao">
+      <soap12:operation soapAction="http://tempuri.org/mtdGerarNumeroIdentificacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroIdentificacao">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroIdentificacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaBensEletronorteMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaCentroCustoMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaEmpregadosMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorTabelaInventarioBensMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarContadorTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorteMobile">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCustoMobile">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregadosMobile">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBensMobile">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaCentroCusto">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaCentroCusto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaBensEletronorte">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaBensEletronorte" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaEmpregados">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaEmpregados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/getTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/setTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="prpTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/prpTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdUploadArquivo">
+      <soap12:operation soapAction="http://tempuri.org/mtdUploadArquivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaAtual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaUtc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTotal">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamento">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTabelaInventarioBensTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDados">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosLinha">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDadosLinha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha">
+      <soap12:operation soapAction="http://tempuri.org/mtdCalcularCodigoEspalhamentoAjustadorDadosTabelaInventarioBensLinha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunas">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroColunas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhas">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroLinhas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroColunasAjustadorDados">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroColunasAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDados">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroLinhasAjustadorDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroLinhasAjustadorDadosTabela">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroLinhasAjustadorDadosTabela" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarConexaoAbertaBancoDados">
+      <soap12:operation soapAction="http://tempuri.org/mtdTestarConexaoAbertaBancoDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdTestarExecucaoComandoBancoDados">
+      <soap12:operation soapAction="http://tempuri.org/mtdTestarExecucaoComandoBancoDados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarConfiguracoes">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarConfiguracoes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdIniciarCriacaoTabelas">
+      <soap12:operation soapAction="http://tempuri.org/mtdIniciarCriacaoTabelas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterLinhaTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaTotalTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterLinhaTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterLinhaAcumuladoTotalTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterLinhaAcumuladoTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInseridos">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroItensInseridos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensAtualizados">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroItensAtualizados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterNumeroItensInalterados">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterNumeroItensInalterados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarContadorLinhaAcumuladoTotalTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdResetarGerarProximoNumeroCodigoOtimizado">
+      <soap12:operation soapAction="http://tempuri.org/mtdResetarGerarProximoNumeroCodigoOtimizado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdManterCanalAberto">
+      <soap12:operation soapAction="http://tempuri.org/mtdManterCanalAberto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharCanal">
+      <soap12:operation soapAction="http://tempuri.org/mtdFecharCanal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdFecharTodosCanais">
+      <soap12:operation soapAction="http://tempuri.org/mtdFecharTodosCanais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaBensEletronorteMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaBensEletronorteMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaCentroCustoMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaCentroCustoMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaEmpregadosMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaEmpregadosMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadagetTabelaInventarioBensMobile">
+      <soap12:operation soapAction="http://tempuri.org/mtdForcarParadagetTabelaInventarioBensMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdForcarParadasetTabelaInventarioBens">
+      <soap12:operation soapAction="http://tempuri.org/mtdForcarParadasetTabelaInventarioBens" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServicoBancoDados">
+    <wsdl:port name="WebServicoBancoDadosSoap" binding="tns:WebServicoBancoDadosSoap">
+      <soap:address location="http://srvpatrimonio/Todos/WebServicoBancoDados.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServicoBancoDadosSoap12" binding="tns:WebServicoBancoDadosSoap12">
+      <soap12:address location="http://srvpatrimonio/Todos/WebServicoBancoDados.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

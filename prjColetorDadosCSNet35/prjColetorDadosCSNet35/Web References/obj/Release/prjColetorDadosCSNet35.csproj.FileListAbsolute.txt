@@ -1,0 +1,5 @@
+G:\Documents\Codigos\prjColetorDadosCSNet35\prjColetorDadosCSNet35\obj\Release\ResolveAssemblyReference.cache
+G:\Documents\Codigos\prjColetorDadosCSNet35\prjColetorDadosCSNet35\obj\Release\prjColetorDadosCSNet35.frmAlterarDeletarItem.resources
+G:\Documents\Codigos\prjColetorDadosCSNet35\prjColetorDadosCSNet35\obj\Release\prjColetorDadosCSNet35.frmPrincipal.resources
+G:\Documents\Codigos\prjColetorDadosCSNet35\prjColetorDadosCSNet35\obj\Release\prjColetorDadosCSNet35.Properties.Resources.resources
+G:\Documents\Codigos\prjColetorDadosCSNet35\prjColetorDadosCSNet35\obj\Release\prjColetorDadosCSNet35.csproj.GenerateResource.Cache

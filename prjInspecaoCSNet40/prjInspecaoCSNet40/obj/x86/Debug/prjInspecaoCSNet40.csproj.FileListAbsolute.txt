@@ -1,0 +1,39 @@
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+c:\users\usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\documents\visual studio 2010\Projects\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Codigos\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb

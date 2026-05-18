@@ -1,0 +1,319 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A2E67EED-7188-4F07-BBB8-60035C6789E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prjColetorDadosIntermecCSNet35</RootNamespace>
+    <AssemblyName>prjColetorDadosIntermecCSNet35</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>2AC76CE7-3E8C-402d-85E7-AE9C98D7B6BA</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>prjColetorDadosIntermecCSNet35</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6.5.3 Professional DTK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>db2hc.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Intermec.DataCollection.CF3.5, Version=4.2.0.1857, Culture=neutral, PublicKeyToken=acd169b56b6148ba, processorArchitecture=MSIL" />
+    <Reference Include="ITC.Embedded.Camera, Version=1.0.5100.25348, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\itc\ITC.Embedded.Camera.dll</HintPath>
+    </Reference>
+    <Reference Include="ITC.Embedded.Decoding, Version=1.0.5100.24588, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\itc\ITC.Embedded.Decoding.dll</HintPath>
+    </Reference>
+    <Reference Include="ITC.Embedded.Utility, Version=1.0.5100.23997, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\itc\ITC.Embedded.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="ITC.Embedded.WirelessAssembly, Version=1.0.5100.23995, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\itc\ITC.Embedded.WirelessAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windowsce.Forms, Version=3.5.0.0, Culture=neutral, PublicKeyToken=969db8053d3322ac, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="Microsoft.WindowsMobile.Samples.Location, Version=1.0.3760.23375, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MS.Embedded.Wireless.Network, Version=1.0.5100.24000, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\itc\MS.Embedded.Wireless.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Win32, Version=1.0.5437.25474, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsAjustarDataHoraSistema.cs" />
+    <Compile Include="clsSendMail.cs" />
+    <Compile Include="clsBancoDados.cs" />
+    <Compile Include="clsBDSQLServerCE.cs" />
+    <Compile Include="clsConexaoBancoDados.cs" />
+    <Compile Include="clsImplementacaoBancoDados.cs" />
+    <Compile Include="clsUtilitarios.cs" />
+    <Compile Include="Compas.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Compas.designer.cs">
+      <DependentUpon>Compas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistanceCalculator.cs" />
+    <Compile Include="frmAlterarDeletarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarDeletarItem.designer.cs">
+      <DependentUpon>frmAlterarDeletarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlterarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarItem.designer.cs">
+      <DependentUpon>frmAlterarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBatteryStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatteryStatus.designer.cs">
+      <DependentUpon>frmBatteryStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeletarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeletarItem.designer.cs">
+      <DependentUpon>frmDeletarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGPSPerimeter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGPSPerimeter.designer.cs">
+      <DependentUpon>frmGPSPerimeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados.designer.cs">
+      <DependentUpon>frmMonitorCarregamentoDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_DownloadTabelaApoio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_DownloadTabelaInventarioBensPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_ForcarParada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_ManterCanalAberto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_MonitorarWebService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_ResetarContadorLinhaAcumuladoTotalTabelaInventarioBens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_TemporizadorForcarDesligamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonitorCarregamentoDados_UploadTabelaInventarioBensPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipal_CadastroOtimizado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal_CaixaTexto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal_Notificacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal_PreparacaoColetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal_SalvarBancoDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobreAplicativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobreAplicativo.Designer.cs">
+      <DependentUpon>frmSobreAplicativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualizarAlterarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualizarAlterarItem.designer.cs">
+      <DependentUpon>frmVisualizarAlterarItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenNetCFFTPClient\Enums.cs" />
+    <Compile Include="OpenNetCFFTPClient\FTP.cs" />
+    <Compile Include="OpenNetCFFTPClient\FTPException.cs" />
+    <Compile Include="OpenNetCFFTPClient\FTPFile.cs" />
+    <Compile Include="OpenNetCFFTPClient\FTPFiles.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAlterarDeletarItem.resx">
+      <DependentUpon>frmAlterarDeletarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarItem.resx">
+      <DependentUpon>frmAlterarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBatteryStatus.resx">
+      <DependentUpon>frmBatteryStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeletarItem.resx">
+      <DependentUpon>frmDeletarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGPSPerimeter.resx">
+      <DependentUpon>frmGPSPerimeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonitorCarregamentoDados.resx">
+      <DependentUpon>frmMonitorCarregamentoDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobreAplicativo.resx">
+      <DependentUpon>frmSobreAplicativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualizarAlterarItem.resx">
+      <DependentUpon>frmVisualizarAlterarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bibliotecas\Intermec.DataCollection.CF3.5.dll" />
+    <Content Include="Bibliotecas\ITCCamera.dll" />
+    <Content Include="Bibliotecas\ITCImager.dll" />
+    <Content Include="Bibliotecas\ITCScan.dll" />
+    <Content Include="Bibliotecas\Microsoft.Windowsce.Forms.dll" />
+    <Content Include="Bibliotecas\Microsoft.WindowsMobile.dll" />
+    <Content Include="Bibliotecas\Microsoft.WindowsMobile.Forms.dll" />
+    <Content Include="Bibliotecas\Microsoft.WindowsMobile.Samples.Location.dll" />
+    <Content Include="Bibliotecas\Win32.dll" />
+    <Content Include="db2hc.ico" />
+    <Content Include="Icones\Barcode.ico" />
+    <Content Include="Icones\BatteryStatus.ico" />
+    <Content Include="Icones\db2hc.ico" />
+    <EmbeddedResource Include="Images\AC_Backup.bmp" />
+    <EmbeddedResource Include="Images\AC_Offline.bmp" />
+    <EmbeddedResource Include="Images\AC_Online.bmp" />
+    <EmbeddedResource Include="Images\AC_Unknown.bmp" />
+    <EmbeddedResource Include="Images\Battery_Charging.bmp" />
+    <EmbeddedResource Include="Images\Battery_Charging_Original.bmp" />
+    <EmbeddedResource Include="Images\Battery_Critical.bmp" />
+    <EmbeddedResource Include="Images\Battery_Critical_Original.bmp" />
+    <EmbeddedResource Include="Images\Battery_High.bmp" />
+    <EmbeddedResource Include="Images\Battery_Low.bmp" />
+    <EmbeddedResource Include="Images\Battery_No_Battery.bmp" />
+    <EmbeddedResource Include="Images\Battery_Unknown.bmp" />
+    <None Include="Web References\WebService\WebServicoBancoDados.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icones\Thumbs.db" />
+    <EmbeddedResource Include="Images\Battery.pdn" />
+    <EmbeddedResource Include="Images\Battery_Charging.pdn" />
+    <EmbeddedResource Include="Images\Battery_No_Battery.pdn" />
+    <None Include="Web References\WebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebService\WebServicoBancoDados.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://srvpatrimonio/Todos/WebServicoBancoDados.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\WebService\</RelPath>
+      <UpdateFromURL>http://srvpatrimonio/Todos/WebServicoBancoDados.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
