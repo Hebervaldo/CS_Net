@@ -1,0 +1,9 @@
+C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\bin\Debug\AlgoritmosOrdenacaoCSNet40.exe
+C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\bin\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.exe
+C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+\\cm1\D\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.exe
+\\cm1\D\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+Z:\Users\Usuario\OneDrive\Documentos\Codigos\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.exe
+Z:\Users\Usuario\OneDrive\Documentos\Codigos\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
