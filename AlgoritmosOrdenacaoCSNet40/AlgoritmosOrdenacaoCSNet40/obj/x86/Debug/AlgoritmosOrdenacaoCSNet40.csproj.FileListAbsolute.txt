@@ -7,3 +7,8 @@ C:\Users\Administrador\Desktop\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrde
 \\cm1\D\Codigos\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
 Z:\Users\Usuario\OneDrive\Documentos\Codigos\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.exe
 Z:\Users\Usuario\OneDrive\Documentos\Codigos\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+C:\Users\Usuario\Documents\GitHub\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.exe
+C:\Users\Usuario\Documents\GitHub\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+C:\Users\Usuario\Documents\GitHub\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\bin\Debug\AlgoritmosOrdenacaoCSNet40.exe
+C:\Users\Usuario\Documents\GitHub\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\bin\Debug\AlgoritmosOrdenacaoCSNet40.pdb
+C:\Users\Usuario\Documents\GitHub\C_Sharp\AlgoritmosOrdenacaoCSNet40\AlgoritmosOrdenacaoCSNet40\obj\x86\Debug\AlgoritmosOrdenacaoCSNet40.csprojResolveAssemblyReference.cache
