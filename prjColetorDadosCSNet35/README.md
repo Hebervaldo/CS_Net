@@ -1,107 +1,96 @@
-# Sistema de Gerenciamento
+# Coletor de Dados Mobile - Windows Mobile 6.5
 
-Sistema de gerenciamento desenvolvido em Java com Spring Boot, utilizando arquitetura em camadas para organização, escalabilidade e manutenção do código.
+Sistema desenvolvido em C# utilizando .NET Framework 3.5 para dispositivos móveis com Windows Mobile 6.5, voltado para coleta de dados em campo através de leitura de código de barras e processamento local das informações.
 
-O projeto foi estruturado com foco em separação de responsabilidades, persistência de dados, segurança e suporte a versionamento/backup de entidades, servindo como base para aplicações corporativas e estudos avançados em desenvolvimento backend.
+O projeto foi desenvolvido para execução em coletores industriais móveis, permitindo automação operacional em ambientes de logística, patrimônio, inventário, almoxarifado e controle corporativo.
 
 ---
 
 ## ✨ Principais Recursos
 
-- Arquitetura em camadas (`Controller`, `Service`, `Repository`, `Model`)
-- Integração com Spring Boot e JPA/Hibernate
-- Estrutura preparada para expansão modular
-- Sistema de backup e rastreamento de alterações
-- Camada de segurança com gerenciamento de chaves
-- Organização voltada para manutenção e evolução do projeto
-- Frontend utilizando Thymeleaf, HTML e JavaScript
+- Coleta de dados em dispositivos móveis
+- Leitura de código de barras
+- Armazenamento local das informações
+- Integração com SQL Server Compact Edition
+- Interface otimizada para Windows Mobile
+- Controle e manipulação de registros
+- Rotinas auxiliares para operação em campo
+- Estrutura modular em C#
 
 ---
 
 ## 🏗️ Arquitetura do Projeto
 
-O sistema segue uma arquitetura tradicional em camadas:
+O sistema foi estruturado em módulos responsáveis pela interface, persistência de dados e utilidades da aplicação.
 
 ```text
-Controller → Service → Repository → Model
+Interface Mobile → Regras de Negócio → Persistência Local
 ```
 
-### Estrutura dos Pacotes
+### Componentes Principais
 
-| Pacote | Responsabilidade |
+| Arquivo / Classe | Função |
 |---|---|
-| `controller` | Controle das requisições e fluxo da aplicação |
-| `service` | Implementação das regras de negócio |
-| `repository` | Acesso e persistência de dados |
-| `model` | Entidades e modelos do sistema |
-| `util` | Funções auxiliares e validações |
-| `security` | Recursos de segurança e gerenciamento de chaves |
-| `backup` | Controle de backup e histórico de entidades |
+| `clsBancoDados.cs` | Operações de banco de dados |
+| `clsBDSQLServerCE.cs` | Integração com SQL Server CE |
+| `clsConexaoBancoDados.cs` | Controle de conexão |
+| `clsImplementacaoBancoDados.cs` | Implementação de persistência |
+| `clsUtilitarios.cs` | Funções auxiliares |
+| `DistanceCalculator.cs` | Cálculos auxiliares |
+| `frmAlterarItem.cs` | Manipulação de registros |
+| `frmBatteryStatus.cs` | Monitoramento de bateria |
 
 ---
 
 ## 🔧 Tecnologias Utilizadas
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- Maven
-- Thymeleaf
-- HTML
-- JavaScript
+- C#
+- .NET Framework 3.5
+- Windows Mobile 6.5
+- SQL Server Compact Edition
+- Programação Orientada a Objetos
+- Windows Forms Mobile
+- Manipulação de Arquivos
 
 ---
 
-## 🔐 Segurança
+## 📦 Funcionalidades
 
-O projeto possui uma implementação própria para gerenciamento de segurança e armazenamento de chaves.
+O sistema permite:
 
-> O arquivo `secret.key` não deve ser versionado em ambientes reais.
-
-Melhorias futuras recomendadas:
-
-- uso de variáveis de ambiente;
-- integração com serviços de vault;
-- revisão criptográfica completa;
-- autenticação baseada em tokens.
+- coleta de dados em campo;
+- leitura de códigos de barras;
+- armazenamento local das informações;
+- alteração e exclusão de registros;
+- monitoramento de status do dispositivo;
+- processamento de informações para sincronização futura.
 
 ---
 
-## 💾 Sistema de Backup
+## 📱 Ambiente de Execução
 
-O sistema inclui uma camada de backup para entidades da aplicação, permitindo:
+O projeto foi desenvolvido para:
 
-- rastreabilidade;
-- histórico de alterações;
-- possibilidade de rollback;
-- auditoria futura.
+- coletores móveis industriais;
+- dispositivos com Windows Mobile 6.5;
+- operações logísticas;
+- inventários corporativos;
+- ambientes industriais e empresariais.
 
 ---
 
 ## 🚀 Melhorias Futuras
 
-- Implementação completa de API REST
-- Integração com frontend moderno (React/Vue)
-- Testes automatizados com JUnit e Mockito
-- Refatoração parcial para DDD
-- Auditoria de segurança mais robusta
-- Padronização de validações com Bean Validation
-- Melhor separação de responsabilidades entre componentes
-
----
-
-## 📊 Status do Projeto
-
-| Item | Status |
-|---|---|
-| Estrutura base | ✔ Concluída |
-| Arquitetura | ✔ Organizada |
-| Segurança | ⚠ Em evolução |
-| Expansão futura | 🚀 Preparado |
+- Sincronização online em tempo real
+- Integração com APIs corporativas
+- Compatibilidade com Android
+- Dashboard administrativo
+- Criptografia de dados
+- Logs avançados de operação
+- Backup automático das coletas
 
 ---
 
 ## 📄 Licença
 
-Projeto desenvolvido para estudos, experimentação e evolução de aplicações Java utilizando Spring Boot.
+Projeto desenvolvido para automação corporativa, coleta de dados móvel e aplicações industriais utilizando C# e Windows Mobile.
