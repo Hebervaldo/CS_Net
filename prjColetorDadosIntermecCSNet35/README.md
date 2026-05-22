@@ -1,23 +1,37 @@
-# Coletor de Dados Intermec para Windows Mobile 6.5
+# Conversão de Guias Patrimoniais para Dados Digitais
 
-Sistema desenvolvido em C# utilizando .NET Framework 3.5 para coletores de dados Intermec com Windows Mobile 6.5, voltado para operações de coleta móvel, inventário patrimonial e automação logística.
+Aplicação desenvolvida em C# utilizando .NET Framework para leitura, interpretação e conversão de formulários físicos de Movimentação de Bens Patrimoniais (MBP/MBPI) em dados manipuláveis digitalmente.
 
-O projeto utiliza integração com bibliotecas proprietárias da Intermec/Honeywell para leitura de código de barras, gerenciamento do dispositivo e comunicação com periféricos embarcados, permitindo execução otimizada em equipamentos industriais móveis.
+O sistema foi criado para automatizar o processo de extração de informações contidas em guias patrimoniais impressas e escaneadas em PDF, permitindo transformar documentos físicos em registros estruturados para pesquisa, conferência e exportação para planilhas eletrônicas.
+
+A aplicação realizava o processamento textual dos formulários, interpretava os campos relevantes e organizava as informações em estruturas manipuláveis por computador, reduzindo significativamente o trabalho manual de digitação.
+
+Os dados processados podiam ser utilizados para:
+
+- pesquisa patrimonial;
+- conferência de movimentações;
+- organização administrativa;
+- cadastro automatizado;
+- exportação para Microsoft Excel;
+- geração de bases estruturadas para controle patrimonial.
+
+O sistema possuía suporte principal para integração com Microsoft Excel, além de suporte complementar para geração e compatibilidade com bases Microsoft Access.
 
 ---
 
 ## ✨ Principais Recursos
 
-- Coleta de dados em dispositivos móveis industriais
-- Leitura de código de barras integrada
-- Compatibilidade com Windows Mobile 6.5
-- Integração com SDKs Intermec/Honeywell
-- Operação offline com armazenamento local
-- Upload e download de dados
-- Estrutura modular em C#
-- Processamento estruturado das coletas
-- Manipulação de arquivos e registros
-- Execução otimizada para coletores corporativos
+- Leitura de formulários patrimoniais em PDF
+- Conversão de documentos físicos em dados digitais
+- Extração textual automatizada
+- Processamento de guias MBP/MBPI
+- Estruturação de informações patrimoniais
+- Exportação para Microsoft Excel
+- Suporte complementar ao Microsoft Access
+- Apoio à pesquisa patrimonial
+- Redução de digitação manual
+- Processamento documental em C#
+- Estrutura modular para manipulação de dados
 
 ---
 
@@ -25,71 +39,92 @@ O projeto utiliza integração com bibliotecas proprietárias da Intermec/Honeyw
 
 O sistema permite:
 
-- captura rápida de informações em campo;
-- leitura automatizada de códigos de barras;
-- armazenamento local dos registros;
-- sincronização de dados entre dispositivo e servidor;
-- automação de processos patrimoniais e logísticos;
-- suporte a inventários e auditorias;
-- organização estruturada das informações coletadas.
+- leitura automatizada de documentos PDF;
+- interpretação de formulários patrimoniais;
+- extração de informações estruturadas;
+- processamento automatizado de registros;
+- exportação e organização em planilhas Excel;
+- suporte à geração de dados para Access;
+- apoio à pesquisa e conferência patrimonial;
+- integração futura com sistemas corporativos;
+- manipulação estruturada dos dados processados.
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Arquitetura do Projeto
 
-O projeto foi organizado de forma modular para facilitar manutenção e expansão.
+O projeto foi estruturado de forma modular para facilitar manutenção, expansão e reutilização dos componentes.
 
 ### Componentes Principais
 
 | Componente | Função |
 |---|---|
 | `Program.cs` | Inicialização da aplicação |
-| `ColetorDados.cs` | Rotinas principais de coleta |
-| `LeitorCodigoBarras.cs` | Integração com scanner |
-| `Configuracao.cs` | Configurações do sistema |
+| `LeitorPDF.cs` | Leitura dos documentos PDF |
+| `ExtracaoDados.cs` | Interpretação e extração de informações |
+| `ExportacaoExcel.cs` | Exportação para planilhas Excel |
+| `PersistenciaDados.cs` | Manipulação estruturada dos registros |
+| `Configuracao.cs` | Configurações da aplicação |
 | `Util.cs` | Funções auxiliares |
-| `Bibliotecas/itc` | SDKs e bibliotecas Intermec |
-| `Bibliotecas/hsm` | Bibliotecas Honeywell/Embedded |
 
 ---
 
 ## 🔧 Tecnologias Utilizadas
 
 - C#
-- .NET Framework 3.5
-- Windows Mobile 6.5
-- Windows Forms
-- Intermec SDK
-- Honeywell Embedded SDK
-- Programação Orientada a Objetos
+- .NET Framework
+- Microsoft Excel
+- Microsoft Access
+- ADO.NET
+- Manipulação de PDF
+- Processamento Textual
+- Automação Documental
 - Manipulação de Arquivos
+- Programação Orientada a Objetos
 
 ---
 
-## 📱 Ambiente de Execução
+## 📂 Fluxo de Processamento
 
-O sistema foi desenvolvido para:
+O sistema executa o seguinte fluxo operacional:
 
-- coletores industriais Intermec;
-- dispositivos móveis corporativos;
-- operações logísticas;
-- inventários patrimoniais;
-- ambientes industriais e operacionais.
+1. leitura das guias patrimoniais em PDF;
+2. interpretação textual das informações;
+3. extração dos campos relevantes;
+4. estruturação dos registros;
+5. exportação para planilhas Excel;
+6. suporte opcional para integração com Access;
+7. disponibilização dos dados para pesquisa e conferência.
+
+---
+
+## 📊 Objetivos do Projeto
+
+O projeto foi desenvolvido para:
+
+- automatizar digitalização de registros patrimoniais;
+- reduzir trabalho manual de digitação;
+- estruturar informações provenientes de documentos físicos;
+- facilitar pesquisas patrimoniais;
+- acelerar cadastros administrativos;
+- apoiar exportação para Excel;
+- melhorar organização e recuperação de informações.
 
 ---
 
 ## 🚀 Melhorias Futuras
 
-- Compatibilidade com Android Industrial
-- API REST para sincronização
+- OCR avançado integrado
+- Exportação automática para múltiplos formatos
+- Integração direta com SQL Server
 - Dashboard administrativo
-- Logs centralizados
-- Processamento em tempo real
-- Criptografia de dados
-- Sincronização online automática
+- Processamento paralelo de documentos
+- Classificação automática de formulários
+- Integração com IA para interpretação documental
+- API REST para processamento remoto
 
 ---
 
 ## 📄 Licença
 
-Projeto desenvolvido para automação corporativa, inventário patrimonial e aplicações móveis utilizando C# e Windows Mobile.
+Projeto desenvolvido para automação documental, digitalização patrimonial e processamento estruturado de informações utilizando C# e .NET Framework.
