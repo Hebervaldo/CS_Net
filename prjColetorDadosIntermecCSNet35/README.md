@@ -1,37 +1,27 @@
-# Conversão de Guias Patrimoniais para Dados Digitais
+# Coletor de Dados Intermec para Windows Mobile 6.5
 
-Aplicação desenvolvida em C# utilizando .NET Framework para leitura, interpretação e conversão de formulários físicos de Movimentação de Bens Patrimoniais (MBP/MBPI) em dados manipuláveis digitalmente.
+Sistema desenvolvido em C# utilizando .NET Framework 3.5 para coletores de dados Intermec/Honeywell com Windows Mobile 6.5, voltado para operações de coleta móvel, inventário patrimonial, automação logística e sincronização corporativa de dados.
 
-O sistema foi criado para automatizar o processo de extração de informações contidas em guias patrimoniais impressas e escaneadas em PDF, permitindo transformar documentos físicos em registros estruturados para pesquisa, conferência e exportação para planilhas eletrônicas.
+O projeto foi criado para execução em dispositivos industriais móveis da linha Intermec, permitindo coleta de informações em campo através de leitura de código de barras, armazenamento local, sincronização remota e integração com sistemas corporativos.
 
-A aplicação realizava o processamento textual dos formulários, interpretava os campos relevantes e organizava as informações em estruturas manipuláveis por computador, reduzindo significativamente o trabalho manual de digitação.
-
-Os dados processados podiam ser utilizados para:
-
-- pesquisa patrimonial;
-- conferência de movimentações;
-- organização administrativa;
-- cadastro automatizado;
-- exportação para Microsoft Excel;
-- geração de bases estruturadas para controle patrimonial.
-
-O sistema possuía suporte principal para integração com Microsoft Excel, além de suporte complementar para geração e compatibilidade com bases Microsoft Access.
+A solução possui suporte a comunicação via WebService e FTP, permitindo transferência de arquivos, sincronização de bases de dados e envio/recebimento de informações entre o coletor móvel e servidores corporativos.
 
 ---
 
 ## ✨ Principais Recursos
 
-- Leitura de formulários patrimoniais em PDF
-- Conversão de documentos físicos em dados digitais
-- Extração textual automatizada
-- Processamento de guias MBP/MBPI
-- Estruturação de informações patrimoniais
-- Exportação para Microsoft Excel
-- Suporte complementar ao Microsoft Access
-- Apoio à pesquisa patrimonial
-- Redução de digitação manual
-- Processamento documental em C#
-- Estrutura modular para manipulação de dados
+- Coleta de dados em dispositivos móveis industriais
+- Leitura integrada de código de barras
+- Compatibilidade com Windows Mobile 6.5
+- Integração com SDKs Intermec/Honeywell
+- Operação offline com armazenamento local
+- Upload e download de dados
+- Transferência de arquivos via FTP
+- Transferência de bases de dados
+- Integração com WebServices corporativos
+- Sincronização híbrida via FTP e WebService
+- Processamento estruturado das coletas
+- Estrutura modular em C#
 
 ---
 
@@ -39,62 +29,153 @@ O sistema possuía suporte principal para integração com Microsoft Excel, alé
 
 O sistema permite:
 
-- leitura automatizada de documentos PDF;
-- interpretação de formulários patrimoniais;
-- extração de informações estruturadas;
-- processamento automatizado de registros;
-- exportação e organização em planilhas Excel;
-- suporte à geração de dados para Access;
-- apoio à pesquisa e conferência patrimonial;
-- integração futura com sistemas corporativos;
-- manipulação estruturada dos dados processados.
+- captura rápida de informações em campo;
+- leitura automatizada de códigos de barras;
+- armazenamento local de registros;
+- sincronização entre dispositivo e servidor;
+- transferência de arquivos via FTP;
+- envio e recebimento de bases de dados;
+- integração com WebServices corporativos;
+- sincronização híbrida via FTP e WebService;
+- automação de processos patrimoniais e logísticos;
+- suporte a inventários e auditorias;
+- organização estruturada das informações coletadas.
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## 🏗️ Estrutura do Projeto
 
-O projeto foi estruturado de forma modular para facilitar manutenção, expansão e reutilização dos componentes.
+O projeto foi organizado de forma modular para facilitar manutenção e expansão.
 
 ### Componentes Principais
 
 | Componente | Função |
 |---|---|
 | `Program.cs` | Inicialização da aplicação |
-| `LeitorPDF.cs` | Leitura dos documentos PDF |
-| `ExtracaoDados.cs` | Interpretação e extração de informações |
-| `ExportacaoExcel.cs` | Exportação para planilhas Excel |
-| `PersistenciaDados.cs` | Manipulação estruturada dos registros |
-| `Configuracao.cs` | Configurações da aplicação |
+| `ColetorDados.cs` | Rotinas principais de coleta |
+| `LeitorCodigoBarras.cs` | Integração com scanner |
+| `SincronizacaoFTP.cs` | Transferência de arquivos via FTP |
+| `IntegracaoWebService.cs` | Comunicação com WebServices |
+| `Configuracao.cs` | Configurações do sistema |
 | `Util.cs` | Funções auxiliares |
+| `Bibliotecas/itc` | SDKs Intermec |
+| `Bibliotecas/hsm` | Bibliotecas Honeywell |
 
 ---
 
 ## 🔧 Tecnologias Utilizadas
 
 - C#
-- .NET Framework
-- Microsoft Excel
-- Microsoft Access
-- ADO.NET
-- Manipulação de PDF
-- Processamento Textual
-- Automação Documental
+- .NET Framework 3.5
+- Windows Mobile 6.5
+- Windows Forms
+- Intermec SDK
+- Honeywell Embedded SDK
+- FTP
+- WebServices
 - Manipulação de Arquivos
 - Programação Orientada a Objetos
 
 ---
 
-## 📂 Fluxo de Processamento
+## 📱 Ambiente de Execução
 
-O sistema executa o seguinte fluxo operacional:
+O sistema foi desenvolvido para:
 
-1. leitura das guias patrimoniais em PDF;
-2. interpretação textual das informações;
-3. extração dos campos relevantes;
-4. estruturação dos registros;
-5. exportação para planilhas Excel;
-6. suporte opcional para integração com Access;
-7. disponibilização dos dados para pesquisa e conferência.
+- coletores industriais Intermec;
+- dispositivos móveis corporativos;
+- operações logísticas;
+- inventários patrimoniais;
+- sincronização corporativa de dados;
+- transmissão remota de arquivos;
+- ambientes industriais e operacionais.
+
+---
+
+## 📂 Estrutura Geral
+
+Arquivos identificados no projeto:
+
+- `AC_Backup.bmp`
+- `AC_Offline.bmp`
+- `AC_Online.bmp`
+- `AC_Unknown.bmp`
+- `AssemblyInfo.cs`
+- `Barcode.ico`
+- `Battery.pdn`
+- `BatteryStatus.ico`
+- `Battery_Charging.bmp`
+- `Battery_Charging.pdn`
+- `Battery_Charging_Original.bmp`
+- `Battery_Critical.bmp`
+- `Battery_Critical_Original.bmp`
+- `Battery_High.bmp`
+- `Battery_Low.bmp`
+- `Battery_No_Battery.bmp`
+- `Battery_No_Battery.pdn`
+- `Battery_Unknown.bmp`
+- `Compas.cs`
+- `Compas.designer.cs`
+- `DistanceCalculator.cs`
+- `Enums.cs`
+- `FTP.cs`
+- `FTPException.cs`
+- `FTPFile.cs`
+- `FTPFiles.cs`
+- `HSM.Embedded.Decoding.DecodeAssembly.dll`
+- `HSM.Embedded.Decoding.DecodeAssembly.xml`
+- `HSM.Embedded.Imaging.CameraAssembly.dll`
+- `HSM.Embedded.Imaging.CameraAssembly.xml`
+- `HSM.Embedded.Utility.SystemNotificationAssembly.dll`
+- `HSM.Embedded.Utility.SystemNotificationAssembly.xml`
+- `HSM.Embedded.UtilityAssembly.dll`
+- `HSM.Embedded.UtilityAssembly.xml`
+- `HSM.Embedded.Wireless.NetworkAssembly.dll`
+- `HSM.Embedded.Wireless.NetworkAssembly.xml`
+- `HSM.Embedded.WirelessAssembly.dll`
+- `HSM.Embedded.WirelessAssembly.xml`
+- `ITC.Embedded.Camera.dll`
+- `ITC.Embedded.Decoding.dll`
+- `ITC.Embedded.Utility.dll`
+- `ITC.Embedded.WirelessAssembly.dll`
+- `ITCCamera.dll`
+- `ITCImager.dll`
+- `ITCScan.dll`
+- `Intermec.DataCollection.CF3.5.dll`
+- `Intermec.DeviceManagement.SmartSystem.ITCSSApi.dll`
+- `Intermec.Multimedia.Camera.CF35.dll`
+- `MS.Embedded.Wireless.Network.dll`
+- `Microsoft.WindowsMobile.Forms.dll`
+- `Microsoft.WindowsMobile.PocketOutlook.dll`
+- `Microsoft.WindowsMobile.PocketOutlook.xml`
+- `Microsoft.WindowsMobile.Samples.Location.dll`
+- `Microsoft.WindowsMobile.Status.dll`
+- `Microsoft.WindowsMobile.dll`
+- `Microsoft.Windowsce.Forms.dll`
+- `Program.cs`
+- `Reference.cs`
+- `Reference.map`
+- `ResolveAssemblyReference.cache`
+- `Resources.Designer.cs`
+- `Resources.resx`
+- `System.Data.SqlServerCe.dll`
+- `Web References.WebService.Reference.cs.dll`
+- `Web References.WebService1.Reference.cs.dll`
+- `Web References.WebServicoBancoDados.Reference.cs.dll`
+- `WebServicoBancoDados.disco`
+- `WebServicoBancoDados.wsdl`
+- `Win32.dll`
+- `clsAjustarDataHoraSistema.cs`
+- `clsBDSQLServerCE.cs`
+- `clsBancoDados.cs`
+- `clsConexaoBancoDados.cs`
+- `clsImplementacaoBancoDados.cs`
+- `clsSendMail.cs`
+- `clsUtilitarios.cs`
+- `db2hc.ico`
+- `frmAlterarDeletarItem.cs`
+- `frmAlterarDeletarItem.designer.cs`
+- `frmAlterarDeletarItem.resx`
 
 ---
 
@@ -102,29 +183,29 @@ O sistema executa o seguinte fluxo operacional:
 
 O projeto foi desenvolvido para:
 
-- automatizar digitalização de registros patrimoniais;
-- reduzir trabalho manual de digitação;
-- estruturar informações provenientes de documentos físicos;
-- facilitar pesquisas patrimoniais;
-- acelerar cadastros administrativos;
-- apoiar exportação para Excel;
-- melhorar organização e recuperação de informações.
+- automatizar processos de coleta móvel;
+- reduzir erros operacionais;
+- agilizar inventários patrimoniais;
+- integrar coletores móveis com sistemas corporativos;
+- sincronizar arquivos e bases de dados;
+- facilitar transmissão remota de informações;
+- estruturar operações móveis industriais.
 
 ---
 
 ## 🚀 Melhorias Futuras
 
-- OCR avançado integrado
-- Exportação automática para múltiplos formatos
-- Integração direta com SQL Server
+- Compatibilidade com Android Industrial
+- API REST para sincronização
+- Criptografia avançada de dados
 - Dashboard administrativo
-- Processamento paralelo de documentos
-- Classificação automática de formulários
-- Integração com IA para interpretação documental
-- API REST para processamento remoto
+- Logs centralizados
+- Processamento em tempo real
+- Integração com protocolos modernos de transferência
+- Sincronização online automática
 
 ---
 
 ## 📄 Licença
 
-Projeto desenvolvido para automação documental, digitalização patrimonial e processamento estruturado de informações utilizando C# e .NET Framework.
+Projeto desenvolvido para automação corporativa, inventário patrimonial e aplicações móveis industriais utilizando C# e Windows Mobile.
