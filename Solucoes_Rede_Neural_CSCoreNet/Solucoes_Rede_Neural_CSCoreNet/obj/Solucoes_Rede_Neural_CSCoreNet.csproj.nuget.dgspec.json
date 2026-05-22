@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj": {}
+    "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj": {
+    "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj",
+        "projectUniqueName": "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj",
         "projectName": "Solucoes_Rede_Neural_CSCoreNet",
-        "projectPath": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj",
+        "projectPath": "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Codigos\\RedeNeural\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\obj\\",
+        "outputPath": "H:\\Documentos\\Linguagem\\Solucoes_Rede_Neural_CSCoreNet\\Solucoes_Rede_Neural_CSCoreNet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,11 +22,10 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,13 +38,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -56,29 +49,10 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -87,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
