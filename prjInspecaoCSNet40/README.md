@@ -1,25 +1,34 @@
-# Sistema Mobile de Inspeção Operacional - .NET Framework 4.0
+# Laboratório de Testes e Simulação - Windows Forms
 
-Sistema desenvolvido em C# utilizando .NET Framework 4.0 para execução de inspeções operacionais, auditorias e coleta de informações em dispositivos móveis corporativos.
+Aplicação desktop desenvolvida em C# utilizando .NET Framework 4.0 e Windows Forms para simulação, homologação e testes das funcionalidades originalmente implementadas na versão Windows Mobile do sistema corporativo.
 
-O projeto foi criado para automatizar processos de inspeção em campo, permitindo registro estruturado de informações, controle operacional, armazenamento local dos dados e sincronização posterior com ambientes corporativos.
+O projeto foi criado como ambiente de laboratório para desenvolvimento e validação de integrações, permitindo reproduzir no desktop os fluxos operacionais executados nos coletores móveis, sem necessidade do dispositivo físico.
 
-A aplicação foi projetada para operação em dispositivos móveis industriais e ambientes corporativos que exigem mobilidade, rastreabilidade e organização das informações coletadas durante inspeções operacionais.
+A aplicação foi utilizada principalmente para:
+
+- testes de integração com WebServices;
+- validação de comunicação entre sistemas;
+- depuração de funcionalidades;
+- homologação de regras de negócio;
+- simulação de operações do coletor mobile;
+- análise de sincronização e troca de dados.
+
+A solução funciona como uma réplica desktop da aplicação mobile, facilitando o desenvolvimento, os testes e a manutenção do ecossistema corporativo.
 
 ---
 
 ## ✨ Principais Recursos
 
-- Execução de inspeções operacionais móveis
-- Registro estruturado de informações
-- Operação offline com persistência local
-- Compatibilidade com .NET Framework 4.0
-- Estrutura modular em C#
-- Processamento e organização de registros
-- Manipulação de arquivos e dados locais
-- Fluxo de inspeção otimizado
-- Suporte a auditorias operacionais
-- Arquitetura preparada para expansão futura
+- Simulação desktop do sistema Windows Mobile
+- Ambiente de laboratório para testes
+- Homologação de funcionalidades
+- Testes de integração com WebServices
+- Debugging de fluxos operacionais
+- Simulação de sincronização de dados
+- Processamento local de registros
+- Estrutura Windows Forms em C#
+- Reprodução de funcionalidades do coletor mobile
+- Ambiente de apoio ao desenvolvimento
 
 ---
 
@@ -27,29 +36,29 @@ A aplicação foi projetada para operação em dispositivos móveis industriais 
 
 O sistema permite:
 
-- execução de inspeções em campo;
-- captura de informações operacionais;
-- armazenamento local dos registros;
-- processamento estruturado dos dados coletados;
-- organização de informações para auditoria;
-- automação de rotinas operacionais;
-- sincronização posterior dos registros;
-- controle e rastreabilidade das inspeções.
+- simulação das rotinas do coletor móvel;
+- execução de testes operacionais;
+- validação de integração com WebServices;
+- homologação de funcionalidades;
+- depuração de fluxos operacionais;
+- análise de sincronização de dados;
+- testes de comunicação entre sistemas;
+- processamento local de registros e informações.
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🏗️ Arquitetura do Projeto
 
-O projeto foi organizado de forma modular para facilitar manutenção, escalabilidade e evolução da aplicação.
+O projeto foi estruturado de forma modular para facilitar manutenção, homologação e expansão futura das funcionalidades.
 
 ### Componentes Principais
 
 | Componente | Função |
 |---|---|
 | `Program.cs` | Inicialização da aplicação |
-| `frmPrincipal.cs` | Interface principal do sistema |
-| `Inspecao.cs` | Regras de negócio das inspeções |
-| `PersistenciaDados.cs` | Persistência e armazenamento |
+| `frmPrincipal.cs` | Interface principal |
+| `Integracao.cs` | Comunicação com WebServices |
+| `PersistenciaDados.cs` | Armazenamento local |
 | `Configuracao.cs` | Configurações da aplicação |
 | `Util.cs` | Funções auxiliares |
 | `Sincronizacao.cs` | Rotinas de sincronização |
@@ -62,102 +71,38 @@ O projeto foi organizado de forma modular para facilitar manutenção, escalabil
 - .NET Framework 4.0
 - Windows Forms
 - Programação Orientada a Objetos
+- Integração com WebServices
 - Manipulação de Arquivos
 - Persistência Local de Dados
 
 ---
 
-## 📂 Estrutura Geral
-
-Arquivos identificados no projeto:
-
-- `prjInspecaoCSNet40.sln`
-- `prjInspecaoCSNet40.suo`
-- `app.config`
-- `clsBDSQLServerCE.cs`
-- `clsConexaoBancoDados.cs`
-- `clsEstatistica.cs`
-- `clsImplementacaoBancoDados.cs`
-- `clsInfraestruturaBancoDados.cs`
-- `clsManipulacaoBaseDados.cs`
-- `clsProbabilidade.cs`
-- `clsStopWatch.cs`
-- `clsUtilitarios.cs`
-- `frmPrincipal.cs`
-- `frmPrincipal.designer.cs`
-- `frmPrincipal.resx`
-- `frmPrincipal_Base_Codigo.cs`
-- `frmPrincipal_Base_Dados.cs`
-- `frmPrincipal_Componentes_Conteudo.cs`
-- `frmPrincipal_Componentes_Manipulacao.cs`
-- `prjInspecaoCSNet40.csproj`
-- `Program.cs`
-- `prjInspecaoCSNet40.exe`
-- `prjInspecaoCSNet40.exe.config`
-- `prjInspecaoCSNet40.pdb`
-- `prjInspecaoCSNet40.vshost.exe`
-- `prjInspecaoCSNet40.vshost.exe.config`
-- `prjInspecaoCSNet40.vshost.exe.manifest`
-- `DesignTimeResolveAssemblyReferences.cache`
-- `DesignTimeResolveAssemblyReferencesInput.cache`
-- `prjInspecaoCSNet40.csproj.FileListAbsolute.txt`
-- `prjInspecaoCSNet40.csproj.GenerateResource.Cache`
-- `prjInspecaoCSNet40.csprojResolveAssemblyReference.cache`
-- `prjInspecaoCSNet40.exe`
-- `prjInspecaoCSNet40.frmPrincipal.resources`
-- `prjInspecaoCSNet40.pdb`
-- `prjInspecaoCSNet40.Properties.Resources.resources`
-- `Web References.WebServiceInspecao.Reference.cs.dll`
-- `AssemblyInfo.cs`
-- `Resources.Designer.cs`
-- `Resources.resx`
-- `Settings.Designer.cs`
-- `Settings.settings`
-- `Reference.cs`
-- `Reference.map`
-- `WebServiceInspecao.disco`
-- `WebServiceInspecao.wsdl`
-
----
-
-## 📱 Ambiente de Execução
+## 🖥️ Objetivo do Laboratório
 
 O sistema foi desenvolvido para:
 
-- dispositivos móveis corporativos;
-- operações em campo;
-- auditorias operacionais;
-- inspeções industriais;
-- ambientes corporativos e logísticos.
-
----
-
-## 📊 Objetivos do Projeto
-
-O projeto foi desenvolvido para:
-
-- automatizar inspeções operacionais;
-- reduzir processos manuais;
-- organizar registros coletados em campo;
-- melhorar rastreabilidade operacional;
-- facilitar auditorias e controles internos;
-- permitir integração futura com sistemas corporativos.
+- acelerar homologações;
+- facilitar debugging de funcionalidades;
+- validar integrações sem necessidade do coletor físico;
+- reproduzir cenários operacionais;
+- testar sincronizações e comunicação;
+- apoiar manutenção e evolução do sistema mobile.
 
 ---
 
 ## 🚀 Melhorias Futuras
 
-- Compatibilidade com Android
-- API REST para sincronização
-- Dashboard administrativo
-- Assinatura digital de inspeções
-- Upload automático de registros
+- Dashboard de monitoramento
+- Logs avançados de integração
+- Simulação automatizada de cenários
+- API REST moderna
+- Processamento assíncrono
 - Integração com banco de dados
-- Processamento em tempo real
-- Relatórios avançados e indicadores
+- Compatibilidade com .NET moderno
+- Ferramentas avançadas de diagnóstico
 
 ---
 
 ## 📄 Licença
 
-Projeto desenvolvido para automação corporativa, inspeção operacional e aplicações móveis utilizando C# e .NET Framework.
+Projeto desenvolvido para homologação, simulação operacional, integração corporativa e apoio ao desenvolvimento de aplicações móveis utilizando C# e .NET Framework.
