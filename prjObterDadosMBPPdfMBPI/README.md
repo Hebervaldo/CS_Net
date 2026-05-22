@@ -1,24 +1,34 @@
-# Conversão de Guias Patrimoniais para Base Digital
+# Conversão de Guias Patrimoniais para Dados Digitais
 
-Aplicação desenvolvida em C# utilizando .NET Framework para leitura, interpretação e conversão de formulários físicos de Movimentação de Bens Patrimoniais (MBP/MBPI) em registros digitais estruturados.
+Aplicação desenvolvida em C# utilizando .NET Framework para leitura, interpretação e conversão de formulários físicos de Movimentação de Bens Patrimoniais (MBP/MBPI) em dados manipuláveis digitalmente.
 
-O sistema foi criado para automatizar o processo de extração de informações contidas em guias patrimoniais impressas e escaneadas em PDF, permitindo transformar documentos físicos em dados manipuláveis eletronicamente.
+O sistema foi criado para automatizar o processo de extração de informações contidas em guias patrimoniais impressas e escaneadas em PDF, permitindo transformar documentos físicos em registros estruturados para pesquisa, conferência e exportação para planilhas eletrônicas.
 
-Após a leitura e interpretação dos documentos, as informações extraídas eram processadas e cadastradas automaticamente em tabelas Microsoft Access, facilitando consultas, pesquisas, conferências e exportação para planilhas eletrônicas.
+A aplicação realizava o processamento textual dos formulários, interpretava os campos relevantes e organizava as informações em estruturas manipuláveis por computador, reduzindo significativamente o trabalho manual de digitação.
 
-A solução reduzia significativamente o trabalho manual de digitação, acelerando processos administrativos e melhorando a organização dos registros patrimoniais.
+Os dados processados podiam ser utilizados para:
+
+- pesquisa patrimonial;
+- conferência de movimentações;
+- organização administrativa;
+- cadastro automatizado;
+- exportação para Microsoft Excel;
+- geração de bases estruturadas para controle patrimonial.
+
+O sistema possuía suporte principal para integração com Microsoft Excel, além de suporte complementar para geração e compatibilidade com bases Microsoft Access.
 
 ---
 
 ## ✨ Principais Recursos
 
 - Leitura de formulários patrimoniais em PDF
-- Conversão de documentos físicos para dados digitais
-- Extração estruturada de informações
-- Processamento automatizado de guias MBP/MBPI
-- Cadastro automático em banco Microsoft Access
-- Apoio a pesquisas patrimoniais
-- Integração com planilhas eletrônicas
+- Conversão de documentos físicos em dados digitais
+- Extração textual automatizada
+- Processamento de guias MBP/MBPI
+- Estruturação de informações patrimoniais
+- Exportação para Microsoft Excel
+- Suporte complementar ao Microsoft Access
+- Apoio à pesquisa patrimonial
 - Redução de digitação manual
 - Processamento documental em C#
 - Estrutura modular para manipulação de dados
@@ -33,11 +43,11 @@ O sistema permite:
 - interpretação de formulários patrimoniais;
 - extração de informações estruturadas;
 - processamento automatizado de registros;
-- cadastro automático em tabelas Access;
-- organização digital de dados patrimoniais;
-- apoio à pesquisa e conferência de registros;
+- exportação e organização em planilhas Excel;
+- suporte à geração de dados para Access;
+- apoio à pesquisa e conferência patrimonial;
 - integração futura com sistemas corporativos;
-- exportação e manipulação dos dados processados.
+- manipulação estruturada dos dados processados.
 
 ---
 
@@ -52,7 +62,8 @@ O projeto foi estruturado de forma modular para facilitar manutenção, expansã
 | `Program.cs` | Inicialização da aplicação |
 | `LeitorPDF.cs` | Leitura dos documentos PDF |
 | `ExtracaoDados.cs` | Interpretação e extração de informações |
-| `PersistenciaAccess.cs` | Cadastro em banco Microsoft Access |
+| `ExportacaoExcel.cs` | Exportação para planilhas Excel |
+| `PersistenciaDados.cs` | Manipulação estruturada dos registros |
 | `Configuracao.cs` | Configurações da aplicação |
 | `Util.cs` | Funções auxiliares |
 
@@ -62,13 +73,14 @@ O projeto foi estruturado de forma modular para facilitar manutenção, expansã
 
 - C#
 - .NET Framework
+- Microsoft Excel
 - Microsoft Access
 - ADO.NET
 - Manipulação de PDF
 - Processamento Textual
+- Automação Documental
 - Manipulação de Arquivos
 - Programação Orientada a Objetos
-- Persistência Relacional
 
 ---
 
@@ -76,12 +88,13 @@ O projeto foi estruturado de forma modular para facilitar manutenção, expansã
 
 O sistema executa o seguinte fluxo operacional:
 
-1. leitura dos formulários patrimoniais em PDF;
+1. leitura das guias patrimoniais em PDF;
 2. interpretação textual das informações;
-3. extração dos dados relevantes;
-4. estruturação das informações;
-5. cadastro automático no banco Access;
-6. disponibilização dos dados para pesquisa e exportação.
+3. extração dos campos relevantes;
+4. estruturação dos registros;
+5. exportação para planilhas Excel;
+6. suporte opcional para integração com Access;
+7. disponibilização dos dados para pesquisa e conferência.
 
 ---
 
@@ -94,6 +107,7 @@ O projeto foi desenvolvido para:
 - estruturar informações provenientes de documentos físicos;
 - facilitar pesquisas patrimoniais;
 - acelerar cadastros administrativos;
+- apoiar exportação para Excel;
 - melhorar organização e recuperação de informações.
 
 ---
@@ -101,13 +115,13 @@ O projeto foi desenvolvido para:
 ## 🚀 Melhorias Futuras
 
 - OCR avançado integrado
-- API REST para processamento remoto
+- Exportação automática para múltiplos formatos
+- Integração direta com SQL Server
 - Dashboard administrativo
-- Exportação automática para Excel
-- Integração com SQL Server
 - Processamento paralelo de documentos
 - Classificação automática de formulários
 - Integração com IA para interpretação documental
+- API REST para processamento remoto
 
 ---
 
