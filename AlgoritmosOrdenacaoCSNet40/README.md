@@ -1,107 +1,138 @@
-# Sistema de Gerenciamento
+# Algoritmos de Ordenação em C# - .NET Framework 4.0
 
-Sistema de gerenciamento desenvolvido em Java com Spring Boot, utilizando arquitetura em camadas para organização, escalabilidade e manutenção do código.
+Aplicação desenvolvida em C# utilizando .NET Framework 4.0 para implementação, estudo, testes e comparação de algoritmos de ordenação.
 
-O projeto foi estruturado com foco em separação de responsabilidades, persistência de dados, segurança e suporte a versionamento/backup de entidades, servindo como base para aplicações corporativas e estudos avançados em desenvolvimento backend.
+O projeto foi criado com foco em análise de desempenho, estruturas de dados e experimentação computacional, permitindo avaliar diferentes estratégias de ordenação utilizando implementações próprias em C#.
+
+A solução possui arquitetura modular voltada para processamento numérico, manipulação de coleções, execução de benchmarks e comparação de eficiência entre algoritmos clássicos de ordenação.
 
 ---
 
 ## ✨ Principais Recursos
 
-- Arquitetura em camadas (`Controller`, `Service`, `Repository`, `Model`)
-- Integração com Spring Boot e JPA/Hibernate
-- Estrutura preparada para expansão modular
-- Sistema de backup e rastreamento de alterações
-- Camada de segurança com gerenciamento de chaves
-- Organização voltada para manutenção e evolução do projeto
-- Frontend utilizando Thymeleaf, HTML e JavaScript
+- Implementação própria de algoritmos de ordenação
+- Comparação de desempenho entre algoritmos
+- Processamento de listas e coleções
+- Estrutura modular em C#
+- Execução de benchmarks
+- Manipulação de estruturas de dados
+- Processamento numérico
+- Testes computacionais de eficiência
+- Arquitetura preparada para expansão
+
+---
+
+## 📦 Funcionalidades
+
+O sistema permite:
+
+- execução de algoritmos de ordenação;
+- comparação de desempenho entre métodos;
+- manipulação de listas e vetores;
+- análise computacional de eficiência;
+- benchmark de tempo de execução;
+- estudo de complexidade algorítmica;
+- experimentação com estruturas de dados;
+- processamento e análise de resultados.
 
 ---
 
 ## 🏗️ Arquitetura do Projeto
 
-O sistema segue uma arquitetura tradicional em camadas:
+O projeto foi estruturado de forma modular para facilitar manutenção, testes e expansão das implementações algorítmicas.
 
-```text
-Controller → Service → Repository → Model
-```
+### Componentes Principais
 
-### Estrutura dos Pacotes
-
-| Pacote | Responsabilidade |
+| Componente | Função |
 |---|---|
-| `controller` | Controle das requisições e fluxo da aplicação |
-| `service` | Implementação das regras de negócio |
-| `repository` | Acesso e persistência de dados |
-| `model` | Entidades e modelos do sistema |
-| `util` | Funções auxiliares e validações |
-| `security` | Recursos de segurança e gerenciamento de chaves |
-| `backup` | Controle de backup e histórico de entidades |
+| `Program.cs` | Inicialização da aplicação |
+| `frmPrincipal.cs` | Interface principal |
+| `clsOrdenacao.cs` | Núcleo dos algoritmos |
+| `clsBenchmark.cs` | Rotinas de benchmark |
+| `clsLista.cs` | Manipulação de listas |
+| `clsUtil.cs` | Funções auxiliares |
 
 ---
 
 ## 🔧 Tecnologias Utilizadas
 
-- Java
-- Spring Boot
-- Spring Data JPA
-- Hibernate
-- Maven
-- Thymeleaf
-- HTML
-- JavaScript
+- C#
+- .NET Framework 4.0
+- Windows Forms
+- Programação Orientada a Objetos
+- Estruturas de Dados
+- Algoritmos de Ordenação
+- Processamento Numérico
 
 ---
 
-## 🔐 Segurança
+## 📚 Algoritmos Identificados
 
-O projeto possui uma implementação própria para gerenciamento de segurança e armazenamento de chaves.
+Arquivos relacionados a algoritmos encontrados no projeto:
 
-> O arquivo `secret.key` não deve ser versionado em ambientes reais.
-
-Melhorias futuras recomendadas:
-
-- uso de variáveis de ambiente;
-- integração com serviços de vault;
-- revisão criptográfica completa;
-- autenticação baseada em tokens.
+- `AlgoritmosOrdenacaoCSNet40.csproj`
+- `AlgoritmosOrdenacaoCSNet40.csproj.FileListAbsolute.txt`
+- `AlgoritmosOrdenacaoCSNet40.csprojResolveAssemblyReference.cache`
+- `AlgoritmosOrdenacaoCSNet40.exe`
+- `AlgoritmosOrdenacaoCSNet40.pdb`
+- `AlgoritmosOrdenacaoCSNet40.sln`
+- `AlgoritmosOrdenacaoCSNet40.suo`
+- `AlgoritmosOrdenacaoCSNet40.vshost.exe`
+- `AlgoritmosOrdenacaoCSNet40.vshost.exe.manifest`
+- `Ordenacoes.cs`
 
 ---
 
-## 💾 Sistema de Backup
+## 📂 Estrutura Geral
 
-O sistema inclui uma camada de backup para entidades da aplicação, permitindo:
+Arquivos identificados no projeto:
 
-- rastreabilidade;
-- histórico de alterações;
-- possibilidade de rollback;
-- auditoria futura.
+- `AlgoritmosOrdenacaoCSNet40.sln`
+- `AlgoritmosOrdenacaoCSNet40.suo`
+- `README.md`
+- `AlgoritmosOrdenacaoCSNet40.csproj`
+- `Ordenacoes.cs`
+- `Program.cs`
+- `StopWatch.cs`
+- `AlgoritmosOrdenacaoCSNet40.exe`
+- `AlgoritmosOrdenacaoCSNet40.pdb`
+- `AlgoritmosOrdenacaoCSNet40.vshost.exe`
+- `AlgoritmosOrdenacaoCSNet40.vshost.exe.manifest`
+- `AlgoritmosOrdenacaoCSNet40.csproj.FileListAbsolute.txt`
+- `AlgoritmosOrdenacaoCSNet40.csprojResolveAssemblyReference.cache`
+- `AlgoritmosOrdenacaoCSNet40.exe`
+- `AlgoritmosOrdenacaoCSNet40.pdb`
+- `DesignTimeResolveAssemblyReferencesInput.cache`
+- `AssemblyInfo.cs`
+
+---
+
+## 📊 Objetivos do Projeto
+
+O projeto foi desenvolvido para:
+
+- estudo de algoritmos de ordenação;
+- comparação de desempenho computacional;
+- aprendizado de estruturas de dados;
+- experimentação algorítmica em C#;
+- análise de eficiência e complexidade;
+- testes e benchmarks de processamento.
 
 ---
 
 ## 🚀 Melhorias Futuras
 
-- Implementação completa de API REST
-- Integração com frontend moderno (React/Vue)
-- Testes automatizados com JUnit e Mockito
-- Refatoração parcial para DDD
-- Auditoria de segurança mais robusta
-- Padronização de validações com Bean Validation
-- Melhor separação de responsabilidades entre componentes
-
----
-
-## 📊 Status do Projeto
-
-| Item | Status |
-|---|---|
-| Estrutura base | ✔ Concluída |
-| Arquitetura | ✔ Organizada |
-| Segurança | ⚠ Em evolução |
-| Expansão futura | 🚀 Preparado |
+- Visualização gráfica das ordenações
+- Benchmark paralelo
+- Comparação estatística avançada
+- Exportação de resultados
+- Suporte a grandes volumes de dados
+- Processamento multithread
+- Dashboard analítico
+- Integração com datasets externos
 
 ---
 
 ## 📄 Licença
 
-Projeto desenvolvido para estudos, experimentação e evolução de aplicações Java utilizando Spring Boot.
+Projeto desenvolvido para estudos de algoritmos, estruturas de dados e processamento computacional utilizando C# e .NET Framework.
