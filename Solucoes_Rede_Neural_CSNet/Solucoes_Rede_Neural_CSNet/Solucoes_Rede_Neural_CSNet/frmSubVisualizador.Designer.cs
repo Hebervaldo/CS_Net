@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace Solucoes_Rede_Neural_CSNet
+﻿namespace Solucoes_Rede_Neural_CSNet
 {
     partial class frmSubVisualizador
     {
@@ -20,22 +18,6 @@ namespace Solucoes_Rede_Neural_CSNet
                 components.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        // Flag que indica que não queremos o botão fechar.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
-
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                // Obtém as flags atuais
-                CreateParams parametros = base.CreateParams;
-                // Adiciona a flag que indica que o "X" não deve ser mostrado
-                parametros.ClassStyle = parametros.ClassStyle | CP_NOCLOSE_BUTTON;
-                // Retorna as flags modificadas
-                return parametros;
-            }
         }
 
         #region Windows Form Designer generated code
@@ -111,7 +93,7 @@ namespace Solucoes_Rede_Neural_CSNet
             this.Controls.Add(this.lstv1);
             this.Controls.Add(this.btnCriar);
             this.Name = "frmSubVisualizador";
-            this.Text = "Fornecer as Colunas";
+            this.Text = "frmSubVisualizador";
             this.Load += new System.EventHandler(this.frmSubVisualizador_Load);
             this.SizeChanged += new System.EventHandler(this.frmSubVisualizador_SizeChanged);
             this.ResumeLayout(false);

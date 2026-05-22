@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using BibliotecaTemporaria_CSNet;
 
 namespace Solucoes_Rede_Neural_CSNet
 {
@@ -22,7 +23,7 @@ namespace Solucoes_Rede_Neural_CSNet
 
         private void mtdFechar()
         {
-            //frmRedeNeural objRedeNeural = new frmRedeNeural();
+            frmRedeNeural objRedeNeural = new frmRedeNeural();
             try
             {
                 frmRedeNeural.Th1.Abort();
@@ -61,9 +62,9 @@ namespace Solucoes_Rede_Neural_CSNet
             barlblMostrContUser.Text = System.Environment.UserName;
             tmr1.Interval = 1000;
             tmr1.Enabled = true;
-            barprg1.Step = 1;
-            barprg1.Style = ProgressBarStyle.Blocks;
-            barprg1.Value = 0;
+            barprgEletronorteGSDE.Step = 1;
+            barprgEletronorteGSDE.Style = ProgressBarStyle.Blocks;
+            barprgEletronorteGSDE.Value = 0;
             contTempo = 0;
         }
 
@@ -89,8 +90,8 @@ namespace Solucoes_Rede_Neural_CSNet
             // Estrutura para controle da barra de progresso da barra de status
             if (varbarProgressivo == true)
             {
-                barprg1.Value += barprg1.Step;
-                if (!(barprg1.Value < 100))
+                barprgEletronorteGSDE.Value += barprgEletronorteGSDE.Step;
+                if (!(barprgEletronorteGSDE.Value < 100))
                 {
                     contTempo = 100;
                     varbarProgressivo = false;
@@ -98,8 +99,8 @@ namespace Solucoes_Rede_Neural_CSNet
             }
             else
             {
-                barprg1.Value -= barprg1.Step;
-                if (!(barprg1.Value > 0))
+                barprgEletronorteGSDE.Value -= barprgEletronorteGSDE.Step;
+                if (!(barprgEletronorteGSDE.Value > 0))
                 {
                     contTempo = 0;
                     varbarProgressivo = true;

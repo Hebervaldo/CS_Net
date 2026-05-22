@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Solucoes_Rede_Neural_CSNet
 {
     static class Program
     {
-        public static frmPrincipal objPrincipal;
-
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -15,8 +14,7 @@ namespace Solucoes_Rede_Neural_CSNet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            objPrincipal = new frmPrincipal(); 
-            Application.Run(objPrincipal);
+            Application.Run(new frmPrincipal());
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Solucoes_Rede_Neural_CSNet
 {
-    partial class frmRedeNeural : Form
+    partial class frmRedeNeural: Form
     {
         /// <summary>
         /// Required designer variable.
@@ -23,20 +23,20 @@ namespace Solucoes_Rede_Neural_CSNet
         }
 
         // Flag que indica que não queremos o botão fechar.
-        private const int CP_NOCLOSE_BUTTON = 0x200;
+    private const int CP_NOCLOSE_BUTTON = 0x200;
 
-        protected override CreateParams CreateParams
+    protected override CreateParams CreateParams
+    {
+        get
         {
-            get
-            {
-                // Obtém as flags atuais
-                CreateParams parametros = base.CreateParams;
-                // Adiciona a flag que indica que o "X" não deve ser mostrado
-                parametros.ClassStyle = parametros.ClassStyle | CP_NOCLOSE_BUTTON;
-                // Retorna as flags modificadas
-                return parametros;
-            }
+            // Obtém as flags atuais
+            CreateParams parametros = base.CreateParams;
+            // Adiciona a flag que indica que o "X" não deve ser mostrado
+            parametros.ClassStyle = parametros.ClassStyle | CP_NOCLOSE_BUTTON;
+            // Retorna as flags modificadas
+            return parametros;
         }
+    }
 
         #region Windows Form Designer generated code
 
@@ -70,12 +70,12 @@ namespace Solucoes_Rede_Neural_CSNet
             this.ststrp1 = new System.Windows.Forms.StatusStrip();
             this.tslbl1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tslbl8 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnE = new System.Windows.Forms.Button();
+            this.btnET = new System.Windows.Forms.Button();
             this.btnR = new System.Windows.Forms.Button();
             this.lbl9 = new System.Windows.Forms.Label();
             this.btnT = new System.Windows.Forms.Button();
             this.btnP = new System.Windows.Forms.Button();
-            this.btnEr = new System.Windows.Forms.Button();
+            this.btnE = new System.Windows.Forms.Button();
             this.grpb2 = new System.Windows.Forms.GroupBox();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.cmb4 = new System.Windows.Forms.ComboBox();
@@ -104,7 +104,7 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl7
             // 
             this.tslbl7.Name = "tslbl7";
-            this.tslbl7.Size = new System.Drawing.Size(42, 17);
+            this.tslbl7.Size = new System.Drawing.Size(40, 17);
             this.tslbl7.Text = "Altura:";
             // 
             // lbl12
@@ -229,9 +229,9 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl4
             // 
             this.tslbl4.AutoSize = false;
-            this.tslbl4.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tslbl4.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tslbl4.Name = "tslbl4";
             this.tslbl4.Size = new System.Drawing.Size(50, 17);
             // 
@@ -247,7 +247,7 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl5
             // 
             this.tslbl5.Name = "tslbl5";
-            this.tslbl5.Size = new System.Drawing.Size(85, 17);
+            this.tslbl5.Size = new System.Drawing.Size(74, 17);
             this.tslbl5.Text = "Comprimento:";
             // 
             // tslbl3
@@ -259,9 +259,9 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl6
             // 
             this.tslbl6.AutoSize = false;
-            this.tslbl6.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tslbl6.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tslbl6.Name = "tslbl6";
             this.tslbl6.Size = new System.Drawing.Size(50, 17);
             // 
@@ -277,9 +277,9 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl2
             // 
             this.tslbl2.AutoSize = false;
-            this.tslbl2.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tslbl2.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tslbl2.Name = "tslbl2";
             this.tslbl2.Size = new System.Drawing.Size(50, 17);
             // 
@@ -309,21 +309,21 @@ namespace Solucoes_Rede_Neural_CSNet
             // tslbl8
             // 
             this.tslbl8.AutoSize = false;
-            this.tslbl8.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
-            | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
+            this.tslbl8.BorderSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)((((System.Windows.Forms.ToolStripStatusLabelBorderSides.Left | System.Windows.Forms.ToolStripStatusLabelBorderSides.Top)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right)
+                        | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tslbl8.Name = "tslbl8";
             this.tslbl8.Size = new System.Drawing.Size(50, 17);
             // 
-            // btnE
+            // btnET
             // 
-            this.btnE.Location = new System.Drawing.Point(6, 189);
-            this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(135, 21);
-            this.btnE.TabIndex = 4;
-            this.btnE.Text = "&Entradas";
-            this.btnE.UseVisualStyleBackColor = true;
-            this.btnE.Click += new System.EventHandler(this.btnE_Click);
+            this.btnET.Location = new System.Drawing.Point(6, 189);
+            this.btnET.Name = "btnET";
+            this.btnET.Size = new System.Drawing.Size(135, 21);
+            this.btnET.TabIndex = 4;
+            this.btnET.Text = "&EntradasTreinamento";
+            this.btnET.UseVisualStyleBackColor = true;
+            this.btnET.Click += new System.EventHandler(this.btnET_Click);
             // 
             // btnR
             // 
@@ -364,19 +364,19 @@ namespace Solucoes_Rede_Neural_CSNet
             this.btnP.UseVisualStyleBackColor = true;
             this.btnP.Click += new System.EventHandler(this.btnP_Click);
             // 
-            // btnEr
+            // btnE
             // 
-            this.btnEr.Location = new System.Drawing.Point(6, 216);
-            this.btnEr.Name = "btnEr";
-            this.btnEr.Size = new System.Drawing.Size(135, 21);
-            this.btnEr.TabIndex = 7;
-            this.btnEr.Text = "&Erro";
-            this.btnEr.UseVisualStyleBackColor = true;
-            this.btnEr.Click += new System.EventHandler(this.btnEr_Click);
+            this.btnE.Location = new System.Drawing.Point(6, 216);
+            this.btnE.Name = "btnE";
+            this.btnE.Size = new System.Drawing.Size(135, 21);
+            this.btnE.TabIndex = 7;
+            this.btnE.Text = "&Erro";
+            this.btnE.UseVisualStyleBackColor = true;
+            this.btnE.Click += new System.EventHandler(this.btnE_Click);
             // 
             // grpb2
             // 
-            this.grpb2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.grpb2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.grpb2.Controls.Add(this.txt3);
             this.grpb2.Controls.Add(this.lbl10);
             this.grpb2.Controls.Add(this.lbl11);
@@ -391,11 +391,11 @@ namespace Solucoes_Rede_Neural_CSNet
             this.grpb2.Controls.Add(this.lbl5);
             this.grpb2.Controls.Add(this.cmb1);
             this.grpb2.Controls.Add(this.lbl9);
-            this.grpb2.Controls.Add(this.btnE);
+            this.grpb2.Controls.Add(this.btnET);
             this.grpb2.Controls.Add(this.btnR);
             this.grpb2.Controls.Add(this.btnT);
             this.grpb2.Controls.Add(this.btnP);
-            this.grpb2.Controls.Add(this.btnEr);
+            this.grpb2.Controls.Add(this.btnE);
             this.grpb2.Location = new System.Drawing.Point(12, 12);
             this.grpb2.Name = "grpb2";
             this.grpb2.Size = new System.Drawing.Size(437, 243);
@@ -534,12 +534,12 @@ namespace Solucoes_Rede_Neural_CSNet
         internal StatusStrip ststrp1;
         internal ToolStripStatusLabel tslbl1;
         internal ToolStripStatusLabel tslbl8;
-        private Button btnE;
+        private Button btnET;
         private Button btnR;
         internal Label lbl9;
         private Button btnT;
         private Button btnP;
-        private Button btnEr;
+        private Button btnE;
         internal GroupBox grpb2;
         private TextBox txt1;
         internal ComboBox cmb4;

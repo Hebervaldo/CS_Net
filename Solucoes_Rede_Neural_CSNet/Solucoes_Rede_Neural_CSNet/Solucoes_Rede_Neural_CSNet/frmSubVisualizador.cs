@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
+using BibliotecaTemporaria_CSNet;
 
 namespace Solucoes_Rede_Neural_CSNet
 {
@@ -14,7 +20,7 @@ namespace Solucoes_Rede_Neural_CSNet
         private bool varHouveRedimensionamento = false;
         private clsArquivoTXT objArquivoTXT = new clsArquivoTXT();
         private frmRedeNeural objRedeNeural = new frmRedeNeural();
-        private int i;
+        private int i; 
         public frmSubVisualizador()
         {
             InitializeComponent();
@@ -35,14 +41,12 @@ namespace Solucoes_Rede_Neural_CSNet
                 lstv1.Items.Add(frmRedeNeural.dtgv.Columns[i].HeaderText);
             }
             this.Controls.Add(lstv1);
-            txt1.Text = String.Concat(mtdRotinaNomeCampo(), (i + 1).ToString("000"));
+            txt1.Text = mtdRotinaNomeCampo() + String.Format((i + 1).ToString(), "000");
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
-            int iMax = lstv1.CheckedItems.Count;
-
-            for (int i = 1; i <= iMax; i++)
+            for (int i = 1; i <= lstv1.CheckedItems.Count; i++)
             {
                 if (lstv1.CheckedItems[0].Checked)
                 {
@@ -61,7 +65,7 @@ namespace Solucoes_Rede_Neural_CSNet
         {
             lstv1.Items.Add(txt1.Text);
             objRedeNeural.RePreencherDataGridView(ref frmRedeNeural.dtgv, ref lstv1);
-            txt1.Text = String.Concat(mtdRotinaNomeCampo(), (i + 1).ToString("000"));
+            txt1.Text = mtdRotinaNomeCampo() + string.Format((i + 1).ToString(), "000");
         }
         private string mtdRotinaNomeCampo()
         {
@@ -70,7 +74,7 @@ namespace Solucoes_Rede_Neural_CSNet
             string strStrAux = string.Empty;
             string strNumeros = "0123456789";
             i = frmRedeNeural.dtgv.Columns.Count;
-            strStrAux = lstv1.Items[i - 1].Text;
+            strStrAux = lstv1.Text;
             for (int j = 0; j <= strStrAux.Length - 1; j++)
             {
                 chrChr = Convert.ToChar(strStrAux.Substring(j, 1));
@@ -113,6 +117,6 @@ namespace Solucoes_Rede_Neural_CSNet
         private void frmSubVisualizador_SizeChanged(object sender, EventArgs e)
         {
             mtdRedimensionar();
-        }
+        } 
     }
 }

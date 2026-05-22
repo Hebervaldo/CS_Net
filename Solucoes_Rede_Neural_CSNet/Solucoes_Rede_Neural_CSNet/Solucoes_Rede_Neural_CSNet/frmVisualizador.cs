@@ -1,5 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
+using BibliotecaTemporaria_CSNet;
 
 namespace Solucoes_Rede_Neural_CSNet
 {
@@ -36,7 +42,7 @@ namespace Solucoes_Rede_Neural_CSNet
             mtdAtributos();
             switch (tipoformulario)
             {
-                case "Entradas":
+                case "EntradasTreinamento":
                     btnAjustar.Enabled = true;
                     break;
                 case "Target":
@@ -47,19 +53,17 @@ namespace Solucoes_Rede_Neural_CSNet
                     break;
             }
         }
-
         public void EnderecoArquivo(string EnderecoArquivo)
         {
             strEnderecoArquivo = EnderecoArquivo;
         }
-
         public void mtdLer(DataGridView dtgv)
         {
             string nomecoluna = string.Empty;
             objRedeNeural.RotinaLeitura(strEnderecoArquivo);
             switch (tipoformulario)
             {
-                case "Entradas":
+                case "EntradasTreinamento":
                     nomecoluna = "Entrada";
                     break;
                 case "Target":
@@ -71,13 +75,12 @@ namespace Solucoes_Rede_Neural_CSNet
             }
             objRedeNeural.PreencherDataGridView(ref dtgv, nomecoluna);
         }
-
         public void mtdCadastrar(DataGridView dtgv)
         {
             objRedeNeural.RotinaCadastro(strEnderecoArquivo, ref dtgv);
             switch (tipoformulario)
             {
-                case "Entradas":
+                case "EntradasTreinamento":
                     frmRedeNeural.NumeroEntrada = dtgv.ColumnCount;
                     frmRedeNeural.NumeroPadroes = dtgv.RowCount - 1;
                     break;
@@ -115,7 +118,6 @@ namespace Solucoes_Rede_Neural_CSNet
             dtgv1.Height = this.Height - dfrmdtgv1V;
             dtgv1.Width = this.Width - dfrmdtgv1H;
         }
-
         private void mtdAtributos()
         {
             tslbl2.Text = Convert.ToString(dtgv1.RowCount - 1);
@@ -126,13 +128,7 @@ namespace Solucoes_Rede_Neural_CSNet
 
         private void btnAjustar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                objSF.Show();
-            }
-            catch (System.Exception ex)
-            {
-            }
+            objSF.Show();
         }
 
         private void btnLer_Click(object sender, EventArgs e)
@@ -143,7 +139,7 @@ namespace Solucoes_Rede_Neural_CSNet
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             mtdCadastrar(dtgv1);
-            mtdAtributos();
+        mtdAtributos();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -155,7 +151,7 @@ namespace Solucoes_Rede_Neural_CSNet
         {
             mtdAtributos();
             vetCelulaSelecionada[0] = dtgv1.SelectedCells[0].ColumnIndex;
-            vetCelulaSelecionada[1] = dtgv1.SelectedCells[0].RowIndex;
+            vetCelulaSelecionada[1] = dtgv1.SelectedCells[0].RowIndex; 
         }
 
         private void frmVisualizador_SizeChanged(object sender, EventArgs e)
