@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{B900F1C2-3D47-4FEC-85B3-04AAF18C3634}") = "prjColetorDadosCab", "prjColetorDadosCab\prjColetorDadosCab.vddproj", "{0CDD9003-DB48-41CC-8F96-33F2B03EAEF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CDD9003-DB48-41CC-8F96-33F2B03EAEF3}.Debug|Default.ActiveCfg = Debug
+		{0CDD9003-DB48-41CC-8F96-33F2B03EAEF3}.Debug|Default.Build.0 = Debug
+		{0CDD9003-DB48-41CC-8F96-33F2B03EAEF3}.Release|Default.ActiveCfg = Release
+		{0CDD9003-DB48-41CC-8F96-33F2B03EAEF3}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
