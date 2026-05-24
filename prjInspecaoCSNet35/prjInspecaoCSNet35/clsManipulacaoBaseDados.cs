@@ -114,27 +114,37 @@ namespace prjInspecaoCSNet35
             return Retorno;
         }
 
-        public List<List<string>> mtdIncluirIndicesListaColuna(string Coluna)
+        public bool mtdDeletarTabela(string BaseDados, string SenhaBaseDados, string NomeTabela)
         {
-            intContadorCampos = System.Convert.ToInt32(lstCamposTabelaIndice[lstCamposTabelaIndice.Count - 1][intColunaIndice]);
-            lstCamposTabelaIndice.Add(new List<string> { Coluna, System.Convert.ToString(intContadorCampos++) });
+            bool Retorno = false;
 
-            return lstCamposTabelaIndice;
+            strBaseDados = BaseDados;
+            strSenhaBaseDados = SenhaBaseDados;
+            strTabela = NomeTabela;
+
+            clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
+            (
+                clsImplementacaoBancoDados.TipoSistemaGerenciadorBancoDadosRelacional.SQLServerCE
+            );
+
+            objImplementacaoBancoDados.mtdDefinirStringConexaoSQLServerCE
+            (
+                clsConexaoBancoDados.TipoConexao.ConexaoSQLServerCENativa,
+                BaseDados,
+                SenhaBaseDados
+            );
+
+            Retorno = objImplementacaoBancoDados.mtdDeletarTabela
+                  (
+                      NomeTabela
+                  );
+
+            objImplementacaoBancoDados.Dispose();
+
+            return Retorno;
         }
 
-        public List<List<string>> mtdIncluirIndicesListaColuna(List<object> ListaColuna)
-        {
-            mtdResetarCamposTabela();
-
-            foreach (object item in ListaColuna)
-            {
-                lstCamposTabelaIndice.Add(new List<string> { item.ToString(), System.Convert.ToString(intContadorCampos++) });
-            }
-
-            return lstCamposTabelaIndice;
-        }
-
-        public bool mtdAlterarDadosTabela(List<List<object>> Campos_Dados_CampoBase_Operacao_DadoBase)
+         public bool mtdAlterarDadosTabela(List<List<object>> Campos_Dados_CampoBase_Operacao_DadoBase)
         {
             return mtdAlterarDadosTabela(strTabela, Campos_Dados_CampoBase_Operacao_DadoBase);
         }

@@ -21,6 +21,22 @@
             base.Dispose(disposing);
         }
 
+        // Flag que indica que não queremos o botão fechar.
+        private const int CP_NOCLOSE_BUTTON = 0x200;
+
+        protected override System.Windows.Forms.CreateParams CreateParams
+        {
+            get
+            {
+                // Obtém as flags atuais
+                System.Windows.Forms.CreateParams parametros = base.CreateParams;
+                // Adiciona a flag que indica que o "X" não deve ser mostrado
+                // parametros.ClassStyle = parametros.ClassStyle | CP_NOCLOSE_BUTTON;
+                // Retorna as flags modificadas
+                return parametros;
+            }
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -49,6 +65,11 @@
             this.cmbDataInspecao = new System.Windows.Forms.ComboBox();
             this.lsvInspecao = new System.Windows.Forms.ListView();
             this.tbpServicos = new System.Windows.Forms.TabPage();
+            this.btnPreencher_Valor_Aleatorio = new System.Windows.Forms.Button();
+            this.btnPreencher_Zero_Um_Dois = new System.Windows.Forms.Button();
+            this.btnPreencher_Zero_Um = new System.Windows.Forms.Button();
+            this.btnPreencher_Dois = new System.Windows.Forms.Button();
+            this.btnPreencher_Um = new System.Windows.Forms.Button();
             this.cmbEndereco = new System.Windows.Forms.ComboBox();
             this.btnZerar = new System.Windows.Forms.Button();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -64,6 +85,8 @@
             this.btnCalcularEstatistica = new System.Windows.Forms.Button();
             this.lsvEstatistica = new System.Windows.Forms.ListView();
             this.tbpFerramentas = new System.Windows.Forms.TabPage();
+            this.btnCriarTabelas = new System.Windows.Forms.Button();
+            this.btnDeletarTabelas = new System.Windows.Forms.Button();
             this.btnCriarBancoDados = new System.Windows.Forms.Button();
             this.lblSenhaBancoDados = new System.Windows.Forms.Label();
             this.txtSenhaBancoDados = new System.Windows.Forms.TextBox();
@@ -77,15 +100,15 @@
             this.lblEnderecoWebService = new System.Windows.Forms.Label();
             this.txtEnderecoWebService = new System.Windows.Forms.TextBox();
             this.pctConfiguracoes = new System.Windows.Forms.PictureBox();
-            this.btnCompactarRepararBancoDados = new System.Windows.Forms.Button();
             this.tbpUtilitarios = new System.Windows.Forms.TabPage();
+            this.btnWebServiceDownload = new System.Windows.Forms.Button();
+            this.chbForcarUpload = new System.Windows.Forms.CheckBox();
+            this.btnWebServiceUpload = new System.Windows.Forms.Button();
             this.btnSairAplicativo = new System.Windows.Forms.Button();
             this.btnSincronizarHorarioServidor = new System.Windows.Forms.Button();
             this.txtLegenda = new System.Windows.Forms.TextBox();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
-            this.chbForcarUpload = new System.Windows.Forms.CheckBox();
-            this.btnWebServiceUpload = new System.Windows.Forms.Button();
-            this.btnWebServiceDownload = new System.Windows.Forms.Button();
+            this.btnCompactarRepararBancoDados = new System.Windows.Forms.Button();
             this.tbpControlePrincipal.SuspendLayout();
             this.tbpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPrincipal)).BeginInit();
@@ -126,7 +149,7 @@
             this.tbpControlePrincipal.Location = new System.Drawing.Point(5, 0);
             this.tbpControlePrincipal.Name = "tbpControlePrincipal";
             this.tbpControlePrincipal.SelectedIndex = 0;
-            this.tbpControlePrincipal.Size = new System.Drawing.Size(240, 265);
+            this.tbpControlePrincipal.Size = new System.Drawing.Size(245, 269);
             this.tbpControlePrincipal.TabIndex = 0;
             this.tbpControlePrincipal.SelectedIndexChanged += new System.EventHandler(this.tbpControlePrincipal_SelectedIndexChanged);
             this.tbpControlePrincipal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbpControlePrincipal_KeyDown);
@@ -142,16 +165,17 @@
             this.tbpPrincipal.Controls.Add(this.txtInspetor);
             this.tbpPrincipal.Location = new System.Drawing.Point(4, 22);
             this.tbpPrincipal.Name = "tbpPrincipal";
-            this.tbpPrincipal.Size = new System.Drawing.Size(232, 239);
+            this.tbpPrincipal.Size = new System.Drawing.Size(237, 243);
             this.tbpPrincipal.TabIndex = 0;
             this.tbpPrincipal.Text = "Principal";
             // 
             // pctPrincipal
             // 
             this.pctPrincipal.Image = ((System.Drawing.Image)(resources.GetObject("pctPrincipal.Image")));
-            this.pctPrincipal.Location = new System.Drawing.Point(7, 7);
+            this.pctPrincipal.Location = new System.Drawing.Point(3, 7);
             this.pctPrincipal.Name = "pctPrincipal";
-            this.pctPrincipal.Size = new System.Drawing.Size(140, 108);
+            this.pctPrincipal.Size = new System.Drawing.Size(230, 150);
+            this.pctPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pctPrincipal.TabIndex = 0;
             this.pctPrincipal.TabStop = false;
             // 
@@ -161,7 +185,7 @@
             this.txtColetor.Name = "txtColetor";
             this.txtColetor.Size = new System.Drawing.Size(150, 20);
             this.txtColetor.TabIndex = 14;
-            this.txtColetor.LostFocus += new System.EventHandler(this.txtColetor_LostFocus);
+            this.txtColetor.Leave += new System.EventHandler(this.txtColetor_Leave);
             // 
             // lblColetor
             // 
@@ -204,7 +228,7 @@
             this.txtInspetor.Name = "txtInspetor";
             this.txtInspetor.Size = new System.Drawing.Size(150, 20);
             this.txtInspetor.TabIndex = 8;
-            this.txtInspetor.LostFocus += new System.EventHandler(this.txtInspetor_LostFocus);
+            this.txtInspetor.Leave += new System.EventHandler(this.txtInspetor_Leave);
             // 
             // tbpInspecao
             // 
@@ -214,7 +238,7 @@
             this.tbpInspecao.Controls.Add(this.lsvInspecao);
             this.tbpInspecao.Location = new System.Drawing.Point(4, 22);
             this.tbpInspecao.Name = "tbpInspecao";
-            this.tbpInspecao.Size = new System.Drawing.Size(232, 239);
+            this.tbpInspecao.Size = new System.Drawing.Size(237, 243);
             this.tbpInspecao.TabIndex = 1;
             this.tbpInspecao.Text = "Inspecao";
             // 
@@ -233,7 +257,7 @@
             this.cmbIdentificacao.Name = "cmbIdentificacao";
             this.cmbIdentificacao.Size = new System.Drawing.Size(226, 21);
             this.cmbIdentificacao.TabIndex = 13;
-            this.cmbIdentificacao.GotFocus += new System.EventHandler(this.cmbIdentificacao_GotFocus);
+            this.cmbIdentificacao.Enter += new System.EventHandler(this.cmbIdentificacao_Enter);
             this.cmbIdentificacao.LostFocus += new System.EventHandler(this.cmbIdentificacao_LostFocus);
             // 
             // cmbDataInspecao
@@ -242,7 +266,7 @@
             this.cmbDataInspecao.Name = "cmbDataInspecao";
             this.cmbDataInspecao.Size = new System.Drawing.Size(226, 21);
             this.cmbDataInspecao.TabIndex = 11;
-            this.cmbDataInspecao.GotFocus += new System.EventHandler(this.cmbDataInspecao_GotFocus);
+            this.cmbDataInspecao.Enter += new System.EventHandler(this.cmbDataInspecao_Enter);
             // 
             // lsvInspecao
             // 
@@ -255,6 +279,11 @@
             // 
             // tbpServicos
             // 
+            this.tbpServicos.Controls.Add(this.btnPreencher_Valor_Aleatorio);
+            this.tbpServicos.Controls.Add(this.btnPreencher_Zero_Um_Dois);
+            this.tbpServicos.Controls.Add(this.btnPreencher_Zero_Um);
+            this.tbpServicos.Controls.Add(this.btnPreencher_Dois);
+            this.tbpServicos.Controls.Add(this.btnPreencher_Um);
             this.tbpServicos.Controls.Add(this.cmbEndereco);
             this.tbpServicos.Controls.Add(this.btnZerar);
             this.tbpServicos.Controls.Add(this.lblEndereco);
@@ -267,95 +296,140 @@
             this.tbpServicos.Controls.Add(this.lsvServicos);
             this.tbpServicos.Location = new System.Drawing.Point(4, 22);
             this.tbpServicos.Name = "tbpServicos";
-            this.tbpServicos.Size = new System.Drawing.Size(232, 239);
+            this.tbpServicos.Size = new System.Drawing.Size(237, 243);
             this.tbpServicos.TabIndex = 2;
             this.tbpServicos.Text = "Servicos";
             // 
+            // btnPreencher_Valor_Aleatorio
+            // 
+            this.btnPreencher_Valor_Aleatorio.Location = new System.Drawing.Point(192, 35);
+            this.btnPreencher_Valor_Aleatorio.Name = "btnPreencher_Valor_Aleatorio";
+            this.btnPreencher_Valor_Aleatorio.Size = new System.Drawing.Size(41, 20);
+            this.btnPreencher_Valor_Aleatorio.TabIndex = 31;
+            this.btnPreencher_Valor_Aleatorio.Text = "A";
+            this.btnPreencher_Valor_Aleatorio.Click += new System.EventHandler(this.btnPreencher_Valor_Aleatorio_Click);
+            // 
+            // btnPreencher_Zero_Um_Dois
+            // 
+            this.btnPreencher_Zero_Um_Dois.Location = new System.Drawing.Point(145, 35);
+            this.btnPreencher_Zero_Um_Dois.Name = "btnPreencher_Zero_Um_Dois";
+            this.btnPreencher_Zero_Um_Dois.Size = new System.Drawing.Size(41, 20);
+            this.btnPreencher_Zero_Um_Dois.TabIndex = 30;
+            this.btnPreencher_Zero_Um_Dois.Text = "0-1-2";
+            this.btnPreencher_Zero_Um_Dois.Click += new System.EventHandler(this.btnPreencher_Zero_Um_Dois_Click);
+            // 
+            // btnPreencher_Zero_Um
+            // 
+            this.btnPreencher_Zero_Um.Location = new System.Drawing.Point(98, 35);
+            this.btnPreencher_Zero_Um.Name = "btnPreencher_Zero_Um";
+            this.btnPreencher_Zero_Um.Size = new System.Drawing.Size(41, 20);
+            this.btnPreencher_Zero_Um.TabIndex = 29;
+            this.btnPreencher_Zero_Um.Text = "0-1";
+            this.btnPreencher_Zero_Um.Click += new System.EventHandler(this.btnPreencher_Zero_Um_Click);
+            // 
+            // btnPreencher_Dois
+            // 
+            this.btnPreencher_Dois.Location = new System.Drawing.Point(51, 35);
+            this.btnPreencher_Dois.Name = "btnPreencher_Dois";
+            this.btnPreencher_Dois.Size = new System.Drawing.Size(41, 20);
+            this.btnPreencher_Dois.TabIndex = 28;
+            this.btnPreencher_Dois.Text = "2";
+            this.btnPreencher_Dois.Click += new System.EventHandler(this.btnPreencher_Dois_Click);
+            // 
+            // btnPreencher_Um
+            // 
+            this.btnPreencher_Um.Location = new System.Drawing.Point(3, 35);
+            this.btnPreencher_Um.Name = "btnPreencher_Um";
+            this.btnPreencher_Um.Size = new System.Drawing.Size(41, 20);
+            this.btnPreencher_Um.TabIndex = 27;
+            this.btnPreencher_Um.Text = "1";
+            this.btnPreencher_Um.Click += new System.EventHandler(this.btnPreencher_Um_Click);
+            // 
             // cmbEndereco
             // 
-            this.cmbEndereco.Location = new System.Drawing.Point(60, 189);
+            this.cmbEndereco.Location = new System.Drawing.Point(51, 189);
             this.cmbEndereco.Name = "cmbEndereco";
-            this.cmbEndereco.Size = new System.Drawing.Size(106, 21);
+            this.cmbEndereco.Size = new System.Drawing.Size(182, 21);
             this.cmbEndereco.TabIndex = 25;
             this.cmbEndereco.Click += new System.EventHandler(this.cmbEndereco_Click);
             // 
             // btnZerar
             // 
-            this.btnZerar.Location = new System.Drawing.Point(186, 10);
+            this.btnZerar.Location = new System.Drawing.Point(192, 9);
             this.btnZerar.Name = "btnZerar";
-            this.btnZerar.Size = new System.Drawing.Size(47, 20);
+            this.btnZerar.Size = new System.Drawing.Size(41, 20);
             this.btnZerar.TabIndex = 23;
-            this.btnZerar.Text = "&Zerar";
+            this.btnZerar.Text = "Zerar";
             this.btnZerar.Click += new System.EventHandler(this.btnZerar_Click);
             // 
             // lblEndereco
             // 
             this.lblEndereco.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblEndereco.Location = new System.Drawing.Point(7, 193);
+            this.lblEndereco.Location = new System.Drawing.Point(13, 189);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(47, 20);
+            this.lblEndereco.Size = new System.Drawing.Size(41, 20);
             this.lblEndereco.TabIndex = 26;
             this.lblEndereco.Text = "End.:";
             // 
             // btnDeletarInspecao
             // 
-            this.btnDeletarInspecao.Location = new System.Drawing.Point(172, 218);
+            this.btnDeletarInspecao.Location = new System.Drawing.Point(182, 216);
             this.btnDeletarInspecao.Name = "btnDeletarInspecao";
-            this.btnDeletarInspecao.Size = new System.Drawing.Size(60, 20);
+            this.btnDeletarInspecao.Size = new System.Drawing.Size(51, 20);
             this.btnDeletarInspecao.TabIndex = 17;
             this.btnDeletarInspecao.Text = "&Deletar";
             this.btnDeletarInspecao.Click += new System.EventHandler(this.btnDeletarInspecao_Click);
             // 
             // btnAlterarInspecao
             // 
-            this.btnAlterarInspecao.Location = new System.Drawing.Point(106, 218);
+            this.btnAlterarInspecao.Location = new System.Drawing.Point(121, 216);
             this.btnAlterarInspecao.Name = "btnAlterarInspecao";
-            this.btnAlterarInspecao.Size = new System.Drawing.Size(60, 20);
+            this.btnAlterarInspecao.Size = new System.Drawing.Size(56, 20);
             this.btnAlterarInspecao.TabIndex = 13;
             this.btnAlterarInspecao.Text = "&Alterar";
             this.btnAlterarInspecao.Click += new System.EventHandler(this.btnAlterarInspecao_Click);
             // 
             // btnIncluirInspecao
             // 
-            this.btnIncluirInspecao.Location = new System.Drawing.Point(172, 192);
+            this.btnIncluirInspecao.Location = new System.Drawing.Point(72, 216);
             this.btnIncluirInspecao.Name = "btnIncluirInspecao";
-            this.btnIncluirInspecao.Size = new System.Drawing.Size(60, 20);
+            this.btnIncluirInspecao.Size = new System.Drawing.Size(43, 20);
             this.btnIncluirInspecao.TabIndex = 11;
             this.btnIncluirInspecao.Text = "&Incluir";
             this.btnIncluirInspecao.Click += new System.EventHandler(this.btnIncluirInspecao_Click);
             // 
             // cmbServicos
             // 
-            this.cmbServicos.Location = new System.Drawing.Point(7, 8);
+            this.cmbServicos.Location = new System.Drawing.Point(3, 8);
             this.cmbServicos.Name = "cmbServicos";
-            this.cmbServicos.Size = new System.Drawing.Size(173, 21);
+            this.cmbServicos.Size = new System.Drawing.Size(183, 21);
             this.cmbServicos.TabIndex = 8;
             this.cmbServicos.SelectedIndexChanged += new System.EventHandler(this.cmbServicos_SelectedIndexChanged);
             this.cmbServicos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbServicos_KeyDown);
             // 
             // btnAtribuirNotaServicos
             // 
-            this.btnAtribuirNotaServicos.Location = new System.Drawing.Point(60, 218);
+            this.btnAtribuirNotaServicos.Location = new System.Drawing.Point(28, 216);
             this.btnAtribuirNotaServicos.Name = "btnAtribuirNotaServicos";
-            this.btnAtribuirNotaServicos.Size = new System.Drawing.Size(40, 20);
+            this.btnAtribuirNotaServicos.Size = new System.Drawing.Size(38, 20);
             this.btnAtribuirNotaServicos.TabIndex = 3;
             this.btnAtribuirNotaServicos.Text = "&Nota";
             this.btnAtribuirNotaServicos.Click += new System.EventHandler(this.btnAtribuirNotaServicos_Click);
             // 
             // txtNotaServicos
             // 
-            this.txtNotaServicos.Location = new System.Drawing.Point(7, 217);
+            this.txtNotaServicos.Location = new System.Drawing.Point(3, 216);
             this.txtNotaServicos.Name = "txtNotaServicos";
-            this.txtNotaServicos.Size = new System.Drawing.Size(47, 20);
+            this.txtNotaServicos.Size = new System.Drawing.Size(19, 20);
             this.txtNotaServicos.TabIndex = 2;
             this.txtNotaServicos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNotaServicos_KeyDown);
             this.txtNotaServicos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotaServicos_KeyPress);
             // 
             // lsvServicos
             // 
-            this.lsvServicos.Location = new System.Drawing.Point(7, 36);
+            this.lsvServicos.Location = new System.Drawing.Point(3, 61);
             this.lsvServicos.Name = "lsvServicos";
-            this.lsvServicos.Size = new System.Drawing.Size(226, 150);
+            this.lsvServicos.Size = new System.Drawing.Size(230, 122);
             this.lsvServicos.TabIndex = 0;
             this.lsvServicos.UseCompatibleStateImageBehavior = false;
             this.lsvServicos.SelectedIndexChanged += new System.EventHandler(this.lsvServicos_SelectedIndexChanged);
@@ -368,7 +442,7 @@
             this.tbpEstatistica.Controls.Add(this.lsvEstatistica);
             this.tbpEstatistica.Location = new System.Drawing.Point(4, 22);
             this.tbpEstatistica.Name = "tbpEstatistica";
-            this.tbpEstatistica.Size = new System.Drawing.Size(232, 239);
+            this.tbpEstatistica.Size = new System.Drawing.Size(237, 243);
             this.tbpEstatistica.TabIndex = 3;
             this.tbpEstatistica.Text = "Estatistica";
             // 
@@ -399,6 +473,9 @@
             // 
             // tbpFerramentas
             // 
+            this.tbpFerramentas.Controls.Add(this.btnCompactarRepararBancoDados);
+            this.tbpFerramentas.Controls.Add(this.btnCriarTabelas);
+            this.tbpFerramentas.Controls.Add(this.btnDeletarTabelas);
             this.tbpFerramentas.Controls.Add(this.btnCriarBancoDados);
             this.tbpFerramentas.Controls.Add(this.lblSenhaBancoDados);
             this.tbpFerramentas.Controls.Add(this.txtSenhaBancoDados);
@@ -412,16 +489,33 @@
             this.tbpFerramentas.Controls.Add(this.lblEnderecoWebService);
             this.tbpFerramentas.Controls.Add(this.txtEnderecoWebService);
             this.tbpFerramentas.Controls.Add(this.pctConfiguracoes);
-            this.tbpFerramentas.Controls.Add(this.btnCompactarRepararBancoDados);
             this.tbpFerramentas.Location = new System.Drawing.Point(4, 22);
             this.tbpFerramentas.Name = "tbpFerramentas";
-            this.tbpFerramentas.Size = new System.Drawing.Size(232, 239);
+            this.tbpFerramentas.Size = new System.Drawing.Size(237, 243);
             this.tbpFerramentas.TabIndex = 4;
             this.tbpFerramentas.Text = "Ferramentas";
             // 
+            // btnCriarTabelas
+            // 
+            this.btnCriarTabelas.Location = new System.Drawing.Point(7, 166);
+            this.btnCriarTabelas.Name = "btnCriarTabelas";
+            this.btnCriarTabelas.Size = new System.Drawing.Size(226, 20);
+            this.btnCriarTabelas.TabIndex = 46;
+            this.btnCriarTabelas.Text = "&Criar Tabelas";
+            this.btnCriarTabelas.Click += new System.EventHandler(this.btnCriarTabelas_Click);
+            // 
+            // btnDeletarTabelas
+            // 
+            this.btnDeletarTabelas.Location = new System.Drawing.Point(7, 192);
+            this.btnDeletarTabelas.Name = "btnDeletarTabelas";
+            this.btnDeletarTabelas.Size = new System.Drawing.Size(226, 20);
+            this.btnDeletarTabelas.TabIndex = 45;
+            this.btnDeletarTabelas.Text = "&Deletar Tabelas";
+            this.btnDeletarTabelas.Click += new System.EventHandler(this.btnDeletarTabelas_Click);
+            // 
             // btnCriarBancoDados
             // 
-            this.btnCriarBancoDados.Location = new System.Drawing.Point(7, 140);
+            this.btnCriarBancoDados.Location = new System.Drawing.Point(7, 114);
             this.btnCriarBancoDados.Name = "btnCriarBancoDados";
             this.btnCriarBancoDados.Size = new System.Drawing.Size(226, 20);
             this.btnCriarBancoDados.TabIndex = 40;
@@ -431,7 +525,7 @@
             // lblSenhaBancoDados
             // 
             this.lblSenhaBancoDados.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblSenhaBancoDados.Location = new System.Drawing.Point(7, 88);
+            this.lblSenhaBancoDados.Location = new System.Drawing.Point(7, 63);
             this.lblSenhaBancoDados.Name = "lblSenhaBancoDados";
             this.lblSenhaBancoDados.Size = new System.Drawing.Size(50, 20);
             this.lblSenhaBancoDados.TabIndex = 41;
@@ -440,16 +534,16 @@
             // 
             // txtSenhaBancoDados
             // 
-            this.txtSenhaBancoDados.Location = new System.Drawing.Point(63, 87);
+            this.txtSenhaBancoDados.Location = new System.Drawing.Point(63, 62);
             this.txtSenhaBancoDados.Name = "txtSenhaBancoDados";
             this.txtSenhaBancoDados.PasswordChar = '*';
             this.txtSenhaBancoDados.Size = new System.Drawing.Size(108, 20);
             this.txtSenhaBancoDados.TabIndex = 37;
-            this.txtSenhaBancoDados.LostFocus += new System.EventHandler(this.txtSenhaBancoDados_LostFocus);
+            this.txtSenhaBancoDados.Leave += new System.EventHandler(this.txtSenhaBancoDados_Leave);
             // 
             // btnTestarEnderecoBancoDados
             // 
-            this.btnTestarEnderecoBancoDados.Location = new System.Drawing.Point(177, 89);
+            this.btnTestarEnderecoBancoDados.Location = new System.Drawing.Point(177, 63);
             this.btnTestarEnderecoBancoDados.Name = "btnTestarEnderecoBancoDados";
             this.btnTestarEnderecoBancoDados.Size = new System.Drawing.Size(56, 20);
             this.btnTestarEnderecoBancoDados.TabIndex = 36;
@@ -458,7 +552,7 @@
             // 
             // btnEnderecoBancoDadosPadrao
             // 
-            this.btnEnderecoBancoDadosPadrao.Location = new System.Drawing.Point(177, 61);
+            this.btnEnderecoBancoDadosPadrao.Location = new System.Drawing.Point(177, 36);
             this.btnEnderecoBancoDadosPadrao.Name = "btnEnderecoBancoDadosPadrao";
             this.btnEnderecoBancoDadosPadrao.Size = new System.Drawing.Size(25, 20);
             this.btnEnderecoBancoDadosPadrao.TabIndex = 35;
@@ -467,7 +561,7 @@
             // 
             // btnAbrirArquivoDialogo
             // 
-            this.btnAbrirArquivoDialogo.Location = new System.Drawing.Point(208, 61);
+            this.btnAbrirArquivoDialogo.Location = new System.Drawing.Point(208, 36);
             this.btnAbrirArquivoDialogo.Name = "btnAbrirArquivoDialogo";
             this.btnAbrirArquivoDialogo.Size = new System.Drawing.Size(25, 20);
             this.btnAbrirArquivoDialogo.TabIndex = 34;
@@ -476,7 +570,7 @@
             // 
             // btnEnderecoBancoDadosFlashDisk
             // 
-            this.btnEnderecoBancoDadosFlashDisk.Location = new System.Drawing.Point(7, 114);
+            this.btnEnderecoBancoDadosFlashDisk.Location = new System.Drawing.Point(7, 88);
             this.btnEnderecoBancoDadosFlashDisk.Name = "btnEnderecoBancoDadosFlashDisk";
             this.btnEnderecoBancoDadosFlashDisk.Size = new System.Drawing.Size(110, 20);
             this.btnEnderecoBancoDadosFlashDisk.TabIndex = 33;
@@ -486,24 +580,24 @@
             // lblEnderecoBancoDados
             // 
             this.lblEnderecoBancoDados.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblEnderecoBancoDados.Location = new System.Drawing.Point(7, 37);
+            this.lblEnderecoBancoDados.Location = new System.Drawing.Point(43, 13);
             this.lblEnderecoBancoDados.Name = "lblEnderecoBancoDados";
-            this.lblEnderecoBancoDados.Size = new System.Drawing.Size(226, 20);
+            this.lblEnderecoBancoDados.Size = new System.Drawing.Size(191, 20);
             this.lblEnderecoBancoDados.TabIndex = 42;
             this.lblEnderecoBancoDados.Text = "Endereco Banco Dados";
             this.lblEnderecoBancoDados.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtEnderecoBancoDados
             // 
-            this.txtEnderecoBancoDados.Location = new System.Drawing.Point(7, 60);
+            this.txtEnderecoBancoDados.Location = new System.Drawing.Point(7, 36);
             this.txtEnderecoBancoDados.Name = "txtEnderecoBancoDados";
             this.txtEnderecoBancoDados.Size = new System.Drawing.Size(164, 20);
             this.txtEnderecoBancoDados.TabIndex = 31;
-            this.txtEnderecoBancoDados.LostFocus += new System.EventHandler(this.txtEnderecoBancoDados_LostFocus);
+            this.txtEnderecoBancoDados.Leave += new System.EventHandler(this.txtEnderecoBancoDados_Leave);
             // 
             // btnEnderecoBancoDadosStorageCard
             // 
-            this.btnEnderecoBancoDadosStorageCard.Location = new System.Drawing.Point(123, 114);
+            this.btnEnderecoBancoDadosStorageCard.Location = new System.Drawing.Point(123, 88);
             this.btnEnderecoBancoDadosStorageCard.Name = "btnEnderecoBancoDadosStorageCard";
             this.btnEnderecoBancoDadosStorageCard.Size = new System.Drawing.Size(110, 20);
             this.btnEnderecoBancoDadosStorageCard.TabIndex = 29;
@@ -513,7 +607,7 @@
             // lblEnderecoWebService
             // 
             this.lblEnderecoWebService.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblEnderecoWebService.Location = new System.Drawing.Point(7, 192);
+            this.lblEnderecoWebService.Location = new System.Drawing.Point(9, 218);
             this.lblEnderecoWebService.Name = "lblEnderecoWebService";
             this.lblEnderecoWebService.Size = new System.Drawing.Size(30, 20);
             this.lblEnderecoWebService.TabIndex = 43;
@@ -522,30 +616,21 @@
             // 
             // txtEnderecoWebService
             // 
-            this.txtEnderecoWebService.Location = new System.Drawing.Point(43, 192);
+            this.txtEnderecoWebService.Location = new System.Drawing.Point(45, 216);
             this.txtEnderecoWebService.Name = "txtEnderecoWebService";
-            this.txtEnderecoWebService.Size = new System.Drawing.Size(190, 20);
+            this.txtEnderecoWebService.Size = new System.Drawing.Size(188, 20);
             this.txtEnderecoWebService.TabIndex = 27;
-            this.txtEnderecoWebService.LostFocus += new System.EventHandler(this.txtEnderecoWebService_LostFocus);
+            this.txtEnderecoWebService.Leave += new System.EventHandler(this.txtEnderecoWebService_Leave);
             // 
             // pctConfiguracoes
             // 
             this.pctConfiguracoes.Image = ((System.Drawing.Image)(resources.GetObject("pctConfiguracoes.Image")));
-            this.pctConfiguracoes.Location = new System.Drawing.Point(105, 4);
+            this.pctConfiguracoes.Location = new System.Drawing.Point(7, 3);
             this.pctConfiguracoes.Name = "pctConfiguracoes";
             this.pctConfiguracoes.Size = new System.Drawing.Size(30, 30);
             this.pctConfiguracoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctConfiguracoes.TabIndex = 44;
             this.pctConfiguracoes.TabStop = false;
-            // 
-            // btnCompactarRepararBancoDados
-            // 
-            this.btnCompactarRepararBancoDados.Location = new System.Drawing.Point(7, 166);
-            this.btnCompactarRepararBancoDados.Name = "btnCompactarRepararBancoDados";
-            this.btnCompactarRepararBancoDados.Size = new System.Drawing.Size(226, 20);
-            this.btnCompactarRepararBancoDados.TabIndex = 16;
-            this.btnCompactarRepararBancoDados.Text = "&Compactar e Reparar";
-            this.btnCompactarRepararBancoDados.Click += new System.EventHandler(this.btnCompactarRepararBancoDados_Click);
             // 
             // tbpUtilitarios
             // 
@@ -557,40 +642,18 @@
             this.tbpUtilitarios.Controls.Add(this.txtLegenda);
             this.tbpUtilitarios.Location = new System.Drawing.Point(4, 22);
             this.tbpUtilitarios.Name = "tbpUtilitarios";
-            this.tbpUtilitarios.Size = new System.Drawing.Size(232, 239);
+            this.tbpUtilitarios.Size = new System.Drawing.Size(237, 243);
             this.tbpUtilitarios.TabIndex = 5;
             this.tbpUtilitarios.Text = "Utilitários";
             // 
-            // btnSairAplicativo
+            // btnWebServiceDownload
             // 
-            this.btnSairAplicativo.Location = new System.Drawing.Point(7, 219);
-            this.btnSairAplicativo.Name = "btnSairAplicativo";
-            this.btnSairAplicativo.Size = new System.Drawing.Size(226, 20);
-            this.btnSairAplicativo.TabIndex = 22;
-            this.btnSairAplicativo.Text = "&Sair";
-            this.btnSairAplicativo.Click += new System.EventHandler(this.btnSairAplicativo_Click);
-            // 
-            // btnSincronizarHorarioServidor
-            // 
-            this.btnSincronizarHorarioServidor.Location = new System.Drawing.Point(7, 193);
-            this.btnSincronizarHorarioServidor.Name = "btnSincronizarHorarioServidor";
-            this.btnSincronizarHorarioServidor.Size = new System.Drawing.Size(226, 20);
-            this.btnSincronizarHorarioServidor.TabIndex = 21;
-            this.btnSincronizarHorarioServidor.Text = "Sincronizar &Horario com o Servidor";
-            this.btnSincronizarHorarioServidor.Click += new System.EventHandler(this.btnSincronizarHorarioServidor_Click);
-            // 
-            // txtLegenda
-            // 
-            this.txtLegenda.Enabled = false;
-            this.txtLegenda.Location = new System.Drawing.Point(7, 7);
-            this.txtLegenda.Multiline = true;
-            this.txtLegenda.Name = "txtLegenda";
-            this.txtLegenda.Size = new System.Drawing.Size(226, 108);
-            this.txtLegenda.TabIndex = 18;
-            // 
-            // ofd1
-            // 
-            this.ofd1.FileName = "ofd1";
+            this.btnWebServiceDownload.Location = new System.Drawing.Point(128, 141);
+            this.btnWebServiceDownload.Name = "btnWebServiceDownload";
+            this.btnWebServiceDownload.Size = new System.Drawing.Size(105, 20);
+            this.btnWebServiceDownload.TabIndex = 28;
+            this.btnWebServiceDownload.Text = "&Download";
+            this.btnWebServiceDownload.Click += new System.EventHandler(this.btnWebServiceDownload_Click);
             // 
             // chbForcarUpload
             // 
@@ -608,24 +671,58 @@
             this.btnWebServiceUpload.Size = new System.Drawing.Size(105, 20);
             this.btnWebServiceUpload.TabIndex = 26;
             this.btnWebServiceUpload.Text = "&Upload";
+            this.btnWebServiceUpload.Click += new System.EventHandler(this.btnWebServiceUpload_Click);
             // 
-            // btnWebServiceDownload
+            // btnSairAplicativo
             // 
-            this.btnWebServiceDownload.Location = new System.Drawing.Point(128, 141);
-            this.btnWebServiceDownload.Name = "btnWebServiceDownload";
-            this.btnWebServiceDownload.Size = new System.Drawing.Size(105, 20);
-            this.btnWebServiceDownload.TabIndex = 28;
-            this.btnWebServiceDownload.Text = "&Download";
-            this.btnWebServiceDownload.Click += new System.EventHandler(this.btnWebServiceDownload_Click);
+            this.btnSairAplicativo.Location = new System.Drawing.Point(7, 219);
+            this.btnSairAplicativo.Name = "btnSairAplicativo";
+            this.btnSairAplicativo.Size = new System.Drawing.Size(226, 20);
+            this.btnSairAplicativo.TabIndex = 22;
+            this.btnSairAplicativo.Text = "&Sair";
+            this.btnSairAplicativo.Click += new System.EventHandler(this.btnSairAplicativo_Click);
+            // 
+            // btnSincronizarHorarioServidor
+            // 
+            this.btnSincronizarHorarioServidor.Location = new System.Drawing.Point(7, 193);
+            this.btnSincronizarHorarioServidor.Name = "btnSincronizarHorarioServidor";
+            this.btnSincronizarHorarioServidor.Size = new System.Drawing.Size(226, 20);
+            this.btnSincronizarHorarioServidor.TabIndex = 21;
+            this.btnSincronizarHorarioServidor.Text = "Sincronizar &Horario com Servidor";
+            this.btnSincronizarHorarioServidor.Click += new System.EventHandler(this.btnSincronizarHorarioServidor_Click);
+            // 
+            // txtLegenda
+            // 
+            this.txtLegenda.Enabled = false;
+            this.txtLegenda.Location = new System.Drawing.Point(7, 7);
+            this.txtLegenda.Multiline = true;
+            this.txtLegenda.Name = "txtLegenda";
+            this.txtLegenda.Size = new System.Drawing.Size(226, 128);
+            this.txtLegenda.TabIndex = 18;
+            // 
+            // ofd1
+            // 
+            this.ofd1.FileName = "ofd1";
+            // 
+            // btnCompactarRepararBancoDados
+            // 
+            this.btnCompactarRepararBancoDados.Location = new System.Drawing.Point(7, 140);
+            this.btnCompactarRepararBancoDados.Name = "btnCompactarRepararBancoDados";
+            this.btnCompactarRepararBancoDados.Size = new System.Drawing.Size(226, 20);
+            this.btnCompactarRepararBancoDados.TabIndex = 47;
+            this.btnCompactarRepararBancoDados.Text = "&Compactar e Reparar";
+            this.btnCompactarRepararBancoDados.Click += new System.EventHandler(this.btnCompactarRepararBancoDados_Click);
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(257, 305);
+            this.ClientSize = new System.Drawing.Size(255, 279);
             this.Controls.Add(this.tbpControlePrincipal);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
             this.Menu = this.mmnPrincipal;
             this.Name = "frmPrincipal";
             this.Text = "Inspecao";
@@ -675,7 +772,6 @@
         private System.Windows.Forms.ListView lsvEstatistica;
         private System.Windows.Forms.Button btnCalcularEstatistica;
         private System.Windows.Forms.TabPage tbpFerramentas;
-        private System.Windows.Forms.Button btnCompactarRepararBancoDados;
         private System.Windows.Forms.ComboBox cmbOpcaoEstatistica;
         private System.Windows.Forms.PictureBox pctConfiguracoes;
         private System.Windows.Forms.PictureBox pctPrincipal;
@@ -704,6 +800,14 @@
         private System.Windows.Forms.CheckBox chbForcarUpload;
         private System.Windows.Forms.Button btnWebServiceUpload;
         private System.Windows.Forms.Button btnWebServiceDownload;
+        private System.Windows.Forms.Button btnDeletarTabelas;
+        private System.Windows.Forms.Button btnPreencher_Dois;
+        private System.Windows.Forms.Button btnPreencher_Um;
+        private System.Windows.Forms.Button btnPreencher_Zero_Um_Dois;
+        private System.Windows.Forms.Button btnPreencher_Zero_Um;
+        private System.Windows.Forms.Button btnPreencher_Valor_Aleatorio;
+        private System.Windows.Forms.Button btnCriarTabelas;
+        private System.Windows.Forms.Button btnCompactarRepararBancoDados;
     }
 }
 

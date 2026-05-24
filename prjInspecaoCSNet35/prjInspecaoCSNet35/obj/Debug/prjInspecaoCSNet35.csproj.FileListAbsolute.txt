@@ -2,8 +2,8 @@ C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjIns
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\bin\Debug\prjInspecaoCSNet35.pdb
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\bin\Debug\System.Data.SqlServerCe.dll
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.frmPrincipal.resources
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.Properties.Resources.resources
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.csproj.GenerateResource.Cache
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.exe
 C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.pdb
-C:\Users\Usuario\Documents\Visual Studio 2008\Projects\prjInspecaoCSNet35\prjInspecaoCSNet35\obj\Debug\prjInspecaoCSNet35.frmPrincipal.resources

@@ -26,10 +26,20 @@ namespace prjInspecaoCSNet40.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://srvpatrimonio:8080/WebServiceInspecao.asmx")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:61062/Todos/WebServiceInspecao.asmx")]
         public string prjInspecaoCSNet40_WebServiceInspecao_WebServiceInspecao {
             get {
                 return ((string)(this["prjInspecaoCSNet40_WebServiceInspecao_WebServiceInspecao"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\dbInspecao.sdf;Persist Security Info=True")]
+        public string dbInspecaoConnectionString {
+            get {
+                return ((string)(this["dbInspecaoConnectionString"]));
             }
         }
     }

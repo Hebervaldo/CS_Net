@@ -36,11 +36,25 @@ namespace prjInspecaoCSNet35
         {
             if (cmbOpcaoEstatistica.Items.Count == 0)
             {
-                cmbOpcaoEstatistica.Items.Add(string.Format("{0} - {1} - {2}", lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Data], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Identificacao], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Servico]));
-                cmbOpcaoEstatistica.Items.Add(string.Format("{0} - {1}", lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Data], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Identificacao]));
+                cmbOpcaoEstatistica.Items.Add(string.Format("{0} - {1} - {2}", lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Data], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Endereco], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Servico]));
+                cmbOpcaoEstatistica.Items.Add(string.Format("{0} - {1}", lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Data], lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Endereco]));
                 cmbOpcaoEstatistica.Items.Add(string.Format("{0}", lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Data]));
                 cmbOpcaoEstatistica.SelectedIndex = 0;
             }
+        }
+
+        private void mtdPreencherCmbEndereco()
+        {
+            List<string> ListaEndereco = new List<string> { };
+
+            System.Data.DataTable dt = mtdSelecionarDadosTabelaEndereco();
+
+            for (int linha = 0; linha <= dt.Rows.Count - 1; linha++)
+            {
+                ListaEndereco.Add(dt.Rows[linha].ItemArray[0].ToString());
+            }
+
+            mtdPreencherCmb(ref cmbEndereco, ListaEndereco);
         }
 
         private void mtdPreencherCmb(ref System.Windows.Forms.ComboBox Cmb, List<string> Cbi)
@@ -53,7 +67,10 @@ namespace prjInspecaoCSNet35
                     Cmb.Items.Add(item);
                 }
 
-                Cmb.SelectedIndex = 0;
+                if (Cmb.Items.Count != 0)
+                {
+                    Cmb.SelectedIndex = 0;
+                }
             }
         }
 
@@ -262,6 +279,34 @@ namespace prjInspecaoCSNet35
             }
         }
 
+        public bool mtdAlterarDadosTabelaInspecao
+        (
+            int Enviar,
+            string CampoBase,
+            string Operacao,
+            object DadoBase
+        )
+        {
+            bool Retorno = false;
+
+            tblCamposDadosTabelaInspecao = new List<List<object>> { };
+            tblCamposDadosTabelaInspecao.Add(new List<object> { lstColunasTabelaInspecaoObject[(int)enmColunasTabelaInspecao.Enviar] });
+            tblCamposDadosTabelaInspecao.Add
+            (
+                new List<object>
+                { 
+                    Enviar,
+                    CampoBase,
+                    Operacao, 
+                    DadoBase 
+                }
+            );
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdAlterarDadosTabela(strTabelaInspecao, tblCamposDadosTabelaInspecao);
+
+            return Retorno;
+        }
+
         private bool mtdAlterarInspecao()
         {
             bool Retorno = true;
@@ -304,7 +349,7 @@ namespace prjInspecaoCSNet35
                                 txtInspetor.Text,
                                 txtColetor.Text,
                                 cmbServicos.Items[contador].ToString(),
-                                txtEndereco.Text,
+                                cmbEndereco.Text,
                                 lista[(int)enmColunasTabelaInspecao.Codigo],
                                 lista[(int)enmColunasTabelaInspecao.Identificacao],
                                 (int)enmEnviar.Sim,
@@ -347,7 +392,7 @@ namespace prjInspecaoCSNet35
                         txtInspetor.Text,
                         txtColetor.Text,
                         cmbServicos.Items[contador].ToString(),
-                        txtEndereco.Text,
+                        cmbEndereco.Text,
                         lista[(int)enmColunasTabelaInspecao.Codigo],
                         lista[(int)enmColunasTabelaInspecao.Identificacao],
                         (int)enmEnviar.Sim
@@ -532,7 +577,25 @@ namespace prjInspecaoCSNet35
             mtdCalcularMediaTabelaEstatisticaMedia(NomeTabela, lstColunas, ref  Dt, MediaColuna, AcrescentarColuna);
         }
 
-        private void mtdCmbIdentificacaoAjustarTblItens(System.Data.DataTable dt, bool DadoVazio)
+        private void mtdCmbIdentificacaoAjustarTblItens_PreencherValorAleatorio(System.Data.DataTable dt, bool DadoVazio)
+        {
+            Random rnd = new Random();
+            int linha = 0;
+
+            for (int contador = 0; contador <= cmbServicos.Items.Count - 1; contador++)
+            {
+                List<List<string>> tblItens = mtdObterTblItens(contador);
+
+                for (int contadorLista = 0; contadorLista <= tblItens.Count - 1; contadorLista++)
+                {
+                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : System.Convert.ToString(System.Convert.ToInt32(rnd.Next(0, 3)));
+                }
+
+                mtdAjustarTblItens(ref tblItens, contador);
+            }
+        }
+
+        private void mtdCmbIdentificacaoAjustarTblItens_PreencherValor(System.Data.DataTable dt, bool DadoVazio, string Valor)
         {
             int linha = 0;
 
@@ -542,11 +605,86 @@ namespace prjInspecaoCSNet35
 
                 for (int contadorLista = 0; contadorLista <= tblItens.Count - 1; contadorLista++)
                 {
-                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : "0";
+                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : Valor;
                 }
 
                 mtdAjustarTblItens(ref tblItens, contador);
             }
+        }
+
+        private void mtdCmbIdentificacaoAjustarTblItens_PreencherValorIntervalo(System.Data.DataTable dt, bool DadoVazio, string ValorInferior, string ValorSuperior)
+        {
+            int linha = 0;
+            int Valor = System.Convert.ToInt32(ValorInferior);
+
+            for (int contador = 0; contador <= cmbServicos.Items.Count - 1; contador++)
+            {
+                List<List<string>> tblItens = mtdObterTblItens(contador);
+
+                for (int contadorLista = 0; contadorLista <= tblItens.Count - 1; contadorLista++)
+                {
+                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : System.Convert.ToString(Valor++ < System.Convert.ToInt32(ValorSuperior) ? Valor : Valor=System.Convert.ToInt32(ValorInferior));
+                }
+
+                mtdAjustarTblItens(ref tblItens, contador);
+            }
+        }
+
+        private void mtdPreencherLsvServicos(string Conteudo)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+
+            dt = mtdSelecionarDados
+            (
+                lstColunasTabelaInspecao,
+                strTabelaInspecao,
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Identificacao],
+                cmbIdentificacao.Text != string.Empty ? string.Format("'{0}'", Conteudo) : "'%'",
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                true
+            );
+
+            mtdCmbIdentificacaoAjustarTblItens_PreencherValorAleatorio(dt, Conteudo != string.Empty);
+
+            mtdIniciarLsvCmbIndice(ref lsvServicos, cmbServicos.SelectedIndex);
+        }
+
+        private void mtdPreencherLsvServicos(string Conteudo, string Valor)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+
+            dt = mtdSelecionarDados
+            (
+                lstColunasTabelaInspecao,
+                strTabelaInspecao,
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Identificacao],
+                cmbIdentificacao.Text != string.Empty ? string.Format("'{0}'", Conteudo) : "'%'",
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                true
+            );
+
+            mtdCmbIdentificacaoAjustarTblItens_PreencherValor(dt, Conteudo != string.Empty, Valor);
+
+            mtdIniciarLsvCmbIndice(ref lsvServicos, cmbServicos.SelectedIndex);
+        }
+
+        private void mtdPreencherLsvServicos(string Conteudo, string ValorInferior, string ValorSuperior)
+        {
+            System.Data.DataTable dt = new System.Data.DataTable();
+
+            dt = mtdSelecionarDados
+            (
+                lstColunasTabelaInspecao,
+                strTabelaInspecao,
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Identificacao],
+                cmbIdentificacao.Text != string.Empty ? string.Format("'{0}'", Conteudo) : "'%'",
+                lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                true
+            );
+
+            mtdCmbIdentificacaoAjustarTblItens_PreencherValorIntervalo(dt, Conteudo != string.Empty, ValorInferior, ValorSuperior);
+
+            mtdIniciarLsvCmbIndice(ref lsvServicos, cmbServicos.SelectedIndex);
         }
     }
 }

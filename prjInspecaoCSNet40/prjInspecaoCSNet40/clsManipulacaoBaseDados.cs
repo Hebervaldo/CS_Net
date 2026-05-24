@@ -114,6 +114,36 @@ namespace prjInspecaoCSNet40
             return Retorno;
         }
 
+        public bool mtdDeletarTabela(string BaseDados, string SenhaBaseDados, string NomeTabela)
+        {
+            bool Retorno = false;
+
+            strBaseDados = BaseDados;
+            strSenhaBaseDados = SenhaBaseDados;
+            strTabela = NomeTabela;
+
+            clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
+            (
+                clsImplementacaoBancoDados.TipoSistemaGerenciadorBancoDadosRelacional.SQLServerCE
+            );
+
+            objImplementacaoBancoDados.mtdDefinirStringConexaoSQLServerCE
+            (
+                clsConexaoBancoDados.TipoConexao.ConexaoSQLServerCENativa,
+                BaseDados,
+                SenhaBaseDados
+            );
+
+            Retorno = objImplementacaoBancoDados.mtdDeletarTabela
+                  (
+                      NomeTabela
+                  );
+
+            objImplementacaoBancoDados.Dispose();
+
+            return Retorno;
+        }
+
          public bool mtdAlterarDadosTabela(List<List<object>> Campos_Dados_CampoBase_Operacao_DadoBase)
         {
             return mtdAlterarDadosTabela(strTabela, Campos_Dados_CampoBase_Operacao_DadoBase);

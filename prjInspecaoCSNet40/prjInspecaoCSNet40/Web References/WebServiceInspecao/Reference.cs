@@ -24,13 +24,19 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="WebServiceInspecaoSoap", Namespace="http://tempuri.org/")]
     public partial class WebServiceInspecao : System.Web.Services.Protocols.SoapHttpClientProtocol {
         
         private System.Threading.SendOrPostCallback HelloWorldOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mtdObterDadosTabelaInspecaoOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mtdObterDadosTabelaEstatistica_01OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback mtdObterDadosTabelaEstatistica_02OperationCompleted;
         
         private System.Threading.SendOrPostCallback mtdInserirDadosTabelaInspecaoOperationCompleted;
         
@@ -82,6 +88,15 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
         public event HelloWorldCompletedEventHandler HelloWorldCompleted;
         
         /// <remarks/>
+        public event mtdObterDadosTabelaInspecaoCompletedEventHandler mtdObterDadosTabelaInspecaoCompleted;
+        
+        /// <remarks/>
+        public event mtdObterDadosTabelaEstatistica_01CompletedEventHandler mtdObterDadosTabelaEstatistica_01Completed;
+        
+        /// <remarks/>
+        public event mtdObterDadosTabelaEstatistica_02CompletedEventHandler mtdObterDadosTabelaEstatistica_02Completed;
+        
+        /// <remarks/>
         public event mtdInserirDadosTabelaInspecaoCompletedEventHandler mtdInserirDadosTabelaInspecaoCompleted;
         
         /// <remarks/>
@@ -121,10 +136,92 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/mtdObterDadosTabelaInspecao", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet mtdObterDadosTabelaInspecao() {
+            object[] results = this.Invoke("mtdObterDadosTabelaInspecao", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaInspecaoAsync() {
+            this.mtdObterDadosTabelaInspecaoAsync(null);
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaInspecaoAsync(object userState) {
+            if ((this.mtdObterDadosTabelaInspecaoOperationCompleted == null)) {
+                this.mtdObterDadosTabelaInspecaoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmtdObterDadosTabelaInspecaoOperationCompleted);
+            }
+            this.InvokeAsync("mtdObterDadosTabelaInspecao", new object[0], this.mtdObterDadosTabelaInspecaoOperationCompleted, userState);
+        }
+        
+        private void OnmtdObterDadosTabelaInspecaoOperationCompleted(object arg) {
+            if ((this.mtdObterDadosTabelaInspecaoCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mtdObterDadosTabelaInspecaoCompleted(this, new mtdObterDadosTabelaInspecaoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/mtdObterDadosTabelaEstatistica_01", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet mtdObterDadosTabelaEstatistica_01() {
+            object[] results = this.Invoke("mtdObterDadosTabelaEstatistica_01", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaEstatistica_01Async() {
+            this.mtdObterDadosTabelaEstatistica_01Async(null);
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaEstatistica_01Async(object userState) {
+            if ((this.mtdObterDadosTabelaEstatistica_01OperationCompleted == null)) {
+                this.mtdObterDadosTabelaEstatistica_01OperationCompleted = new System.Threading.SendOrPostCallback(this.OnmtdObterDadosTabelaEstatistica_01OperationCompleted);
+            }
+            this.InvokeAsync("mtdObterDadosTabelaEstatistica_01", new object[0], this.mtdObterDadosTabelaEstatistica_01OperationCompleted, userState);
+        }
+        
+        private void OnmtdObterDadosTabelaEstatistica_01OperationCompleted(object arg) {
+            if ((this.mtdObterDadosTabelaEstatistica_01Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mtdObterDadosTabelaEstatistica_01Completed(this, new mtdObterDadosTabelaEstatistica_01CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/mtdObterDadosTabelaEstatistica_02", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet mtdObterDadosTabelaEstatistica_02() {
+            object[] results = this.Invoke("mtdObterDadosTabelaEstatistica_02", new object[0]);
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaEstatistica_02Async() {
+            this.mtdObterDadosTabelaEstatistica_02Async(null);
+        }
+        
+        /// <remarks/>
+        public void mtdObterDadosTabelaEstatistica_02Async(object userState) {
+            if ((this.mtdObterDadosTabelaEstatistica_02OperationCompleted == null)) {
+                this.mtdObterDadosTabelaEstatistica_02OperationCompleted = new System.Threading.SendOrPostCallback(this.OnmtdObterDadosTabelaEstatistica_02OperationCompleted);
+            }
+            this.InvokeAsync("mtdObterDadosTabelaEstatistica_02", new object[0], this.mtdObterDadosTabelaEstatistica_02OperationCompleted, userState);
+        }
+        
+        private void OnmtdObterDadosTabelaEstatistica_02OperationCompleted(object arg) {
+            if ((this.mtdObterDadosTabelaEstatistica_02Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.mtdObterDadosTabelaEstatistica_02Completed(this, new mtdObterDadosTabelaEstatistica_02CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/mtdInserirDadosTabelaInspecao", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void mtdInserirDadosTabelaInspecao(System.Data.DataSet Ds) {
-            this.Invoke("mtdInserirDadosTabelaInspecao", new object[] {
+        public bool mtdInserirDadosTabelaInspecao(System.Data.DataSet Ds) {
+            object[] results = this.Invoke("mtdInserirDadosTabelaInspecao", new object[] {
                         Ds});
+            return ((bool)(results[0]));
         }
         
         /// <remarks/>
@@ -144,7 +241,7 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
         private void OnmtdInserirDadosTabelaInspecaoOperationCompleted(object arg) {
             if ((this.mtdInserirDadosTabelaInspecaoCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.mtdInserirDadosTabelaInspecaoCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.mtdInserirDadosTabelaInspecaoCompleted(this, new mtdInserirDadosTabelaInspecaoCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -249,11 +346,11 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void HelloWorldCompletedEventHandler(object sender, HelloWorldCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class HelloWorldCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -275,15 +372,115 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
-    public delegate void mtdInserirDadosTabelaInspecaoCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void mtdObterDadosTabelaInspecaoCompletedEventHandler(object sender, mtdObterDadosTabelaInspecaoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mtdObterDadosTabelaInspecaoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mtdObterDadosTabelaInspecaoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void mtdObterDadosTabelaEstatistica_01CompletedEventHandler(object sender, mtdObterDadosTabelaEstatistica_01CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mtdObterDadosTabelaEstatistica_01CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mtdObterDadosTabelaEstatistica_01CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void mtdObterDadosTabelaEstatistica_02CompletedEventHandler(object sender, mtdObterDadosTabelaEstatistica_02CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mtdObterDadosTabelaEstatistica_02CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mtdObterDadosTabelaEstatistica_02CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    public delegate void mtdInserirDadosTabelaInspecaoCompletedEventHandler(object sender, mtdInserirDadosTabelaInspecaoCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class mtdInserirDadosTabelaInspecaoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal mtdInserirDadosTabelaInspecaoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public bool Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void mtdObterDadosTabelaEnderecoCompletedEventHandler(object sender, mtdObterDadosTabelaEnderecoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class mtdObterDadosTabelaEnderecoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -305,11 +502,11 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void mtdObterDataTempoSistemaAtualCompletedEventHandler(object sender, mtdObterDataTempoSistemaAtualCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class mtdObterDataTempoSistemaAtualCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -331,11 +528,11 @@ namespace prjInspecaoCSNet40.WebServiceInspecao {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     public delegate void mtdObterDataTempoSistemaUtcCompletedEventHandler(object sender, mtdObterDataTempoSistemaUtcCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.81.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9032.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class mtdObterDataTempoSistemaUtcCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

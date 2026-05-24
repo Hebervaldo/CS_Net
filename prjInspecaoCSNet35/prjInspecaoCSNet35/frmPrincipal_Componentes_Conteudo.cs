@@ -252,5 +252,271 @@ namespace prjInspecaoCSNet35
             mtdPreencherColunasLsv(ref Lsv, dt, uintComprimento);
             mtdPreencherDadosLsv(ref Lsv, dt);
         }
+
+        public WebServiceInspecao.WebServiceInspecao objWebServiceInspecao = new WebServiceInspecao.WebServiceInspecao();
+
+        private bool mtdUploadWebService()
+        {
+            bool Retorno = false;
+            
+            Retorno = mtdUploadWebService(false);
+
+            return Retorno;
+        }
+
+        private bool mtdUploadWebService(bool ForcarUpload)
+        {
+            bool Retorno = true;
+
+            try
+            {
+                System.Data.DataSet ds = new System.Data.DataSet();
+                System.Data.DataTable dt = new System.Data.DataTable();
+
+                dt = objManipulacaoBaseDadosColetor.mtdSelecionarDadosTabela
+                    (
+                        0,
+                        lstColunasTabelaInspecao,
+                        strTabelaInspecao,
+                        lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                        "LIKE",
+                        "'%'",
+                        lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                        true
+                    );
+
+                ds.Tables.Add(dt.Clone());
+                ds.Tables[0].Rows.Add();
+
+                for (int linha = 0; linha <= dt.Rows.Count - 1; linha++)
+                {
+                    if (System.Convert.ToInt32(dt.Rows[linha].ItemArray[(int)enmColunasTabelaInspecao.Enviar]) == 1 || ForcarUpload)
+                    {
+                        mtdAlterarDadosTabelaInspecao
+                        (
+                            0,
+                            lstColunasTabelaInspecao[(int)enmColunasTabelaInspecao.Codigo],
+                            "LIKE",
+                            dt.Rows[linha].ItemArray[(int)enmColunasTabelaInspecao.Codigo]
+                        );
+
+                        ds.Tables[0].Rows[0].ItemArray = dt.Rows[linha].ItemArray;
+                        ds.Tables[0].Rows[0].ItemArray[(int)enmColunasTabelaInspecao.Enviar] = 0;
+                        Retorno &= objWebServiceInspecao.mtdInserirDadosTabelaInspecao(ds);
+                    }
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Retorno = false;
+            }
+            finally
+            {
+            }
+
+            return Retorno;
+        }
+
+        private List<string> mtdGerarEnderecoNomeBancoDados(string BaseDadosColetor)
+        {
+            string[] strBaseDados = BaseDadosColetor.Split('\\');
+
+            string strEnderecoBancoDadosColetor = string.Empty;
+
+            for (int contador = strBaseDados.GetLowerBound(0); contador <= strBaseDados.GetUpperBound(0) - 1; contador++)
+            {
+                strEnderecoBancoDadosColetor += strBaseDados[contador] + @"\";
+            }
+
+            return new List<string> { strEnderecoBancoDadosColetor, strBaseDados[strBaseDados.GetUpperBound(0)] };
+        }
+
+        private void mtdAjustarEnderecoNomeTextoBancoDados(string Diretorio)
+        {
+            mtdAjustarEnderecoBancoDadosColetor(Diretorio);
+            List<string> vetNomeEnderecoBancoDados = mtdGerarEnderecoNomeBancoDados(Diretorio);
+            strEnderecoBancoDadosColetor = vetNomeEnderecoBancoDados[0];
+            strNomeBancoDadosColetor = vetNomeEnderecoBancoDados[1];
+            txtEnderecoBancoDados.Text = Diretorio;
+        }
+
+        private void mtdAjustarEnderecoBancoDadosColetor(string Valor)
+        {
+            // Write out to text file
+
+            string strEnderecoArquivo = string.Format(@"{0}\{1}\", cntEnderecoBancoDadosColetor, "Arquivo");
+            System.IO.Directory.CreateDirectory(strEnderecoArquivo);
+            System.IO.StreamWriter writer = System.IO.File.CreateText(string.Format(@"{0}\EnderecoBancoDadosColetor.txt", strEnderecoArquivo));
+            writer.WriteLine(Valor);
+
+            writer.Close();
+        }
+
+        private string mtdObterEnderecoBancoDadosColetor()
+        {
+            string Retorno = string.Empty;
+
+            try
+            {
+                // Read all lines from text file
+                string strEnderecoArquivo = string.Format(@"{0}\{1}\", cntEnderecoBancoDadosColetor, "Arquivo");
+                System.IO.Directory.CreateDirectory(strEnderecoArquivo);
+                System.IO.StreamReader reader = System.IO.File.OpenText(string.Format(@"{0}\EnderecoBancoDadosColetor.txt", strEnderecoArquivo));
+                string line = reader.ReadLine();
+                //while (line != null)
+                //{
+                //    line = reader.ReadLine();
+                //}
+
+                Retorno = line;
+
+                reader.Close();
+            }
+            catch (System.Exception ex)
+            {
+                Retorno = mtdGerarCaminhoBaseDadosColetor(cntEnderecoBancoDadosColetor, cntNomeBancoDadosColetor);
+                mtdAjustarEnderecoBancoDadosColetor(Retorno);
+            }
+
+            return Retorno;
+        }
+
+        private void mtdAjustarSenhaBancoDadosColetor(string Valor)
+        {
+            // Write out to text file
+
+            string strEnderecoArquivo = string.Format(@"{0}\{1}\", cntEnderecoBancoDadosColetor, "Arquivo");
+            System.IO.Directory.CreateDirectory(strEnderecoArquivo);
+            System.IO.StreamWriter writer = System.IO.File.CreateText(string.Format(@"{0}\SenhaBancoDadosColetor.txt", strEnderecoArquivo));
+            writer.WriteLine(Valor);
+
+            writer.Close();
+        }
+
+        private string mtdObterSenhaBancoDadosColetor()
+        {
+            string Retorno = string.Empty;
+
+            try
+            {
+                // Read all lines from text file
+                string strEnderecoArquivo = string.Format(@"{0}\{1}\", cntEnderecoBancoDadosColetor, "Arquivo");
+                System.IO.Directory.CreateDirectory(strEnderecoArquivo);
+                System.IO.StreamReader reader = System.IO.File.OpenText(string.Format(@"{0}\SenhaBancoDadosColetor.txt", strEnderecoArquivo));
+                string line = reader.ReadLine();
+                //while (line != null)
+                //{
+                //    line = reader.ReadLine();
+                //}
+
+                Retorno = line;
+
+                reader.Close();
+            }
+            catch (System.Exception ex)
+            {
+                Retorno = cntSenhaBaseDadosColetor;
+                mtdAjustarSenhaBancoDadosColetor(Retorno);
+            }
+
+            return Retorno;
+        }
+
+        private bool mtdTestarConexao()
+        {
+            return mtdTestarConexao(strBaseDadosColetor, strSenhaBaseDadosColetor);
+        }
+
+        private bool mtdTestarConexao(string BaseDadosColetor, string SenhaBaseDadosColetor)
+        {
+            bool retorno = false;
+
+            clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
+            (
+                clsImplementacaoBancoDados.TipoSistemaGerenciadorBancoDadosRelacional.SQLServerCE
+            );
+
+            objImplementacaoBancoDados.mtdDefinirStringConexaoSQLServerCE
+            (
+                clsConexaoBancoDados.TipoConexao.ConexaoSQLServerCENativa,
+                strBaseDadosColetor,
+                strSenhaBaseDadosColetor
+            );
+
+            retorno = objImplementacaoBancoDados.mtdAbrirConexao();
+
+            objImplementacaoBancoDados.Dispose();
+
+            return retorno;
+        }
+
+        private void mtdTestarConexao_()
+        {
+            System.Windows.Forms.MessageBox.Show
+                (
+                mtdTestarConexao() ? "A conexão foi realizada com sucesso." : "Não foi possível realizar a conexão, verifique se o arquivo existe ou se a senha está correta.",
+                "Aviso!",
+                System.Windows.Forms.MessageBoxButtons.OK,
+                System.Windows.Forms.MessageBoxIcon.Exclamation,
+                System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
+        }
+
+        public void mtdSincronizarHorarioServidor()
+        {
+            mtdSincronizarHorarioServidor(true);
+        }
+
+        public void mtdSincronizarHorarioServidor(bool Notificacao)
+        {
+            string Retorno = string.Empty;
+
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor; // set the wait cursor
+                //Do some work
+
+                if (clsDataTempoSistema.mtdAjustarDataTempoSistema(objWebServiceInspecao.Url))
+                {
+                    dtpDataInspecao.Value = System.DateTime.Now;
+
+                    try
+                    {
+                        Retorno = "A data e o tempo do dispositivo foram sincronizados com um servidor externo.";
+                    }
+                    catch (System.Exception ex)
+                    {
+                        Retorno = "A data e o tempo foram sincronizados.";
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        Retorno = "Não foi possível sincronizar a data e o tempo do dispositivo com um servidor externo.";
+                    }
+                    catch (System.Exception ex)
+                    {
+                        Retorno = "A data e o tempo não foram sincronizados.";
+                    }
+                }
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default; //restore the old cursor
+            }
+
+            if (Notificacao)
+            {
+                System.Windows.Forms.MessageBox.Show
+                (
+                    Retorno,
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Exclamation,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
+            }
+        }
     }
 }

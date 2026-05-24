@@ -4053,9 +4053,6 @@ namespace prjInspecaoCSNet35
             return saida;
         }
 
-
-
-
         private bool mtdInserirDadosParametroComandoSQLServerCEValor(string NomeTabela, List<List<object>> Campos_Dados)
         {
             bool saida = true;

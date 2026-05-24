@@ -18,11 +18,11 @@ namespace prjInspecaoCSNet40
         private static string strEnderecoStorageCard = @"\Storage Card\";
         private static string strEnderecoFlashDisk = @"\Flash Disk\";
 
-        //public readonly string cntEnderecoBancoDadosColetor = System.IO.Path.GetDirectoryName
-        //(
-        //    System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase
-        //);
-        public static string cntEnderecoBancoDadosColetor = @"C:\Users\Usuario\Documents";
+        // public readonly string cntEnderecoBancoDadosColetor = System.IO.Path.GetDirectoryName
+        // (
+        //     System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase
+        // );
+        public static string cntEnderecoBancoDadosColetor = AppDomain.CurrentDomain.BaseDirectory;
 
         public static string strEnderecoBancoDadosColetor = string.Empty;
         //private static string strEnderecoBancoDadosColetor = @"\Storage Card\";
@@ -453,11 +453,11 @@ namespace prjInspecaoCSNet40
             return Retorno;
         }
 
-        public bool mtdDeletarTabelaEndereco(string Tabela)
+        public bool mtdDeletarTabela(string Tabela)
         {
             bool Retorno = false;
 
-            Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(Tabela, tblCamposTabelaEndereco);
+            Retorno = objManipulacaoBaseDadosColetor.mtdDeletarTabela(string.Format(@"{0}{1}", strEnderecoBancoDadosColetor, strNomeBancoDadosColetor), strSenhaBaseDadosColetor, Tabela);
 
             return Retorno;
         }
@@ -893,7 +893,7 @@ namespace prjInspecaoCSNet40
             );
 
             objImplementacaoBancoDados.mtdAdaptadorDados();
-            
+
             try
             {
                 Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];

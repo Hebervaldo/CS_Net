@@ -311,7 +311,8 @@ namespace prjInspecaoCSNet40
             System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.Default; //restore the old cursor
         }
 
-        private void cmbDataInspecao_GotFocus(object sender, EventArgs e)
+        // private void cmbDataInspecao_GotFocus(object sender, EventArgs e)
+        private void cmbDataInspecao_Enter(object sender, EventArgs e)
         {
             mtdPreencherCmb
             (
@@ -322,7 +323,8 @@ namespace prjInspecaoCSNet40
             );
         }
 
-        private void cmbIdentificacao_GotFocus(object sender, EventArgs e)
+        // private void cmbIdentificacao_GotFocus(object sender, EventArgs e)
+        private void cmbIdentificacao_Enter(object sender, EventArgs e)
         {
             mtdPreencherCmb
             (
@@ -543,9 +545,104 @@ namespace prjInspecaoCSNet40
             }
         }
 
+        private void btnCriarTabelas_Click(object sender, EventArgs e)
+        {
+
+            bool Retorno = true;
+
+            if
+            (
+                System.Windows.Forms.MessageBox.Show
+                (
+                    "Deseja criar as Tabelas DadosCamposColetor, Endereco e Inspecao?",
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.YesNo,
+                    System.Windows.Forms.MessageBoxIcon.Question,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button2
+                )
+                ==
+                System.Windows.Forms.DialogResult.Yes
+            )
+            {
+                Retorno &= mtdCriarTabelaInspecao();
+                Retorno &= mtdCriarTabelaCamposDadosColetor();
+                Retorno &= mtdCriarTabelaEndereco();
+
+                if (Retorno)
+                {
+                    System.Windows.Forms.MessageBox.Show
+                    (
+                        "As Tabelas foram criadas.",
+                        "Aviso!",
+                        System.Windows.Forms.MessageBoxButtons.OK,
+                        System.Windows.Forms.MessageBoxIcon.Exclamation,
+                        System.Windows.Forms.MessageBoxDefaultButton.Button1
+                    );
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show
+                    (
+                        "Nao foi possivel criar algumas das Tabelas.",
+                        "Aviso!",
+                        System.Windows.Forms.MessageBoxButtons.OK,
+                        System.Windows.Forms.MessageBoxIcon.Exclamation,
+                        System.Windows.Forms.MessageBoxDefaultButton.Button1
+                    );
+                }
+            }
+        }
+
+        private void btnDeletarTabelas_Click(object sender, EventArgs e)
+        {
+            bool Retorno = true;
+
+            if
+            (
+                System.Windows.Forms.MessageBox.Show
+                (
+                    "Deseja deletar as Tabelas DadosCamposColetor, Endereco e Inspecao?",
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.YesNo,
+                    System.Windows.Forms.MessageBoxIcon.Question,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button2
+                )
+                ==
+                System.Windows.Forms.DialogResult.Yes
+            )
+            {
+                Retorno &= mtdDeletarTabela(strTabelaDadosCamposColetor);
+                Retorno &= mtdDeletarTabela(strTabelaEndereco);
+                Retorno &= mtdDeletarTabela(strTabelaInspecao);
+
+                if (Retorno)
+                {
+                    System.Windows.Forms.MessageBox.Show
+                    (
+                        "As Tabelas foram deletadas.",
+                        "Aviso!",
+                        System.Windows.Forms.MessageBoxButtons.OK,
+                        System.Windows.Forms.MessageBoxIcon.Exclamation,
+                        System.Windows.Forms.MessageBoxDefaultButton.Button1
+                    );
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show
+                    (
+                        "Nao foi possivel deletar algumas das Tabelas.",
+                        "Aviso!",
+                        System.Windows.Forms.MessageBoxButtons.OK,
+                        System.Windows.Forms.MessageBoxIcon.Exclamation,
+                        System.Windows.Forms.MessageBoxDefaultButton.Button1
+                    );
+                }
+            }
+        }
+
         private void cmbIdentificacao_LostFocus(object sender, EventArgs e)
         {
-            mtdPreencherLsvServicos(cmbIdentificacao.Text);
+            mtdPreencherLsvServicos(cmbIdentificacao.Text, "0");
         }
 
         private void cmbOpcaoEstatistica_GotFocus(object sender, EventArgs e)
@@ -796,6 +893,15 @@ namespace prjInspecaoCSNet40
         {
             switch (mni1.Text)
             {
+                case "Comp. Rep.":
+                    btnCompactarRepararBancoDados_Click(sender, e);
+                    break;
+                case "Consultar":
+                    btnConsultarInspecao_Click(sender, e);
+                    break;
+                case "Nota":
+                    mtdAtribuirNotaServicos(txtNotaServicos.Text);
+                    break;
                 case "Prox. Sel.":
                     if (cmbOpcaoEstatistica.SelectedIndex <= cmbOpcaoEstatistica.Items.Count - 2)
                     {
@@ -805,12 +911,6 @@ namespace prjInspecaoCSNet40
                     {
                         cmbOpcaoEstatistica.SelectedIndex = 0;
                     }
-                    break;
-                case "Consultar":
-                    btnConsultarInspecao_Click(sender, e);
-                    break;
-                case "Nota":
-                    mtdAtribuirNotaServicos(txtNotaServicos.Text);
                     break;
             }
         }
@@ -861,7 +961,7 @@ namespace prjInspecaoCSNet40
                     mni2.Text = "Calcular";
                     break;
                 case 4:
-                    mni1.Text = "";
+                    mni1.Text = "Comp. Rep.";
                     mni2.Text = "Sair";
                     break;
                 case 5:
@@ -877,10 +977,67 @@ namespace prjInspecaoCSNet40
 
         private void btnWebServiceUpload_Click(object sender, EventArgs e)
         {
-            mtdUploadWebService(chbForcarUpload.Checked);
+            bool blnEnvio = false;
+
+            try
+            {
+                blnEnvio = mtdUploadWebService(chbForcarUpload.Checked);
+            }
+            catch (System.Exception)
+            {
+                blnEnvio = false;
+            }
+
+            if (blnEnvio)
+            {
+                System.Windows.Forms.MessageBox.Show
+                (
+                "Os dados foram transferidos com sucesso.",
+                "Aviso!",
+                System.Windows.Forms.MessageBoxButtons.OK,
+                System.Windows.Forms.MessageBoxIcon.Exclamation,
+                System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show
+                (
+                    "Houve algum erro ao transferir os dados.",
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Exclamation,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
+            }
         }
 
         private void btnZerar_Click(object sender, EventArgs e)
+        {
+            mtdPreencherLsvServicos(string.Empty, "0");
+        }
+
+        private void btnPreencher_Um_Click(object sender, EventArgs e)
+        {
+            mtdPreencherLsvServicos(string.Empty, "1");
+        }
+
+        private void btnPreencher_Dois_Click(object sender, EventArgs e)
+        {
+            mtdPreencherLsvServicos(string.Empty, "2");
+        }
+
+        private void btnPreencher_Zero_Um_Click(object sender, EventArgs e)
+        {
+            mtdPreencherLsvServicos(string.Empty, "0", "1");
+        }
+
+        private void btnPreencher_Zero_Um_Dois_Click(object sender, EventArgs e)
+        {
+            mtdPreencherLsvServicos(string.Empty, "0", "2");
+        }
+
+        private void btnPreencher_Valor_Aleatorio_Click(object sender, EventArgs e)
         {
             mtdPreencherLsvServicos(string.Empty);
         }
@@ -937,14 +1094,16 @@ namespace prjInspecaoCSNet40
             return Retorno;
         }
 
-        private void txtColetor_LostFocus(object sender, EventArgs e)
+        // private void txtColetor_LostFocus(object sender, EventArgs e)
+        private void txtColetor_Leave(object sender, EventArgs e)
         {
             txtColetor.Text = objManipuladorTexto.mtdExecutarTudo(txtColetor.Text);
 
             mtdAjustarConteudoCamposDadosColetor(0, txtColetor.Text);
         }
 
-        private void txtInspetor_LostFocus(object sender, EventArgs e)
+        // private void txtInspetor_LostFocus(object sender, EventArgs e)
+        private void txtInspetor_Leave(object sender, EventArgs e)
         {
             txtInspetor.Text = objManipuladorTexto.mtdExecutarTudo(txtInspetor.Text);
 
@@ -958,7 +1117,8 @@ namespace prjInspecaoCSNet40
             mtdAjustarConteudoCamposDadosColetor(2, cmbEndereco.Text);
         }
 
-        private void txtEnderecoWebService_LostFocus(object sender, EventArgs e)
+        // private void txtEnderecoWebService_LostFocus(object sender, EventArgs e)
+        private void txtEnderecoWebService_Leave(object sender, EventArgs e)
         {
             string strEnderecoWebService = txtEnderecoWebService.Text;
 
@@ -999,13 +1159,15 @@ namespace prjInspecaoCSNet40
             mtdAjustarEnderecoNomeTextoBancoDados(DiretorioArmazenamentoCompleto);
         }
 
-        private void txtEnderecoBancoDados_LostFocus(object sender, EventArgs e)
+        // private void txtEnderecoBancoDados_LostFocus(object sender, EventArgs e)
+        private void txtEnderecoBancoDados_Leave(object sender, EventArgs e)
         {
             DiretorioArmazenamentoCompleto = txtEnderecoBancoDados.Text;
             mtdAjustarEnderecoNomeTextoBancoDados(DiretorioArmazenamentoCompleto);
         }
 
-        private void txtSenhaBancoDados_LostFocus(object sender, EventArgs e)
+        // private void txtSenhaBancoDados_LostFocus(object sender, EventArgs e)
+        private void txtSenhaBancoDados_Leave(object sender, EventArgs e)
         {
             strSenhaBaseDadosColetor = txtSenhaBancoDados.Text;
             mtdAjustarSenhaBancoDadosColetor(strSenhaBaseDadosColetor);
@@ -1075,16 +1237,49 @@ namespace prjInspecaoCSNet40
 
         private void btnWebServiceDownload_Click(object sender, EventArgs e)
         {
-            mtdDeletarDadosTabelaEndereco(lstColunasTabelaEndereco[(int)enmColunasTabelaEndereco.Endereco], "%");
+            bool Retorno = true;
 
-            System.Data.DataSet dt = objWebServiceInspecao.mtdObterDadosTabelaEndereco();
-
-            for (int linha = 0; linha <= dt.Tables[0].Rows.Count - 1; linha++)
+            try
             {
-                mtdInserirDadosTabelaEndereco(dt.Tables[0].Rows[linha].ItemArray[(int)enmColunasTabelaEndereco.Endereco].ToString());
+                Retorno &= mtdDeletarDadosTabelaEndereco(lstColunasTabelaEndereco[(int)enmColunasTabelaEndereco.Endereco], "%");
+
+                System.Data.DataSet dt = objWebServiceInspecao.mtdObterDadosTabelaEndereco();
+
+                for (int linha = 0; linha <= dt.Tables[0].Rows.Count - 1; linha++)
+                {
+                    Retorno &= mtdInserirDadosTabelaEndereco(dt.Tables[0].Rows[linha].ItemArray[(int)enmColunasTabelaEndereco.Endereco].ToString());
+                }
+            }
+            catch (System.Exception ex)
+            {
+                Retorno = false;
+            }
+
+            if (Retorno)
+            {
+                System.Windows.Forms.MessageBox.Show
+                (
+                    "Os dados foram transferidos.",
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Exclamation,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show
+                (
+                    "Houve algum erro ao transferir os dados.",
+                    "Aviso!",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Exclamation,
+                    System.Windows.Forms.MessageBoxDefaultButton.Button1
+                );
             }
         }
 
+        // private void cmbEndereco_KeyDown(object sender, KeyEventArgs e)
         private void cmbEndereco_Click(object sender, EventArgs e)
         {
             mtdPreencherCmbEndereco();

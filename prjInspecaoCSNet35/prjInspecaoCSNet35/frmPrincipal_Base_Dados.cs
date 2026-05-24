@@ -15,16 +15,25 @@ namespace prjInspecaoCSNet35
 
         //public static clsEnderecoAplicativo objEnderecoAplicativo = new clsEnderecoAplicativo();
 
-        //public static string strEnderecoBancoDadosColetor = System.IO.Path.GetDirectoryName
-        //(
-        //    System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase
-        //);
-        private static string strEnderecoBancoDadosColetor = @"\Storage Card\";
-        //private static string strEnderecoBancoDadosColetor = @"C:\Users\Usuario\Documents";
+        private static string strEnderecoStorageCard = @"\Storage Card\";
+        private static string strEnderecoFlashDisk = @"\Flash Disk\";
+
+        public readonly string cntEnderecoBancoDadosColetor = System.IO.Path.GetDirectoryName
+        (
+            System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase
+        );
+        // public static string cntEnderecoBancoDadosColetor = AppDomain.CurrentDomain.BaseDirectory;
+
+        public static string strEnderecoBancoDadosColetor = string.Empty;
+        //private static string strEnderecoBancoDadosColetor = @"\Storage Card\";
+        //private static string strEnderecoBancoDadosColetor = cntEnderecoBancoDadosColetor;
 
         public static string DiretorioEnderecoAplicativo = string.Empty;
-        public static string DiretorioArmazenamento = "Armazenamento";
+        public const string DiretorioArmazenamento = "Armazenamento";
         public static string DiretorioArmazenamentoCompleto = string.Empty;
+
+        public static string cntNomeBancoDadosColetor = @"dbInspecao";
+        public static string cntSenhaBaseDadosColetor = "12345678";
 
         public static string strNomeBancoDadosColetor = @"dbInspecao";
         public static string strBaseDadosColetor = string.Empty;
@@ -33,6 +42,8 @@ namespace prjInspecaoCSNet35
         public static string strTabelaInspecao = "tblInspecao";
         public static string strTabelaEstatistica_01 = "tblEstatistica_01";
         public static string strTabelaEstatistica_02 = "tblEstatistica_02";
+        public static string strTabelaDadosCamposColetor = "tblDadosCamposColetor";
+        public static string strTabelaEndereco = "tblEndereco";
 
         public static clsManipulacaoBaseDados objManipulacaoBaseDadosColetor = new clsManipulacaoBaseDados(strBaseDadosColetor, strSenhaBaseDadosColetor, strTabelaInspecao);
 
@@ -46,9 +57,27 @@ namespace prjInspecaoCSNet35
         public static List<List<string>> tblCamposTabelaEstatistica = new List<List<string>> { };
         public static List<List<object>> tblCamposDadosTabelaEstatistica = new List<List<object>> { };
 
-        private void mtdBaseDados_Load()
+        public static List<string> lstColunasTabelaDadosCamposColetor = new List<string> { };
+        public static List<object> lstColunasTabelaDadosCamposColetorObject = new List<object> { };
+        public static List<List<string>> tblCamposTabelaDadosCamposColetor = new List<List<string>> { };
+        public static List<List<object>> tblCamposDadosTabelaDadosCamposColetor = new List<List<object>> { };
+
+        public static List<string> lstColunasTabelaEndereco = new List<string> { };
+        public static List<object> lstColunasTabelaEnderecoObject = new List<object> { };
+        public static List<List<string>> tblCamposTabelaEndereco = new List<List<string>> { };
+        public static List<List<object>> tblCamposDadosTabelaEndereco = new List<List<object>> { };
+
+        private string mtdGerarCaminhoBaseDadosColetor(string EnderecoBancoDadosColetor, string NomeBancoDadosColetor)
         {
-            frmPrincipal.DiretorioArmazenamentoCompleto = String.Format(@"{0}\{1}\", strEnderecoBancoDadosColetor, DiretorioArmazenamento).Replace(@"\\", @"\");
+            if (!EnderecoBancoDadosColetor.Contains(DiretorioArmazenamento))
+            {
+                frmPrincipal.DiretorioArmazenamentoCompleto = String.Format(@"{0}\{1}\", EnderecoBancoDadosColetor, DiretorioArmazenamento).Replace(@"\\", @"\");
+            }
+            else
+            {
+                frmPrincipal.DiretorioArmazenamentoCompleto = String.Format(@"{0}\", EnderecoBancoDadosColetor).Replace(@"\\", @"\");
+            }
+
             try
             {
                 System.IO.Directory.CreateDirectory(frmPrincipal.DiretorioArmazenamentoCompleto);
@@ -60,11 +89,20 @@ namespace prjInspecaoCSNet35
                 //frmPrincipal.mtdGerarRelatorioErros(string.Format(@"{0}Relatorio_Erros.txt", frmPrincipal.DiretorioEnderecoAplicativo), strExcecao);
             }
             frmPrincipal.DiretorioEnderecoAplicativo = DiretorioArmazenamentoCompleto;
-            strBaseDadosColetor = (frmPrincipal.DiretorioArmazenamentoCompleto + strNomeBancoDadosColetor + cntExtensaoBancoDadosColetor);
+            strBaseDadosColetor = (frmPrincipal.DiretorioArmazenamentoCompleto + NomeBancoDadosColetor + (NomeBancoDadosColetor.Contains(cntExtensaoBancoDadosColetor) ? string.Empty : cntExtensaoBancoDadosColetor));
 
+            return strBaseDadosColetor;
+        }
+
+        private void mtdBaseDados_Load()
+        {
             mtdGerarListaColunasTabelaInspecao();
+            mtdGerarListaColunasTabelaDadosCamposColetor();
+            mtdGerarListaColunasTabelaEndereco();
             mtdRotinaPreparacaoColetor();
             mtdCriarTabelaInspecao();
+            mtdCriarTabelaCamposDadosColetor();
+            mtdCriarTabelaEndereco();
         }
 
         public enum enmColunasTabelaInspecao
@@ -81,6 +119,17 @@ namespace prjInspecaoCSNet35
             Item = 9,
             Nota = 10,
             Enviar = 11
+        }
+
+        public enum enmColunasTabelaDadosCamposColetor
+        {
+            Campos = 0,
+            Dados = 1,
+        }
+
+        public enum enmColunasTabelaEndereco
+        {
+            Endereco = 0
         }
 
         public void mtdGerarListaColunasTabelaInspecao()
@@ -117,6 +166,29 @@ namespace prjInspecaoCSNet35
             return Retorno;
         }
 
+        public void mtdGerarListaColunasTabelaDadosCamposColetor()
+        {
+            lstColunasTabelaDadosCamposColetor = new List<string> { };
+            lstColunasTabelaDadosCamposColetor.Add("Campos");
+            lstColunasTabelaDadosCamposColetor.Add("Dados");
+
+            foreach (string item in frmPrincipal.lstColunasTabelaDadosCamposColetor)
+            {
+                lstColunasTabelaDadosCamposColetorObject.Add(item.ToString());
+            }
+        }
+
+        public void mtdGerarListaColunasTabelaEndereco()
+        {
+            lstColunasTabelaEndereco = new List<string> { };
+            lstColunasTabelaEndereco.Add("Endereco");
+
+            foreach (string item in frmPrincipal.lstColunasTabelaEndereco)
+            {
+                lstColunasTabelaEnderecoObject.Add(item.ToString());
+            }
+        }
+
         private void mtdRotinaPreparacaoColetor()
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
@@ -133,7 +205,7 @@ namespace prjInspecaoCSNet35
 
             if (!objImplementacaoBancoDados.mtdAbrirConexao())
             {
-                mtdCriarBaseDadosColetor();
+                blnCriado = mtdCriarBaseDadosColetor();
                 blnReparado = mtdRepararBancoDadosColetor();
                 blnCompactado = mtdCompactarBancoDadosColetor();
             }
@@ -261,7 +333,6 @@ namespace prjInspecaoCSNet35
                 }
             }
 
-            objManipulacaoBaseDadosColetor.mtdIncluirIndicesListaColuna(lstColunasTabelaInspecaoObject);
             Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(strTabelaInspecao, tblCamposTabelaInspecao);
 
             return Retorno;
@@ -288,8 +359,105 @@ namespace prjInspecaoCSNet35
                 );
             }
 
-            objManipulacaoBaseDadosColetor.mtdIncluirIndicesListaColuna(lstColunasTabelaEstatisticaObject);
             Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(Tabela, tblCamposTabelaEstatistica);
+
+            return Retorno;
+        }
+
+        public bool mtdCriarTabelaCamposDadosColetor()
+        {
+            bool Retorno = false;
+
+            tblCamposTabelaDadosCamposColetor = new List<List<string>> { };
+
+            for (int contador = 0; contador <= lstColunasTabelaDadosCamposColetor.Count - 1; contador++)
+            {
+                switch (contador)
+                {
+                    case 0:
+                        tblCamposTabelaDadosCamposColetor.Add
+                        (
+                            new List<string> 
+                            {
+                                lstColunasTabelaDadosCamposColetor[contador], 
+                                "INTEGER",
+                                string.Empty, 
+                                string.Format
+                                (
+                                    "CONSTRAINT PrimaryKey{0} PRIMARY KEY", 
+                                    lstColunasTabelaDadosCamposColetor[contador]
+                                )
+                            }
+                        );
+                        break;
+                    default:
+                        tblCamposTabelaDadosCamposColetor.Add
+                        (
+                            new List<string> 
+                            { 
+                                lstColunasTabelaDadosCamposColetor[contador],
+                                "NVARCHAR",
+                                "255",
+                                string.Empty 
+                            }
+                        );
+                        break;
+                }
+            }
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(strTabelaDadosCamposColetor, tblCamposTabelaDadosCamposColetor);
+
+            return Retorno;
+        }
+
+        public bool mtdCriarTabelaEndereco()
+        {
+            bool Retorno = false;
+
+            tblCamposTabelaEndereco = new List<List<string>> { };
+
+            for (int contador = 0; contador <= lstColunasTabelaEndereco.Count - 1; contador++)
+            {
+                switch (contador)
+                {
+                    case 0:
+                        tblCamposTabelaEndereco.Add
+                        (
+                            new List<string> 
+                            {
+                                lstColunasTabelaEndereco[contador], 
+                                "NVARCHAR",
+                                "255", 
+                                string.Format
+                                (
+                                    "CONSTRAINT PrimaryKey{0} PRIMARY KEY", 
+                                    lstColunasTabelaEndereco[contador]
+                                )
+                            }
+                        );
+                        break;
+                }
+            }
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(strTabelaEndereco, tblCamposTabelaEndereco);
+
+            return Retorno;
+        }
+
+        public bool mtdDeletarTabelaEstatistica(string Tabela)
+        {
+            bool Retorno = false;
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdCriarTabela(Tabela, tblCamposTabelaEstatistica);
+
+            return Retorno;
+        }
+
+        public bool mtdDeletarTabela(string Tabela)
+        {
+            bool Retorno = false;
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdDeletarTabela(string.Format(@"{0}{1}", strEnderecoBancoDadosColetor, strNomeBancoDadosColetor), strSenhaBaseDadosColetor, Tabela);
 
             return Retorno;
         }
@@ -344,6 +512,66 @@ namespace prjInspecaoCSNet35
             return Retorno;
         }
 
+        public bool mtdAlterarDadosTabelaDadosCamposColetor
+        (
+             int Campos,
+             string Dados,
+             string CampoBase,
+             string Operacao,
+             object DadoBase
+        )
+        {
+            bool Retorno = false;
+
+            tblCamposDadosTabelaDadosCamposColetor = new List<List<object>> { };
+            tblCamposDadosTabelaDadosCamposColetor.Add(lstColunasTabelaDadosCamposColetorObject);
+            tblCamposDadosTabelaDadosCamposColetor.Add
+            (
+                new List<object>
+                { 
+                    Campos,
+                    Dados,
+                    CampoBase,
+                    Operacao, 
+                    DadoBase 
+                }
+            );
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdAlterarDadosTabela(strTabelaDadosCamposColetor, tblCamposDadosTabelaDadosCamposColetor);
+
+            return Retorno;
+        }
+
+        public bool mtdAlterarDadosTabelaEndereco
+        (
+             int Campos,
+             string Dados,
+             string CampoBase,
+             string Operacao,
+             object DadoBase
+        )
+        {
+            bool Retorno = false;
+
+            tblCamposDadosTabelaEndereco = new List<List<object>> { };
+            tblCamposDadosTabelaEndereco.Add(lstColunasTabelaEnderecoObject);
+            tblCamposDadosTabelaEndereco.Add
+            (
+                new List<object>
+                { 
+                    Campos,
+                    Dados,
+                    CampoBase,
+                    Operacao, 
+                    DadoBase 
+                }
+            );
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdAlterarDadosTabela(strTabelaEndereco, tblCamposDadosTabelaEndereco);
+
+            return Retorno;
+        }
+
         public bool mtdInserirDadosTabelaInspecao
         (
             int Codigo,
@@ -383,6 +611,52 @@ namespace prjInspecaoCSNet35
             );
 
             Retorno = objManipulacaoBaseDadosColetor.mtdInserirDadosTabela(strTabelaInspecao, tblCamposDadosTabelaInspecao);
+
+            return Retorno;
+        }
+
+        public bool mtdInserirDadosTabelaDadosCamposColetor
+        (
+            int Campos,
+            string Dados
+        )
+        {
+            bool Retorno = false;
+
+            tblCamposDadosTabelaDadosCamposColetor = new List<List<object>> { };
+            tblCamposDadosTabelaDadosCamposColetor.Add(lstColunasTabelaDadosCamposColetorObject);
+            tblCamposDadosTabelaDadosCamposColetor.Add
+            (
+                new List<object> 
+                {
+                    Campos,
+                    Dados
+                }
+            );
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdInserirDadosTabela(strTabelaDadosCamposColetor, tblCamposDadosTabelaDadosCamposColetor);
+
+            return Retorno;
+        }
+
+        public bool mtdInserirDadosTabelaEndereco
+        (
+            string Endereco
+        )
+        {
+            bool Retorno = false;
+
+            tblCamposDadosTabelaEndereco = new List<List<object>> { };
+            tblCamposDadosTabelaEndereco.Add(lstColunasTabelaEnderecoObject);
+            tblCamposDadosTabelaEndereco.Add
+            (
+                new List<object> 
+                {
+                    Endereco
+                }
+            );
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdInserirDadosTabela(strTabelaEndereco, tblCamposDadosTabelaEndereco);
 
             return Retorno;
         }
@@ -448,6 +722,24 @@ namespace prjInspecaoCSNet35
             return Retorno;
         }
 
+        public bool mtdDeletarDadosTabelaDadosCamposColetor(string CampoSelecionador, object Dado)
+        {
+            bool Retorno = false;
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdDeletarDadosTabela(strTabelaDadosCamposColetor, CampoSelecionador, "LIKE", Dado);
+
+            return Retorno;
+        }
+
+        public bool mtdDeletarDadosTabelaEndereco(string CampoSelecionador, object Dado)
+        {
+            bool Retorno = false;
+
+            Retorno = objManipulacaoBaseDadosColetor.mtdDeletarDadosTabela(strTabelaEndereco, CampoSelecionador, "LIKE", Dado);
+
+            return Retorno;
+        }
+
         public System.Data.DataTable mtdSelecionarDadosTabelaInspecao
         (
             uint NumeroLinhas,
@@ -459,6 +751,11 @@ namespace prjInspecaoCSNet35
         )
         {
             return objManipulacaoBaseDadosColetor.mtdSelecionarDadosTabela(NumeroLinhas, lstColunasTabelaInspecao, strTabelaInspecao, CampoSelecionador, Operacao, Dado, CampoSelecionador, Crescente);
+        }
+
+        public System.Data.DataTable mtdSelecionarDadosTabelaEndereco()
+        {
+            return objManipulacaoBaseDadosColetor.mtdSelecionarDadosTabela(0, lstColunasTabelaEndereco, strTabelaEndereco, lstColunasTabelaEndereco[0], "LIKE", "'%'", lstColunasTabelaEndereco[0], true);
         }
 
         private List<string> mtdSelecionarDados
@@ -597,7 +894,14 @@ namespace prjInspecaoCSNet35
 
             objImplementacaoBancoDados.mtdAdaptadorDados();
 
-            Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            try
+            {
+                Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            }
+            catch (System.Exception ex)
+            {
+
+            }
 
             objImplementacaoBancoDados.Dispose();
 
@@ -655,6 +959,19 @@ namespace prjInspecaoCSNet35
             objImplementacaoBancoDados.Dispose();
 
             return Retorno;
+        }
+
+        public System.Data.DataTable mtdSelecionarDadosTabelaDadosCamposColetor
+        (
+            uint NumeroLinhas,
+            string CampoSelecionador,
+            string Operacao,
+            object Dado,
+            string CampoOrdenador,
+            bool Crescente
+        )
+        {
+            return objManipulacaoBaseDadosColetor.mtdSelecionarDadosTabela(NumeroLinhas, lstColunasTabelaDadosCamposColetor, strTabelaDadosCamposColetor, CampoSelecionador, Operacao, Dado, CampoSelecionador, Crescente);
         }
     }
 }

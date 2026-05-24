@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDadosTabelaInspecao">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDadosTabelaInspecaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdObterDadosTabelaInspecaoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEstatistica_01">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEstatistica_01Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdObterDadosTabelaEstatistica_01Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEstatistica_02">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEstatistica_02Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdObterDadosTabelaEstatistica_02Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdInserirDadosTabelaInspecao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdInserirDadosTabelaInspecaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdInserirDadosTabelaInspecaoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEndereco">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDadosTabelaEnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mtdObterDadosTabelaEnderecoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaAtual">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaAtualResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterDataTempoSistemaAtualResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaUtc">
+        <s:complexType />
+      </s:element>
+      <s:element name="mtdObterDataTempoSistemaUtcResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mtdObterDataTempoSistemaUtcResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaInspecaoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaInspecao" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaInspecaoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaInspecaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEstatistica_01SoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEstatistica_01" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEstatistica_01SoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEstatistica_01Response" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEstatistica_02SoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEstatistica_02" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEstatistica_02SoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEstatistica_02Response" />
+  </wsdl:message>
+  <wsdl:message name="mtdInserirDadosTabelaInspecaoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdInserirDadosTabelaInspecao" />
+  </wsdl:message>
+  <wsdl:message name="mtdInserirDadosTabelaInspecaoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdInserirDadosTabelaInspecaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEndereco" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDadosTabelaEnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDadosTabelaEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaAtualSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaAtual" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaAtualSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaAtualResponse" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaUtcSoapIn">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaUtc" />
+  </wsdl:message>
+  <wsdl:message name="mtdObterDataTempoSistemaUtcSoapOut">
+    <wsdl:part name="parameters" element="tns:mtdObterDataTempoSistemaUtcResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceInspecaoSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaInspecao">
+      <wsdl:input message="tns:mtdObterDadosTabelaInspecaoSoapIn" />
+      <wsdl:output message="tns:mtdObterDadosTabelaInspecaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_01">
+      <wsdl:input message="tns:mtdObterDadosTabelaEstatistica_01SoapIn" />
+      <wsdl:output message="tns:mtdObterDadosTabelaEstatistica_01SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_02">
+      <wsdl:input message="tns:mtdObterDadosTabelaEstatistica_02SoapIn" />
+      <wsdl:output message="tns:mtdObterDadosTabelaEstatistica_02SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdInserirDadosTabelaInspecao">
+      <wsdl:input message="tns:mtdInserirDadosTabelaInspecaoSoapIn" />
+      <wsdl:output message="tns:mtdInserirDadosTabelaInspecaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEndereco">
+      <wsdl:input message="tns:mtdObterDadosTabelaEnderecoSoapIn" />
+      <wsdl:output message="tns:mtdObterDadosTabelaEnderecoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <wsdl:input message="tns:mtdObterDataTempoSistemaAtualSoapIn" />
+      <wsdl:output message="tns:mtdObterDataTempoSistemaAtualSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <wsdl:input message="tns:mtdObterDataTempoSistemaUtcSoapIn" />
+      <wsdl:output message="tns:mtdObterDataTempoSistemaUtcSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceInspecaoSoap" type="tns:WebServiceInspecaoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaInspecao">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDadosTabelaInspecao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_01">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEstatistica_01" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_02">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEstatistica_02" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdInserirDadosTabelaInspecao">
+      <soap:operation soapAction="http://tempuri.org/mtdInserirDadosTabelaInspecao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEndereco">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaAtual" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <soap:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaUtc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceInspecaoSoap12" type="tns:WebServiceInspecaoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaInspecao">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDadosTabelaInspecao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_01">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEstatistica_01" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEstatistica_02">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEstatistica_02" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdInserirDadosTabelaInspecao">
+      <soap12:operation soapAction="http://tempuri.org/mtdInserirDadosTabelaInspecao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDadosTabelaEndereco">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDadosTabelaEndereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaAtual">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaAtual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mtdObterDataTempoSistemaUtc">
+      <soap12:operation soapAction="http://tempuri.org/mtdObterDataTempoSistemaUtc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebServiceInspecao">
+    <wsdl:port name="WebServiceInspecaoSoap" binding="tns:WebServiceInspecaoSoap">
+      <soap:address location="http://localhost:61062/Todos/WebServiceInspecao.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceInspecaoSoap12" binding="tns:WebServiceInspecaoSoap12">
+      <soap12:address location="http://localhost:61062/Todos/WebServiceInspecao.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

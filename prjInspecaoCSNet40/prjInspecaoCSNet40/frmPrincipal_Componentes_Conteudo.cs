@@ -255,13 +255,19 @@ namespace prjInspecaoCSNet40
 
         public WebServiceInspecao.WebServiceInspecao objWebServiceInspecao = new WebServiceInspecao.WebServiceInspecao();
 
-        private void mtdUploadWebService()
+        private bool mtdUploadWebService()
         {
-            mtdUploadWebService(false);
+            bool Retorno = false;
+            
+            Retorno = mtdUploadWebService(false);
+
+            return Retorno;
         }
 
-        private void mtdUploadWebService(bool ForcarUpload)
+        private bool mtdUploadWebService(bool ForcarUpload)
         {
+            bool Retorno = true;
+
             try
             {
                 System.Data.DataSet ds = new System.Data.DataSet();
@@ -296,33 +302,19 @@ namespace prjInspecaoCSNet40
 
                         ds.Tables[0].Rows[0].ItemArray = dt.Rows[linha].ItemArray;
                         ds.Tables[0].Rows[0].ItemArray[(int)enmColunasTabelaInspecao.Enviar] = 0;
-                        objWebServiceInspecao.mtdInserirDadosTabelaInspecao(ds);
+                        Retorno &= objWebServiceInspecao.mtdInserirDadosTabelaInspecao(ds);
                     }
                 }
-
-                System.Windows.Forms.MessageBox.Show
-                (
-                    "Os dados foram transferidos com sucesso.",
-                    "Aviso!",
-                    System.Windows.Forms.MessageBoxButtons.OK,
-                    System.Windows.Forms.MessageBoxIcon.Exclamation,
-                    System.Windows.Forms.MessageBoxDefaultButton.Button1
-                );
             }
             catch (System.Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show
-                (
-                    "Houve algum erro ao transferir os dados.",
-                    "Aviso!",
-                    System.Windows.Forms.MessageBoxButtons.OK,
-                    System.Windows.Forms.MessageBoxIcon.Exclamation,
-                    System.Windows.Forms.MessageBoxDefaultButton.Button1
-                );
+                Retorno = false;
             }
             finally
             {
             }
+
+            return Retorno;
         }
 
         private List<string> mtdGerarEnderecoNomeBancoDados(string BaseDadosColetor)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace prjInspecaoCSNet35
+namespace prjInspecaoCSNet40
 {
     class clsStopWatch
     {

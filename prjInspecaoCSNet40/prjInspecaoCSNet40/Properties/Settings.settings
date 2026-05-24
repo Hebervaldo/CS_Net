@@ -3,7 +3,15 @@
   <Profiles />
   <Settings>
     <Setting Name="prjInspecaoCSNet40_WebServiceInspecao_WebServiceInspecao" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://srvpatrimonio:8080/WebServiceInspecao.asmx</Value>
+      <Value Profile="(Default)">http://localhost:61062/Todos/WebServiceInspecao.asmx</Value>
+    </Setting>
+    <Setting Name="dbInspecaoConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=|DataDirectory|\dbInspecao.sdf;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.SqlServerCe.Client.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=|DataDirectory|\dbInspecao.sdf;Persist Security Info=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

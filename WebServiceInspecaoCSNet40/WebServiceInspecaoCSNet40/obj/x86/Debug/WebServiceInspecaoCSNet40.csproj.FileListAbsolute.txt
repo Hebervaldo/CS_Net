@@ -1,0 +1,8 @@
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\bin\x86\Debug\WebServiceInspecaoCSNet40.dll
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\bin\x86\Debug\WebServiceInspecaoCSNet40.pdb
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\Interop.ADODB.dll
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\Interop.ADOX.dll
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\Interop.JRO.dll
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\WebServiceInspecaoCSNet40.csproj.ResolveComReference.cache
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\WebServiceInspecaoCSNet40.dll
+C:\Users\Usuario\documents\visual studio 2010\Projects\WebServiceInspecaoCSNet40\WebServiceInspecaoCSNet40\obj\x86\Debug\WebServiceInspecaoCSNet40.pdb
