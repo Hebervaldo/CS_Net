@@ -44,3 +44,15 @@ C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\ob
 C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
 C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
 C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\Armazenamento\dbPatrimonio.sdf
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
