@@ -1,2 +1,0 @@
-Não há conteúdo.
-0 - mtdAbortarThreadImportarTabelaUsuarios: O thread estava sendo anulado.

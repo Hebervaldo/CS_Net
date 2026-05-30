@@ -335,7 +335,7 @@
             this.tbpConfiguracoes.Controls.Add(this.txtEnderecoBaseDados);
             this.tbpConfiguracoes.Location = new System.Drawing.Point(0, 0);
             this.tbpConfiguracoes.Name = "tbpConfiguracoes";
-            this.tbpConfiguracoes.Size = new System.Drawing.Size(232, 242);
+            this.tbpConfiguracoes.Size = new System.Drawing.Size(240, 245);
             this.tbpConfiguracoes.Text = "Configurações";
             // 
             // txtComprimentoColunas
@@ -520,7 +520,7 @@
             this.tbpTabelas.Controls.Add(this.tbc2);
             this.tbpTabelas.Location = new System.Drawing.Point(0, 0);
             this.tbpTabelas.Name = "tbpTabelas";
-            this.tbpTabelas.Size = new System.Drawing.Size(240, 245);
+            this.tbpTabelas.Size = new System.Drawing.Size(232, 242);
             this.tbpTabelas.Text = "Tabelas";
             // 
             // tbc2
@@ -532,7 +532,7 @@
             this.tbc2.Location = new System.Drawing.Point(0, 0);
             this.tbc2.Name = "tbc2";
             this.tbc2.SelectedIndex = 0;
-            this.tbc2.Size = new System.Drawing.Size(240, 242);
+            this.tbc2.Size = new System.Drawing.Size(232, 242);
             this.tbc2.TabIndex = 61;
             this.tbc2.SelectedIndexChanged += new System.EventHandler(this.tbc2_SelectedIndexChanged);
             // 
@@ -543,7 +543,7 @@
             this.tbpTabelaInventario.Controls.Add(this.dtg1);
             this.tbpTabelaInventario.Location = new System.Drawing.Point(0, 0);
             this.tbpTabelaInventario.Name = "tbpTabelaInventario";
-            this.tbpTabelaInventario.Size = new System.Drawing.Size(240, 219);
+            this.tbpTabelaInventario.Size = new System.Drawing.Size(232, 219);
             this.tbpTabelaInventario.Text = "Inventario";
             // 
             // cmbConsultarInventario
@@ -715,7 +715,7 @@
             this.tbpDadosGerais.Controls.Add(this.btnPatrimonioItem);
             this.tbpDadosGerais.Location = new System.Drawing.Point(0, 0);
             this.tbpDadosGerais.Name = "tbpDadosGerais";
-            this.tbpDadosGerais.Size = new System.Drawing.Size(240, 245);
+            this.tbpDadosGerais.Size = new System.Drawing.Size(232, 242);
             this.tbpDadosGerais.Text = "Dados Gerais";
             // 
             // btnPatrimonioItemOutrosDadosItem
@@ -1033,7 +1033,7 @@
             this.tbpControleFisico.Controls.Add(this.lblDataInventario);
             this.tbpControleFisico.Location = new System.Drawing.Point(0, 0);
             this.tbpControleFisico.Name = "tbpControleFisico";
-            this.tbpControleFisico.Size = new System.Drawing.Size(232, 242);
+            this.tbpControleFisico.Size = new System.Drawing.Size(240, 245);
             this.tbpControleFisico.Text = "Controle Físico";
             // 
             // txtMatriculaItem
@@ -1838,7 +1838,7 @@
             this.tblRepeticoes.Controls.Add(this.dtg6);
             this.tblRepeticoes.Location = new System.Drawing.Point(0, 0);
             this.tblRepeticoes.Name = "tblRepeticoes";
-            this.tblRepeticoes.Size = new System.Drawing.Size(240, 219);
+            this.tblRepeticoes.Size = new System.Drawing.Size(232, 216);
             this.tblRepeticoes.Text = "Repetições";
             // 
             // lblRepeticoes
@@ -1901,7 +1901,7 @@
             this.tblRegistros.Controls.Add(this.lblTabelaInventarioBens);
             this.tblRegistros.Location = new System.Drawing.Point(0, 0);
             this.tblRegistros.Name = "tblRegistros";
-            this.tblRegistros.Size = new System.Drawing.Size(240, 219);
+            this.tblRegistros.Size = new System.Drawing.Size(232, 216);
             this.tblRegistros.Text = "Registros";
             // 
             // lblRelatorioExtra
@@ -2147,7 +2147,7 @@
             this.tbpFotografia.Controls.Add(this.pctFotografia);
             this.tbpFotografia.Location = new System.Drawing.Point(0, 0);
             this.tbpFotografia.Name = "tbpFotografia";
-            this.tbpFotografia.Size = new System.Drawing.Size(232, 242);
+            this.tbpFotografia.Size = new System.Drawing.Size(240, 245);
             this.tbpFotografia.Text = "Fotografia";
             // 
             // btnTirarFotografiaL
@@ -2222,7 +2222,7 @@
             this.tbpGPS.Controls.Add(this.txtGPSDeviceUsed);
             this.tbpGPS.Location = new System.Drawing.Point(0, 0);
             this.tbpGPS.Name = "tbpGPS";
-            this.tbpGPS.Size = new System.Drawing.Size(232, 242);
+            this.tbpGPS.Size = new System.Drawing.Size(240, 245);
             this.tbpGPS.Text = "GPS";
             // 
             // btnGPSPerimeter
@@ -2380,7 +2380,7 @@
             this.tbpMapa.Controls.Add(this.wbMapa);
             this.tbpMapa.Location = new System.Drawing.Point(0, 0);
             this.tbpMapa.Name = "tbpMapa";
-            this.tbpMapa.Size = new System.Drawing.Size(232, 242);
+            this.tbpMapa.Size = new System.Drawing.Size(240, 245);
             this.tbpMapa.Text = "Mapa";
             // 
             // btnVisualizarMapa
@@ -2429,7 +2429,7 @@
             this.tbpConfiguracoesExtras.Controls.Add(this.pctConfiguracoesExtras);
             this.tbpConfiguracoesExtras.Location = new System.Drawing.Point(0, 0);
             this.tbpConfiguracoesExtras.Name = "tbpConfiguracoesExtras";
-            this.tbpConfiguracoesExtras.Size = new System.Drawing.Size(232, 242);
+            this.tbpConfiguracoesExtras.Size = new System.Drawing.Size(240, 245);
             this.tbpConfiguracoesExtras.Text = "Configurações Extras";
             // 
             // chkProcuraAutomatica
@@ -2573,7 +2573,7 @@
             this.tbpZerarTabelas.Controls.Add(this.btnZerarTabelaInventarioBens);
             this.tbpZerarTabelas.Location = new System.Drawing.Point(0, 0);
             this.tbpZerarTabelas.Name = "tbpZerarTabelas";
-            this.tbpZerarTabelas.Size = new System.Drawing.Size(232, 242);
+            this.tbpZerarTabelas.Size = new System.Drawing.Size(240, 245);
             this.tbpZerarTabelas.Text = "Zerar Tabelas";
             // 
             // txtSenhaZerarTabelas
@@ -2706,7 +2706,7 @@
             this.tbpSair.Controls.Add(this.pctSairAplicativo);
             this.tbpSair.Location = new System.Drawing.Point(0, 0);
             this.tbpSair.Name = "tbpSair";
-            this.tbpSair.Size = new System.Drawing.Size(232, 242);
+            this.tbpSair.Size = new System.Drawing.Size(240, 245);
             this.tbpSair.Text = "Sair";
             // 
             // btnTemporizadorCancelar

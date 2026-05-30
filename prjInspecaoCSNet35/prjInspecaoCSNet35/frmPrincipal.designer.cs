@@ -303,11 +303,11 @@
             this.cmbEndereco.Name = "cmbEndereco";
             this.cmbEndereco.Size = new System.Drawing.Size(182, 22);
             this.cmbEndereco.TabIndex = 25;
-            this.cmbEndereco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbEndereco_KeyDown);
+            this.cmbEndereco.GotFocus += new System.EventHandler(this.cmbEndereco_GotFocus);
             // 
             // btnZerar
             // 
-            this.btnZerar.Location = new System.Drawing.Point(188, 5);
+            this.btnZerar.Location = new System.Drawing.Point(188, 3);
             this.btnZerar.Name = "btnZerar";
             this.btnZerar.Size = new System.Drawing.Size(45, 20);
             this.btnZerar.TabIndex = 23;

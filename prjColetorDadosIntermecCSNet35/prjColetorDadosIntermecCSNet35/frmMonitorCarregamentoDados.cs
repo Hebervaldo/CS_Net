@@ -131,7 +131,15 @@ namespace prjColetorDadosIntermecCSNet35
             {
                 clsVerificarConexao objVerificarConexao = new clsVerificarConexao();
                 string[] strEnderecoServidor = txtEnderecoWebService.Text.Split('/');
-                string strEnderecoRede = string.Format("{0}", strEnderecoServidor[2]);
+                string strEnderecoRede = string.Format
+                (
+                   "{0}",
+                   (
+                       strEnderecoServidor[2].Contains(":")
+                       ? (strEnderecoServidor[2]).Split(':')[0]
+                       : strEnderecoServidor[2]
+                   )
+                );
 
                 if (objVerificarConexao.mtdChecarRede(strEnderecoRede))
                 {
@@ -212,7 +220,15 @@ namespace prjColetorDadosIntermecCSNet35
             {
                 clsVerificarConexao objVerificarConexao = new clsVerificarConexao();
                 string[] strEnderecoServidor = txtEnderecoWebService.Text.Split('/');
-                string strEnderecoRede = string.Format("{0}", strEnderecoServidor[2]);
+                string strEnderecoRede = string.Format
+                (
+                   "{0}",
+                   (
+                       strEnderecoServidor[2].Contains(":")
+                       ? (strEnderecoServidor[2]).Split(':')[0]
+                       : strEnderecoServidor[2]
+                   )
+                );
 
                 if (objVerificarConexao.mtdChecarRede(strEnderecoRede))
                 {
@@ -293,7 +309,15 @@ namespace prjColetorDadosIntermecCSNet35
             {
                 clsVerificarConexao objVerificarConexao = new clsVerificarConexao();
                 string[] strEnderecoServidor = txtEnderecoWebService.Text.Split('/');
-                string strEnderecoRede = string.Format("{0}", strEnderecoServidor[2]);
+                string strEnderecoRede = string.Format
+                (
+                   "{0}",
+                   (
+                       strEnderecoServidor[2].Contains(":")
+                       ? (strEnderecoServidor[2]).Split(':')[0]
+                       : strEnderecoServidor[2]
+                   )
+                );
 
                 if (objVerificarConexao.mtdChecarRede(strEnderecoRede))
                 {

@@ -615,7 +615,8 @@ namespace prjInspecaoCSNet35
         private void mtdCmbIdentificacaoAjustarTblItens_PreencherValorIntervalo(System.Data.DataTable dt, bool DadoVazio, string ValorInferior, string ValorSuperior)
         {
             int linha = 0;
-            int Valor = System.Convert.ToInt32(ValorInferior);
+            int Valor = 0;
+            Valor = System.Convert.ToInt32(ValorInferior) - 1;
 
             for (int contador = 0; contador <= cmbServicos.Items.Count - 1; contador++)
             {
@@ -623,7 +624,7 @@ namespace prjInspecaoCSNet35
 
                 for (int contadorLista = 0; contadorLista <= tblItens.Count - 1; contadorLista++)
                 {
-                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : System.Convert.ToString(Valor++ < System.Convert.ToInt32(ValorSuperior) ? Valor : Valor=System.Convert.ToInt32(ValorInferior));
+                    tblItens[contadorLista][1] = DadoVazio ? dt.Rows[linha++].ItemArray[10].ToString() : System.Convert.ToString(++Valor <= System.Convert.ToInt32(ValorSuperior) ? Valor : Valor = System.Convert.ToInt32(ValorInferior));
                 }
 
                 mtdAjustarTblItens(ref tblItens, contador);

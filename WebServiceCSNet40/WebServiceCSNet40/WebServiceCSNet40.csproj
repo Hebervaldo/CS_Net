@@ -6,13 +6,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}</ProjectGuid>
+    <ProjectGuid>{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WebServiceCSNet40</RootNamespace>
     <AssemblyName>WebServiceCSNet40</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +47,7 @@
     <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -64,8 +66,12 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10618.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bibliotecas\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -91,77 +97,9 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Armazenamento\dbPatrimonio.mdb" />
-    <Content Include="Armazenamento\dbPatrimonio.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Armazenamento\Relatorio_Erros.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_BancoDadosCADU.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_EnderecoArquivoTexto.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_EnderecoBancoDadosColetor.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_EnderecoBancoDadosExcel.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_EnderecoBancoDadosPrincipal.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_NomeArquivoTexto.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_NomeBancoDadosColetor.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_NomeBancoDadosExcel.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_NomeBancoDadosPrincipal.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_PermitirControleColetorUpLoad.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_SenhaCADU.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_SenhaColetor.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_SenhaPrincipal.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_ServidorCADU.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_TabelaCADU.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_Principal_UsuarioCADU.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_BancoDadosSQLServer.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_EnderecoArquivoTexto.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_EnderecoBancoDadosAccess.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_EnderecoBancoDadosExcel.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_EnderecoBancoDadosSQLServerCE.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_NomeArquivoTexto.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_NomeBancoDadosAccess.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_NomeBancoDadosExcel.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_NomeBancoDadosSQLServerCE.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_SenhaAccess.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_SenhaSQLServer.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_SenhaSQLServerCE.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_ServidorSQLServer.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_TabelaSQLServer.txt" />
-    <Content Include="Armazenamento\Software_Eletronorte_WebService_UsuarioSQLServer.txt" />
+    <Content Include="Armazenamento\dbPatrimonio.sdf" />
     <Content Include="Bibliotecas\AjaxControlToolkit.dll" />
     <Content Include="Bibliotecas\AjaxControlToolkit.pdb" />
-    <Content Include="bin\AjaxControlToolkit.dll" />
-    <Content Include="bin\AjaxControlToolkit.pdb" />
-    <Content Include="bin\Debug\AjaxControlToolkit.dll" />
-    <Content Include="bin\Debug\Styles\Site.css" />
-    <Content Include="bin\Debug\WebServiceCSNet40.dll" />
-    <Content Include="bin\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="bin\Interop.JRO.dll" />
-    <Content Include="bin\Styles\Site.css" />
-    <Content Include="bin\WebServiceCSNet40.dll" />
-    <Content Include="bin\WebServiceCSNet40.pdb" />
-    <Content Include="bin\x64\Debug\AjaxControlToolkit.dll" />
-    <Content Include="bin\x64\Debug\AjaxControlToolkit.pdb" />
-    <Content Include="bin\x64\Debug\Interop.JRO.dll" />
-    <Content Include="bin\x64\Debug\Styles\Site.css" />
-    <Content Include="bin\x64\Debug\WebServiceCSNet40.dll" />
-    <Content Include="bin\x64\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="bin\x64\Release\AjaxControlToolkit.dll" />
-    <Content Include="bin\x64\Release\AjaxControlToolkit.pdb" />
-    <Content Include="bin\x64\Release\Interop.JRO.dll" />
-    <Content Include="bin\x64\Release\Styles\Site.css" />
-    <Content Include="bin\x64\Release\WebServiceCSNet40.dll" />
-    <Content Include="bin\x64\Release\WebServiceCSNet40.pdb" />
-    <Content Include="bin\x86\Debug\AjaxControlToolkit.dll" />
-    <Content Include="bin\x86\Debug\AjaxControlToolkit.pdb" />
-    <Content Include="bin\x86\Debug\Interop.JRO.dll" />
-    <Content Include="bin\x86\Debug\Styles\Site.css" />
-    <Content Include="bin\x86\Debug\WebServiceCSNet40.dll" />
-    <Content Include="bin\x86\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="bin\x86\Release\AjaxControlToolkit.dll" />
-    <Content Include="bin\x86\Release\AjaxControlToolkit.pdb" />
-    <Content Include="bin\x86\Release\Interop.JRO.dll" />
-    <Content Include="bin\x86\Release\Styles\Site.css" />
-    <Content Include="bin\x86\Release\WebServiceCSNet40.dll" />
-    <Content Include="bin\x86\Release\WebServiceCSNet40.pdb" />
     <Content Include="frmCadastroUsuario.aspx" />
     <Content Include="frmConsultarTabelaDados.aspx" />
     <Content Include="frmDownloadArquivos.aspx" />
@@ -170,71 +108,6 @@
     <Content Include="Imagem\imgEletrobrasEletronorte.jpg" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
-    <Content Include="obj\Debug\Interop.ADODB.dll" />
-    <Content Include="obj\Debug\Interop.ADOX.dll" />
-    <Content Include="obj\Debug\Interop.JRO.dll" />
-    <Content Include="obj\Debug\Package\PackageTmp\About.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Account\ChangePassword.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Account\ChangePasswordSuccess.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Account\Login.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Account\Register.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Bibliotecas\AjaxControlToolkit.dll" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\AjaxControlToolkit.dll" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\AjaxControlToolkit.pdb" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\Interop.JRO.dll" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\Styles\Site.css" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\WebServiceCSNet40.dll" />
-    <Content Include="obj\Debug\Package\PackageTmp\bin\WebServiceCSNet40.pdb" />
-    <Content Include="obj\Debug\Package\PackageTmp\Default.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\frmCadastroUsuario.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\frmConsultarTabelaDados.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\frmDownloadArquivos.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\frmImportacaoExportacaoDados.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Global.asax" />
-    <Content Include="obj\Debug\Package\PackageTmp\Imagem\imgEletrobrasEletronorte.bmp" />
-    <Content Include="obj\Debug\Package\PackageTmp\Imagem\imgEletrobrasEletronorte.jpg" />
-    <Content Include="obj\Debug\Package\PackageTmp\login.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\logout.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="obj\Debug\Package\PackageTmp\Scripts\jquery-1.4.1.js" />
-    <Content Include="obj\Debug\Package\PackageTmp\Scripts\jquery-1.4.1.min.js" />
-    <Content Include="obj\Debug\Package\PackageTmp\Scripts\Main.js" />
-    <Content Include="obj\Debug\Package\PackageTmp\Styles\Site.css" />
-    <Content Include="obj\Debug\Package\PackageTmp\Todos\sobre.aspx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Todos\WebServicoBancoDados.asmx" />
-    <Content Include="obj\Debug\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Debug\WebServiceCSNet40.dll" />
-    <Content Include="obj\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="obj\Release\Interop.ADODB.dll" />
-    <Content Include="obj\Release\Interop.ADOX.dll" />
-    <Content Include="obj\Release\Interop.JRO.dll" />
-    <Content Include="obj\Release\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\Release\WebServiceCSNet40.dll" />
-    <Content Include="obj\Release\WebServiceCSNet40.pdb" />
-    <Content Include="obj\x64\Debug\Interop.ADODB.dll" />
-    <Content Include="obj\x64\Debug\Interop.ADOX.dll" />
-    <Content Include="obj\x64\Debug\Interop.JRO.dll" />
-    <Content Include="obj\x64\Debug\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\x64\Debug\WebServiceCSNet40.dll" />
-    <Content Include="obj\x64\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="obj\x64\Release\Interop.ADODB.dll" />
-    <Content Include="obj\x64\Release\Interop.ADOX.dll" />
-    <Content Include="obj\x64\Release\Interop.JRO.dll" />
-    <Content Include="obj\x64\Release\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\x64\Release\WebServiceCSNet40.dll" />
-    <Content Include="obj\x64\Release\WebServiceCSNet40.pdb" />
-    <Content Include="obj\x86\Debug\Interop.ADODB.dll" />
-    <Content Include="obj\x86\Debug\Interop.ADOX.dll" />
-    <Content Include="obj\x86\Debug\Interop.JRO.dll" />
-    <Content Include="obj\x86\Debug\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\x86\Debug\WebServiceCSNet40.dll" />
-    <Content Include="obj\x86\Debug\WebServiceCSNet40.pdb" />
-    <Content Include="obj\x86\Release\Interop.ADODB.dll" />
-    <Content Include="obj\x86\Release\Interop.ADOX.dll" />
-    <Content Include="obj\x86\Release\Interop.JRO.dll" />
-    <Content Include="obj\x86\Release\WebServiceCSNet40.csproj.FileListAbsolute.txt" />
-    <Content Include="obj\x86\Release\WebServiceCSNet40.dll" />
-    <Content Include="obj\x86\Release\WebServiceCSNet40.pdb" />
     <Content Include="Scripts\Main.js" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -395,8 +268,13 @@
     </Compile>
     <Compile Include="Monitoramento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
-    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
     <Compile Include="Todos\sobre.aspx.cs">
       <DependentUpon>sobre.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,34 +295,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Armazenamento\dbPatrimonio.log" />
-    <None Include="Armazenamento\dbPatrimonio.xls" />
-    <None Include="Bibliotecas\AjaxControlToolkit.dll.refresh" />
     <Content Include="ImageHandler.ashx" />
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Debug\Package\PackageTmp\Account\Web.config" />
-    <Content Include="obj\Debug\Package\PackageTmp\ImageHandler.ashx" />
-    <Content Include="obj\Debug\Package\PackageTmp\Site.Master" />
-    <Content Include="obj\Debug\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Debug\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Debug\TransformWebConfig\transformed\Web.config" />
-    <None Include="obj\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\Release\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="obj\x64\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\x64\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="obj\x64\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\x64\Release\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="obj\x86\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <None Include="obj\x86\Release\WebServiceCSNet40.csproj.ResolveComReference.cache" />
-    <None Include="Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
+    <None Include="Bibliotecas\AjaxControlToolkit.dll.refresh" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">
@@ -483,7 +340,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>48534</DevelopmentServerPort>
+          <DevelopmentServerPort>17350</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

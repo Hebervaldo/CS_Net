@@ -85,6 +85,7 @@
             this.btnCalcularEstatistica = new System.Windows.Forms.Button();
             this.lsvEstatistica = new System.Windows.Forms.ListView();
             this.tbpFerramentas = new System.Windows.Forms.TabPage();
+            this.btnCompactarRepararBancoDados = new System.Windows.Forms.Button();
             this.btnCriarTabelas = new System.Windows.Forms.Button();
             this.btnDeletarTabelas = new System.Windows.Forms.Button();
             this.btnCriarBancoDados = new System.Windows.Forms.Button();
@@ -108,7 +109,6 @@
             this.btnSincronizarHorarioServidor = new System.Windows.Forms.Button();
             this.txtLegenda = new System.Windows.Forms.TextBox();
             this.ofd1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnCompactarRepararBancoDados = new System.Windows.Forms.Button();
             this.tbpControlePrincipal.SuspendLayout();
             this.tbpPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPrincipal)).BeginInit();
@@ -365,9 +365,9 @@
             // lblEndereco
             // 
             this.lblEndereco.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.lblEndereco.Location = new System.Drawing.Point(13, 189);
+            this.lblEndereco.Location = new System.Drawing.Point(3, 189);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(41, 20);
+            this.lblEndereco.Size = new System.Drawing.Size(42, 20);
             this.lblEndereco.TabIndex = 26;
             this.lblEndereco.Text = "End.:";
             // 
@@ -494,6 +494,15 @@
             this.tbpFerramentas.Size = new System.Drawing.Size(237, 243);
             this.tbpFerramentas.TabIndex = 4;
             this.tbpFerramentas.Text = "Ferramentas";
+            // 
+            // btnCompactarRepararBancoDados
+            // 
+            this.btnCompactarRepararBancoDados.Location = new System.Drawing.Point(7, 140);
+            this.btnCompactarRepararBancoDados.Name = "btnCompactarRepararBancoDados";
+            this.btnCompactarRepararBancoDados.Size = new System.Drawing.Size(226, 20);
+            this.btnCompactarRepararBancoDados.TabIndex = 47;
+            this.btnCompactarRepararBancoDados.Text = "&Compactar e Reparar";
+            this.btnCompactarRepararBancoDados.Click += new System.EventHandler(this.btnCompactarRepararBancoDados_Click);
             // 
             // btnCriarTabelas
             // 
@@ -703,15 +712,6 @@
             // ofd1
             // 
             this.ofd1.FileName = "ofd1";
-            // 
-            // btnCompactarRepararBancoDados
-            // 
-            this.btnCompactarRepararBancoDados.Location = new System.Drawing.Point(7, 140);
-            this.btnCompactarRepararBancoDados.Name = "btnCompactarRepararBancoDados";
-            this.btnCompactarRepararBancoDados.Size = new System.Drawing.Size(226, 20);
-            this.btnCompactarRepararBancoDados.TabIndex = 47;
-            this.btnCompactarRepararBancoDados.Text = "&Compactar e Reparar";
-            this.btnCompactarRepararBancoDados.Click += new System.EventHandler(this.btnCompactarRepararBancoDados_Click);
             // 
             // frmPrincipal
             // 

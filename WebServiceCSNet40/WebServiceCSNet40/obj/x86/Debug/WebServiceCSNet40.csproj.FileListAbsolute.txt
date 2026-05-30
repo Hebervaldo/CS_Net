@@ -1,58 +1,8 @@
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\AjaxControlToolkit.dll
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\AjaxControlToolkit.pdb
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Desktop\Coletor_\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.Properties.Resources.resources
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\Armazenamento\dbPatrimonio.sdf
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
-c:\users\usuario\documents\visual studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
-C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\Armazenamento\dbPatrimonio.sdf
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.Properties.Resources.resources
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Desktop\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\Armazenamento\dbPatrimonio.sdf
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.Properties.Resources.resources
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\Documents\GitHub\C_Sharp\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\Armazenamento\dbPatrimonio.sdf
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.Properties.Resources.resources
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.GenerateResource.Cache
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADOX.dll
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.csproj.ResolveComReference.cache
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.dll
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\bin\x86\Debug\WebServiceCSNet40.pdb
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.ADODB.dll
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\Interop.JRO.dll
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.dll
+C:\Users\Usuario\Documents\Visual Studio 2010\Projects\WebServiceCSNet40\WebServiceCSNet40\obj\x86\Debug\WebServiceCSNet40.pdb

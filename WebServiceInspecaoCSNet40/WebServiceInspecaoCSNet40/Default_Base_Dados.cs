@@ -36,12 +36,13 @@ namespace WebServiceInspecaoCSNet40
 
         // MySQL
         public static string strConexaoMySQL = string.Empty;
+        public static string strConexaoMySQL_SemBD = string.Empty;
 
         public static string strServidorMySQL = @"localhost";
         public static string strPortaMySQL = @"3307";
         public static string strNomeBancoDadosMySQL = @"dbInspecao";
         public static string strUsuarioMySQL = @"root";
-        public static string strSenhaMySQL = @"723564";
+        public static string strSenhaMySQL = @"12345678";
 
         public static string strTabelaInspecao = "tblInspecao";
         public static string strTabelaEstatistica_01 = "tblEstatistica_01";
@@ -77,6 +78,7 @@ namespace WebServiceInspecaoCSNet40
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados();
 
+            strConexaoMySQL_SemBD = objImplementacaoBancoDados.mtdDefinirStringConexaoMySQL(clsConexaoBancoDados.TipoConexao.ConexaoMySQLNativa, strServidorMySQL, strPortaMySQL, strUsuarioMySQL, strSenhaMySQL);
             strConexaoMySQL = objImplementacaoBancoDados.mtdDefinirStringConexaoMySQL(clsConexaoBancoDados.TipoConexao.ConexaoMySQLNativa, strServidorMySQL, strPortaMySQL, strNomeBancoDadosMySQL, strUsuarioMySQL, strSenhaMySQL);
             // strConexaoMySQL = string.Format("Server={0}; Port={1}; Database={2}; Uid={3}; Pwd={4}; Encrypt=False; Connection Timeout=5; Pooling=False;", strServidorMySQL, strPortaMySQL, strNomeBancoDadosMySQL, strUsuarioMySQL, strSenhaMySQL);
             objImplementacaoBancoDados.Dispose();
@@ -171,7 +173,7 @@ namespace WebServiceInspecaoCSNet40
         {
             bool Retorno = false;
 
-            Retorno = objManipulacaoBaseDadosWebService.mtdCriarBancoDados(strConexaoMySQL);
+            Retorno = objManipulacaoBaseDadosWebService.mtdCriarBancoDados(strConexaoMySQL_SemBD, strNomeBancoDadosMySQL);
 
             return Retorno;
         }
@@ -259,7 +261,7 @@ namespace WebServiceInspecaoCSNet40
             }
 
             objManipulacaoBaseDadosWebService.mtdIncluirIndicesListaColuna(lstColunasTabelaInspecaoObject);
-            Retorno = objManipulacaoBaseDadosWebService.mtdCriarTabela(strTabelaInspecao, tblCamposTabelaInspecao);
+            Retorno = objManipulacaoBaseDadosWebService.mtdCriarTabela(strConexaoMySQL, strTabelaInspecao, tblCamposTabelaInspecao);
 
             return Retorno;
         }
@@ -721,7 +723,14 @@ namespace WebServiceInspecaoCSNet40
 
             objImplementacaoBancoDados.mtdAdaptadorDados();
 
-            Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            try
+            {
+                Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            }
+            catch (System.Exception ex)
+            {
+
+            }
 
             objImplementacaoBancoDados.Dispose();
 

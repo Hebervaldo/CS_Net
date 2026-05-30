@@ -34,15 +34,6 @@ C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecao
 C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
 C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
 C:\Users\Usuario\Desktop\Documentos\Codigo\CSharp\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csprojResolveAssemblyReference.cache
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
-C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
@@ -51,3 +42,11 @@ C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prj
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
 C:\Users\Usuario\Desktop\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe.config
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\bin\Debug\prjInspecaoCSNet40.pdb
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.frmPrincipal.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.Properties.Resources.resources
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.exe
+C:\Users\Usuario\OneDrive\Documentos\GitHub\CS_Net\prjInspecaoCSNet40\prjInspecaoCSNet40\obj\x86\Debug\prjInspecaoCSNet40.pdb

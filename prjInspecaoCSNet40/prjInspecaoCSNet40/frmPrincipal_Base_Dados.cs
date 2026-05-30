@@ -845,7 +845,14 @@ namespace prjInspecaoCSNet40
 
             objImplementacaoBancoDados.mtdAdaptadorDados();
 
-            Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            try
+            {
+                Retorno = objImplementacaoBancoDados.prpAjustadorDados.Tables[0];
+            }
+            catch (System.Exception ex)
+            {
+
+            }
 
             objImplementacaoBancoDados.Dispose();
 

@@ -1278,8 +1278,7 @@ namespace prjInspecaoCSNet35
             }
         }
 
-        private void cmbEndereco_KeyDown(object sender, KeyEventArgs e)
-        // private void cmbEndereco_Click(object sender, EventArgs e)
+        private void cmbEndereco_GotFocus(object sender, EventArgs e)
         {
             mtdPreencherCmbEndereco();
         }

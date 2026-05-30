@@ -402,15 +402,15 @@ namespace prjColetorDadosIntermecCSNet35
                             {
                                 case 0:
                                     objImplementacaoBancoDados.mtdDeletarTabela(Tabela);
-                                    Program.objPrincipal.mtdCriarTabelaBensEletronorteColetor();
+                                    frmPrincipal.mtdCriarTabelaBensEletronorteColetor();
                                     break;
                                 case 1:
                                     objImplementacaoBancoDados.mtdDeletarTabela(Tabela);
-                                    Program.objPrincipal.mtdCriarTabelaEmpregadosColetor();
+                                    frmPrincipal.mtdCriarTabelaEmpregadosColetor();
                                     break;
                                 case 2:
                                     objImplementacaoBancoDados.mtdDeletarTabela(Tabela);
-                                    Program.objPrincipal.mtdCriarTabelaCentroCustoColetor();
+                                    frmPrincipal.mtdCriarTabelaCentroCustoColetor();
                                     break;
                             }
 

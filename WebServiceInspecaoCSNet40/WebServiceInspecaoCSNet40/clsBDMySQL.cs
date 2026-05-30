@@ -827,9 +827,14 @@ namespace WebServiceInspecaoCSNet40
                 prpSharedMemoryNameMySQL);
         }
 
-        public string mtdDefinirStringConexaoMySQL(TipoConexao TipoConexao, string Server, string DataBase, string UserId, string Password)
+        //public string mtdDefinirStringConexaoMySQL(TipoConexao TipoConexao, string Server, string DataBase, string UserId, string Password)
+        //{
+        //    return mtdDefinirStringConexaoMySQL(TipoConexao, Server, cntPortMySQL[1], DataBase, cntCharsetMySQL[1], UserId, Password, cntsslcaMySQL[1], cntsslcertMySQL[1], cntsslkeyMySQL[1], cntsslverifyMySQL[1], cntSocketMySQL[1], cntOptionMySQL[1], cntEncryptMySQL[1], cntConnectionTimeoutMySQL[1], cntIgnorePrepareMySQL[1], cntProtocolMySQL[1], cntSharedMemoryNameMySQL[1]);
+        //}
+
+        public string mtdDefinirStringConexaoMySQL(TipoConexao TipoConexao, string Server, string Port, string UserId, string Password)
         {
-            return mtdDefinirStringConexaoMySQL(TipoConexao, Server, cntPortMySQL[1], DataBase, cntCharsetMySQL[1], UserId, Password, cntsslcaMySQL[1], cntsslcertMySQL[1], cntsslkeyMySQL[1], cntsslverifyMySQL[1], cntSocketMySQL[1], cntOptionMySQL[1], cntEncryptMySQL[1], cntConnectionTimeoutMySQL[1], cntIgnorePrepareMySQL[1], cntProtocolMySQL[1], cntSharedMemoryNameMySQL[1]);
+            return mtdDefinirStringConexaoMySQL(TipoConexao, Server, Port, cntDataBaseMySQL[1], cntCharsetMySQL[1], UserId, Password, cntsslcaMySQL[1], cntsslcertMySQL[1], cntsslkeyMySQL[1], cntsslverifyMySQL[1], cntSocketMySQL[1], cntOptionMySQL[1], cntEncryptMySQL[1], cntConnectionTimeoutMySQL[1], cntIgnorePrepareMySQL[1], cntProtocolMySQL[1], cntSharedMemoryNameMySQL[1]);
         }
 
         public string mtdDefinirStringConexaoMySQL(TipoConexao TipoConexao, string Server, string Port, string DataBase, string UserId, string Password)
@@ -1111,9 +1116,6 @@ namespace WebServiceInspecaoCSNet40
 
             return saida;
         }
-
-
-
 
         private bool mtdAtualizarDadosParametroComandoMySQLValor(string NomeTabela, object[,] Campos_Dados, string CampoBase, string Operacao, object DadoBase)
         {

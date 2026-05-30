@@ -1,24 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceCSNet40", "WebServiceCSNet40\WebServiceCSNet40.csproj", "{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceCSNet40", "WebServiceCSNet40\WebServiceCSNet40.csproj", "{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
-		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Debug|x86.ActiveCfg = Debug|x86
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Debug|x86.Build.0 = Debug|x86
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Release|x86.ActiveCfg = Release|x86
-		{C686C072-78D7-44DF-A1B2-1E9B92FF55EE}.Release|x86.Build.0 = Release|x86
+		{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92EC65F7-8CE9-4093-BA3D-EABCFB4F0B45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -47,7 +47,7 @@ namespace WebServiceCSNet40
         public static string cntNomeBancoDadosPrincipal = "dbPatrimonio.mdb";
         public static string cntEnderecoBancoDadosPrincipal = string.Empty;
         public static string cntUsuarioPrincipal = string.Empty;
-        public static string cntSenhaPrincipal = "723564";
+        public static string cntSenhaPrincipal = "12345678";
 
         public static string strBaseDadosPrincipal = string.Empty;
         public static string strNomeBancoDadosPrincipal = string.Empty;
@@ -404,7 +404,7 @@ namespace WebServiceCSNet40
             cntNomeBancoDadosPrincipal = "dbPatrimonio.mdb";
             cntEnderecoBancoDadosPrincipal = DiretorioArmazenamentoRegistro;
             cntUsuarioPrincipal = string.Empty;
-            cntSenhaPrincipal = "723564";
+            cntSenhaPrincipal = "12345678";
 
             strBaseDadosPrincipal = string.Empty;
             strNomeBancoDadosPrincipal = string.Empty;
@@ -427,11 +427,11 @@ namespace WebServiceCSNet40
             // SQL Server
 
             cntBaseDadosCADU = string.Empty;
-            cntServidorCADU = @"10.61.116.29";
-            cntBancoDadosCADU = @"cadu";
-            cntUsuarioCADU = "patrimonio_user";
-            cntSenhaCADU = "p01t53wl";
-            cntTabelaCADU = "vw_patrimonio";
+            cntServidorCADU = string.Empty;
+            cntBancoDadosCADU = string.Empty;
+            cntUsuarioCADU = string.Empty;
+            cntSenhaCADU = string.Empty;
+            cntTabelaCADU = string.Empty;
 
             strBaseDadosCADU = string.Empty;
             strServidorCADU = string.Empty;

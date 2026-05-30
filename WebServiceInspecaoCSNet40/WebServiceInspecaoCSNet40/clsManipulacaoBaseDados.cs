@@ -61,6 +61,31 @@ namespace WebServiceInspecaoCSNet40
             return Retorno;
         }
 
+        public bool mtdCriarBancoDados(string Conexao, string BancoDados)
+        {
+            strConexao = Conexao;
+
+            bool Retorno = false;
+
+            try
+            {
+                clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados(strConexao, clsInfraestruturaBancoDados.TipoSistemaGerenciadorBancoDadosRelacional.MySQL);
+                objImplementacaoBancoDados.mtdValidarConexaoMySQL(strConexao);
+
+                Retorno = objImplementacaoBancoDados.mtdCriarBancoDadosMySQL(BancoDados);
+
+                objImplementacaoBancoDados.Dispose();
+            }
+            catch (System.Exception ex)
+            {
+                string strExcecao = "mtdCriarBancoDados: " + ex.Message;
+                System.Diagnostics.Debug.WriteLine(strExcecao);
+                //frmPrincipal.mtdGerarRelatorioErros(string.Format(@"{0}Relatorio_Erros.txt", frmPrincipal.DiretorioEnderecoAplicativo), strExcecao);
+            }
+
+            return Retorno;
+        }
+
         public bool mtdCriarTabela(string NomeTabela, List<List<string>> CamposTabela)
         {
             return mtdCriarTabela(strConexao, NomeTabela, CamposTabela);

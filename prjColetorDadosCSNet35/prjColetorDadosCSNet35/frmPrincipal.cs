@@ -643,7 +643,7 @@ namespace prjColetorDadosCSNet35
             return saida;
         }
 
-        private void mtdCriarTabelaInventarioBensColetor()
+        private static void mtdCriarTabelaInventarioBensColetor()
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
                 (
@@ -734,7 +734,7 @@ namespace prjColetorDadosCSNet35
             objImplementacaoBancoDados.Dispose();
         }
 
-        public void mtdCriarTabelaBensEletronorteColetor()
+        public static void mtdCriarTabelaBensEletronorteColetor()
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
                 (
@@ -793,7 +793,7 @@ namespace prjColetorDadosCSNet35
             objImplementacaoBancoDados.Dispose();
         }
 
-        public void mtdCriarTabelaEmpregadosColetor()
+        public static void mtdCriarTabelaEmpregadosColetor()
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
                 (
@@ -843,7 +843,7 @@ namespace prjColetorDadosCSNet35
             objImplementacaoBancoDados.Dispose();
         }
 
-        public void mtdCriarTabelaCentroCustoColetor()
+        public static void mtdCriarTabelaCentroCustoColetor()
         {
             clsImplementacaoBancoDados objImplementacaoBancoDados = new clsImplementacaoBancoDados
                 (
@@ -8179,15 +8179,15 @@ namespace prjColetorDadosCSNet35
             int intMes = dtpDataInventario.Value.Month;
             int intAno = dtpDataInventario.Value.Year;
 
-            if (dtpDataInventario.Value.Month < 12)
-            {
-                intMes = dtpDataInventario.Value.Month + 1;
-            }
-            else
-            {
-                intMes = 1;
-                intAno = dtpDataInventario.Value.Year + 1;
-            }
+            //if (dtpDataInventario.Value.Month < 12)
+            //{
+            //    intMes = dtpDataInventario.Value.Month + 1;
+            //}
+            //else
+            //{
+            //    intMes = 1;
+            //    intAno = dtpDataInventario.Value.Year + 1;
+            //}
 
             txtOutrosDadosItem.Text = txtTRGItem.Text != string.Empty && txtOrgaoItem.Text != string.Empty
                  ?
